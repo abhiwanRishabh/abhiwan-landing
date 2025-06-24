@@ -52,11 +52,11 @@ const Awards = () => {
   return (
     <>
       <div>
-        <h1
+        <h2
           className={`text-center text-white small-heading max-w-10/12 m-auto font-bold uppercase mt-1 md:mt-12 ${gravesend.className}`}
         >
           Honored with Excellence – Recognized for Innovation
-        </h1>
+        </h2>
       </div>
       <div>
         <div className="py-12 rounded-md flex flex-col antialiased items-center justify-center relative overflow-hidden">

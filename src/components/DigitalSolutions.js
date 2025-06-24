@@ -42,7 +42,7 @@ const DigitalSolutions = () => {
       {/* Heading */}
       <div className="text-center py-8 px-6" id="ourservice">
         <div>
-          <h1
+          <h2
             className={`${gravesend.className} uppercase text-3xl md:text-6xl lg:text-7xl font-bold text-white lineHeightFullPercentage`}
             id="Headings"
           >
@@ -55,7 +55,7 @@ const DigitalSolutions = () => {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
               Digital Solutions
             </span>
-          </h1>
+          </h2>
         </div>{" "}
         <div>
           <p className="mt-6 lead text-gray-300 max-w-3xl mx-auto !font-light">

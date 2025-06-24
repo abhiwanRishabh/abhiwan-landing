@@ -59,12 +59,12 @@ export default function ContactForm() {
         {/* Left section */}
         <div className="flex flex-col justify-between w-full lg:w-1/2 gap-4">
           <div className={` `}>
-            <h1
+            <h2
               className={` text-4xl font-bold leading-tight mb-4 ${gravesend.className}`}
             >
               LEVEL UP YOUR
               <br /> ONLINE EXPERIENCE
-            </h1>
+            </h2>
             <p
               className={`text-[20px] tracking-[2px]  mb-6 text-capitalize  ${helvetica.className}`}
             >

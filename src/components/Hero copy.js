@@ -166,7 +166,7 @@ const Hero = () => {
             <div className="flex flex-col justify-between items-between relative z-10">
               {/* heading */}
               <div>
-                <h1
+                <h2
                   className={`${styles.mainHeading} ${nasalization.className} text-6xl sm:text-6xl md:text-[16rem] font-bold text-white uppercase text-center`}
                 >
                   Abhiwan

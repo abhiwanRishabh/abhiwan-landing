@@ -145,11 +145,11 @@ export default function Sliderr() {
       >
         {/* Header */}
         <div className="text-center translate-y-[100px] md:translate-y-[40px] z-10">
-          <h1
+          <h2
             className={`${gravesend.className}  main-heading transition-all  font-bold tracking-wider uppercase`}
           >
             {slides[current].title}
-          </h1>
+          </h2>
           <p
             className={` small-subheading text-white/80 ${helvetica.className} transition-all`}
           >

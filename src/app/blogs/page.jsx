@@ -176,7 +176,7 @@ export default function BlogsPage() {
                   <div className="bg-white/10 backdrop-blur-sm rounded-2xl h-[400px] overflow-hidden border border-white/20 hover:border-purple-400/50 transition-all duration-300 hover:transform hover:scale-105">
                     <div className="relative overflow-hidden">
                       <img
-                        src={post.featuredImage || "/placeholder.svg"}
+                        src={post.thumbnailImage || "/placeholder.svg"}
                         alt={post.blogName}
                         className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
                       />

@@ -274,11 +274,12 @@
 @media (width <= 600px) {
   .vrGirl {
     height: 100%;
-    bottom: -18%;
+    bottom: -20%;
   }
+  
    .vrGirl img {
      object-fit: contain;
-     scale: 1.1;
+     scale: 1.25;
    }
 
    .hero{

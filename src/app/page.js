@@ -68,7 +68,7 @@ export default function Home() {
       <OurClients />
       <Awards />
       <ContactUs />
-      <Footer /> */
+      <Footer /> 
     </>
   );
 }

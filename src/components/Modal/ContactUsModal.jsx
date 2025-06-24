@@ -39,7 +39,7 @@ export default function ContactUsModal({ isOpen, onClose }) {
           {/* Left Section */}
           <div className={styles.leftSection}>
             <div className={styles.textContent}>
-              <h1
+              <h2
                 className={`${styles.heading} ${gravesend.className} ${helvetica.className}`}
               >
                 LEVEL UP YOUR

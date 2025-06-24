@@ -14,7 +14,6 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import styles from "./styles/TechShowcase.module.css";
-import AOS from "aos";
 import { gravesend, nasalization, helvetica } from "@/app/font/Fonts";
 import { data } from "@/components/constants/techShowcaseData";
 import { useLazyLoadOnView } from "./hooks/useLazyLoadOnView";
@@ -244,7 +243,7 @@ export default function TechShowcase() {
           <div className="flex relative py-[0rem]">
             {/* <div className="flex relative h-[128px] py-[9rem]"> */}
             <div >
-              {/* <h1 className="h-[max-content] my-auto text-4xl md:text-7xl font-bold tracking-wide relative z-50 bg-[linear-gradient(90deg,_#FFFDFF_0%,_#999899_100%)] bg-clip-text text-transparent">
+              {/* <h2 className="h-[max-content] my-auto text-4xl md:text-7xl font-bold tracking-wide relative z-50 bg-[linear-gradient(90deg,_#FFFDFF_0%,_#999899_100%)] bg-clip-text text-transparent">
             METAVERSE
           </h1> */}
             </div>
@@ -255,11 +254,11 @@ export default function TechShowcase() {
             <div
               className={`${styles.marqueeWrapper}absolute top-0 left-0 invisible `}
             >
-              <h1
+              <h2
                 className={`${styles.marquee} text-[4rem] md:text-[8rem] font-bold tracking-wide capitalize bg-amber-600`}
               >
                 Ai Innovation
-              </h1>
+              </h2>
             </div>
           </div>
 
@@ -313,7 +312,7 @@ export default function TechShowcase() {
                 >
                   <div className={`mainCard w-full`}>
                     {item.title == "Metaverse" && (
-                      <h1
+                      <h2
                         style={{
                           position: "absolute",
                           top: "-5rem",
@@ -323,10 +322,10 @@ export default function TechShowcase() {
                         className={`${gravesend.className} ${styles.mainCardTopHeading} h-[max-content] my-auto text-3xl md:text-6xl font-bold tracking-wide relative z-50 bg-[linear-gradient(90deg,_#FFFDFF_0%,_#999899_100%)] bg-clip-text text-transparent`}
                       >
                         METAVERSE
-                      </h1>
+                      </h2>
                     )}
                     {item.title == "Web & App Dev" && (
-                      <h1
+                      <h2
                         style={{
                           position: "absolute",
                           top: "-5rem",
@@ -336,7 +335,7 @@ export default function TechShowcase() {
                         className={`${gravesend.className} ${styles.mainCardTopHeading} h-[max-content] my-auto text-3xl md:text-6xl font-bold tracking-wide relative z-50 bg-[linear-gradient(90deg,_#FFFDFF_0%,_#999899_100%)] bg-clip-text text-transparent`}
                       >
                         Development
-                      </h1>
+                      </h2>
                     )}
                     {item.title == "Metaverse" && (
                       <>
@@ -431,7 +430,7 @@ export default function TechShowcase() {
                       </div>
                     </div>
                     {item.title == "Blockchain" && (
-                      <h1
+                      <h2
                         style={{
                           position: "absolute",
                           bottom: "-8rem",
@@ -442,10 +441,10 @@ export default function TechShowcase() {
                         className={`${gravesend.className} ${styles.mainCardBottomHeading} h-[max-content] my-auto text-3xl md:text-6xl font-bold tracking-wide relative z-50 bg-[linear-gradient(90deg,_#FFFDFF_0%,_#999899_100%)] bg-clip-text text-transparent`}
                       >
                         Blockchain
-                      </h1>
+                      </h2>
                     )}
                     {item.title == "Game Design" && (
-                      <h1
+                      <h2
                         style={{
                           position: "absolute",
                           bottom: "-8rem",
@@ -456,7 +455,7 @@ export default function TechShowcase() {
                         className={`${gravesend.className} ${styles.mainCardBottomHeading} text-nowrap h-[max-content] my-auto text-3xl md:text-6xl font-bold tracking-wide relative z-50 bg-[linear-gradient(90deg,_#FFFDFF_0%,_#999899_100%)] bg-clip-text text-transparent`}
                       >
                         Game Art
-                      </h1>
+                      </h2>
                     )}
 
                     {item.title == "Game Design" && (
@@ -501,11 +500,11 @@ export default function TechShowcase() {
 
           <div className="flex relative mt-[0rem]">
             <div className={`${styles.marqueeWrapper} absolute bottom-[6rem]`}>
-              <h1
+              <h2
                 className={`${styles.marquee} text-[2rem] font-bold tracking-wide capitalize`}
               >
                 Ai Innovation
-              </h1>
+              </h2>
             </div>
           </div>
         </>

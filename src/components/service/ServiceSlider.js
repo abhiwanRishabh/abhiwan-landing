@@ -114,7 +114,7 @@ export default function ServiceSlider() {
             transition={{ duration: 0.8 }}
             className="mt-10 text-center text-white space-y-4 px-4"
           >
-            <h1 className="text-5xl font-extrabold">{slides[current].title}</h1>
+            <h2 className="text-5xl font-extrabold">{slides[current].title}</h1>
             <h2 className="text-2xl font-semibold">
               {slides[current].subtitle}
             </h2>

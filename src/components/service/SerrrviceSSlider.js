@@ -83,7 +83,7 @@ export default function SerrrviceSSlider() {
               transition={{ duration: 0.8 }}
               className="space-y-4"
             >
-              <h1
+              <h2
                 className={`text-8xl font-extrabold text-shadow-lg/30 ${gravesend.className}`}
               >
                 {slides[current].title}

@@ -68,11 +68,11 @@ const Footer = () => {
               className={`${styles.marqueeWrapper} absolute top-0 left-0 py-[3rem] hidden md:block`}
               // className={`${styles.marqueeWrapper} absolute top-0 left-0 h-[8rem]`}
             >
-              <h1
+              <h2
                 className={`${styles.marquee} text-9xl font-bold tracking-wide capitalize`}
               >
                 REACH US OUT
-              </h1>
+              </h2>
             </div>
           </div>
         </section>

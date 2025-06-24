@@ -79,7 +79,7 @@ export default function TechShowcase() {
   return (
     <div className="min-h-screen text-white py-20 px-6 relative overflow-hidden">
       <div className="text-center mb-16">
-        <h1 className="text-4xl md:text-6xl font-bold tracking-wide">
+        <h2 className="text-4xl md:text-6xl font-bold tracking-wide">
           METAVERSE
         </h1>
       </div>

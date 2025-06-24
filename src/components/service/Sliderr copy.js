@@ -133,7 +133,7 @@ export default function Sliderr() {
     >
       {/* Header */}
       <div className="text-center mt-25 mb-35 z-10">
-        <h1
+        <h2
           className={`${gravesend.className} text-8xl font-bold tracking-wider uppercase`}
         >
           {slides[current].title}

@@ -85,7 +85,7 @@ const OurClients = () => {
     <>
       <div>
         <div className="text-center mb-3  pe-0 md:pe-6 pt-9">
-          <h1
+          <h2
             className={`text-3xl md:text-6xl lg:text-7xl font-bold  mb-2 uppercase tracking-wide text-transparent bg-clip-text inline-block mt-2 ${gravesend.className}`}
             style={{
               backgroundImage:
@@ -95,7 +95,7 @@ const OurClients = () => {
           >
             hear it <br className="block md:hidden " />
             from our clients
-          </h1>
+          </h2>
         </div>
       </div>
 

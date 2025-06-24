@@ -120,11 +120,11 @@ const AbhiwanTechnology = () => {
           </h2>
         </div>
         <div className="hidden md:block">
-          <h1
+          <h2
             className={`${styles.nonMarquee}  absolute top-[6rem] right-[-13rem] text-[11rem]  font-bold tracking-wide capitalize z-0`}
           >
             INNOVATION
-          </h1>
+          </h2>
         </div>
       </div>
       <div className="hidden md:block">

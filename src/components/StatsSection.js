@@ -51,7 +51,7 @@ export const StatsSection = () => {
         id="aboutus"
       >
         <div>
-          <h1
+          <h2
             className={`${gravesend.className} font-bold text-white leading-snug `}
             // lineHeightFullPercentage
             id="Headings"
@@ -69,7 +69,7 @@ export const StatsSection = () => {
               {/* tracking-wider */}
               Globally
             </span>
-          </h1>{" "}
+          </h2>{" "}
         </div>
       </div>
 
