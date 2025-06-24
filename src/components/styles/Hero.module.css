@@ -192,14 +192,12 @@
      scale: .6;
   }
   .statsContainer {
-    bottom: 30px;
+    bottom: 0px;
   }
 
   .vrGirl {
     scale: .9;
   }
-
-
 }
 
 @media (min-width : 1040px) {

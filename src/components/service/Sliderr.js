@@ -133,7 +133,7 @@ export default function Sliderr() {
   return (
     <>
       <div
-        className="relative w-full h-screen  text-white overflow-hidden px-4 "
+        className="relative w-full h-screen  text-white overflow-hidden px-4"
         // className="relative w-full h-screen flex flex-col items-center justify-center text-white overflow-hidden px-4"
         style={{
           backgroundImage: `url(${slides[current].backgroundImage})`,
@@ -144,21 +144,21 @@ export default function Sliderr() {
         }}
       >
         {/* Header */}
-        <div className="text-center mt-25 mb-35 z-10">
+        <div className="text-center translate-y-[100px] md:translate-y-[40px] z-10">
           <h1
-            className={`${gravesend.className} md:text-5xl transition-all  xl:text-8xl font-bold tracking-wider uppercase`}
+            className={`${gravesend.className}  main-heading transition-all  font-bold tracking-wider uppercase`}
           >
             {slides[current].title}
           </h1>
           <p
-            className={` text-2xl mt-2 text-white/80 ${helvetica.className} transition-all`}
+            className={` small-subheading text-white/80 ${helvetica.className} transition-all`}
           >
             {slides[current].subtitle}
           </p>
         </div>
 
         {/* Slide container */}
-        <div className="relative w-full max-w-[1200px] h-[320px] flex items-center justify-end">
+        <div className="relative w-full  max-w-[1200px] h-[320px] flex items-center justify-end">
           {/* Left Arrow */}
           {/* <button
           onClick={prevSlide}
@@ -177,12 +177,12 @@ export default function Sliderr() {
 
               borderBottom: "1px solid white",
             }}
-            className="absolute right-[90%] sm:right-[50%] md:right-[40%] lg:right-[55%] top-1/2 -translate-y-1/2 w-10 h-10 md:w-14 md:h-14 rounded-full bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center text-white shadow-lg hover:shadow-xl transition-all cursor-pointer"
+            className="absolute top-60 2xl:top-80 right-[80%] md:left-[42%] w-10 h-10 md:w-14 md:h-14 rounded-full bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center text-white shadow-lg hover:shadow-xl transition-all cursor-pointer"
           >
             <ChevronLeft size={32} />
           </button>
 
-          <div className="relative flex overflow-visible items-center justify-end">
+          <div className="relative flex overflow-visible items-center justify-end translate-y-[120px] 2xl:translate-y-[200px]">
             {slides.map((img, index) => {
               let offset = index - current;
               if (offset < 0) offset += slides.length;
@@ -221,7 +221,7 @@ export default function Sliderr() {
                     <div className="cursor-pointer">
                       <button
                         onClick={() => handleOpen(img.data)}
-                        className={`absolute top-[250px] -left-[300px] z-30 px-4 py-3 text-nowrap   text-white text-[16px] font-semibold rounded-[10px]  hover:scale-100 transition  ${helvetica.className} cursor-pointer`}
+                        className={`absolute top-[180px] sm:top-[250px] -left-[200px] md:-left-[350px] z-30 px-4 py-3 text-nowrap   text-white text-[16px] font-semibold rounded-[10px]  hover:scale-100 transition  ${helvetica.className} cursor-pointer`}
                         style={{
                           boxShadow: ` rgba(255, 255, 255, 0.33) 0px 21px 28px`,
                           backgroundImage:
@@ -275,7 +275,7 @@ export default function Sliderr() {
       </div>{" "}
       {selectedImage && (
         <AnimatePresence>
-          {(
+          {
             <motion.div
               className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90"
               initial={{ opacity: 0 }}
@@ -306,7 +306,7 @@ export default function Sliderr() {
                 </div>
               </motion.div>
             </motion.div>
-          )}
+          }
         </AnimatePresence>
       )}
     </>
