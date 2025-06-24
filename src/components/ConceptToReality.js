@@ -2,7 +2,6 @@
 import React, { useEffect, useId, useState } from "react";
 import styles from "./styles/ConceptToReality.module.css";
 import Image from "next/image";
-import AOS from "aos";
 import { gravesend, helvetica } from "@/app/font/Fonts";
 import { motion, AnimatePresence } from "framer-motion";
 import { CornerUpLeft, X } from "lucide-react";
@@ -17,6 +16,7 @@ const projects = [
     appStore: true,
     googlePlay: true,
     dataAos: "fade",
+    class: "shadow-card-1",
   },
   {
     id: "ac999e19-3364-4b23-bc3b-97e1148cc0c8",
@@ -28,6 +28,7 @@ const projects = [
     appStore: false,
     googlePlay: false,
     dataAos: "fade",
+    class: "shadow-card-2",
   },
   {
     id: "ca0908f0-03e3-4072-bf8e-5aa79c4bb2b7",
@@ -41,6 +42,7 @@ const projects = [
     appStore: true,
     googlePlay: true,
     dataAos: "fade",
+    class: "shadow-card-3",
   },
 ];
 const projectsSecondRow = [
@@ -54,6 +56,7 @@ const projectsSecondRow = [
     appStore: true,
     googlePlay: true,
     dataAos: "fade",
+    class: "shadow-card-4",
   },
   {
     id: "deb21f98-4572-4e11-b394-388f7b0fd8f9",
@@ -65,6 +68,7 @@ const projectsSecondRow = [
     appStore: false,
     googlePlay: false,
     dataAos: "fade",
+    class: "shadow-card-5",
   },
   {
     id: "b5426440-b39b-4bc1-b18c-5fcc6cf205a4",
@@ -78,6 +82,7 @@ const projectsSecondRow = [
     appStore: true,
     googlePlay: true,
     dataAos: "fade-",
+    class: "shadow-card-6",
   },
 ];
 
@@ -89,6 +94,7 @@ const projectlanscape = [
     secondImg: "/content/projects/penguinKartsH.png",
     // boxShadow: " shadow-[0px_4px_93.3px_0px_#02E3F8]",
     dataAos: "fade",
+     class: "shadow-card-7"
   },
   {
     id: "b74983c9-fa26-4352-a91f-9ab5a4fe39df",
@@ -97,6 +103,7 @@ const projectlanscape = [
     secondImg: "/content/projects/ohziH.png",
     // boxShadow: "shadow-[0px_4px_126.5px_0px_#000000CF]",
     dataAos: "fade",
+     class: "shadow-card-8"
   },
 ];
 
@@ -169,7 +176,11 @@ const ConceptToReality = () => {
                 View Image
               </button> */}
                 <div
-                  className={`${project?.boxShadow ?? ''}  h-[34rem] overflow-hidden rounded-2xl cursor-pointer`}
+                  className={`${
+                    project?.boxShadow ?? ""
+                  }  h-[34rem] overflow-hidden rounded-2xl cursor-pointer ${
+                    project?.class
+                  }`}
                   onClick={() => handleOpen(project.secondImg)}
                 >
                   <Image
@@ -199,7 +210,7 @@ const ConceptToReality = () => {
                 height={400}
                 src={item.image}
                 alt={item.title}
-                className={`cursor-pointer w-full h-70 md:h-96 rounded-[2.1rem] ${item.boxShadow}  transition-transform hover:scale-105 duration-300`}
+                className={`cursor-pointer w-full h-70 md:h-96 rounded-[2.1rem] ${item?.class}  transition-transform hover:scale-105 duration-300`}
               />
             </div>
           );
@@ -216,7 +227,11 @@ const ConceptToReality = () => {
                 View Image
               </button> */}
               <div
-                className={`${project.boxShadow ?? ''}  h-[34rem] overflow-hidden rounded-2xl cursor-pointer`}
+                className={`${
+                  project.boxShadow ?? ""
+                }  h-[34rem] overflow-hidden rounded-2xl cursor-pointer ${
+                  project?.class
+                }`}
                 onClick={() => handleOpen(project.secondImg)}
               >
                 <Image
@@ -236,7 +251,7 @@ const ConceptToReality = () => {
       {/* <div className="relative z-10"> */}
       {selectedImage && (
         <AnimatePresence>
-          {(
+          {
             <motion.div
               className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90"
               initial={{ opacity: 0 }}
@@ -272,7 +287,7 @@ const ConceptToReality = () => {
                 </div>
               </motion.div>
             </motion.div>
-          )}
+          }
         </AnimatePresence>
       )}
 

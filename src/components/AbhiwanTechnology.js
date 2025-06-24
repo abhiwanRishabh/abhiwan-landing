@@ -264,6 +264,7 @@ const AbhiwanTechnology = () => {
               className={`relative w-[320px] lg:w-[300px]  hover:shadow-[0px_0px_49px_0px_rgba(251,0,255,0.9)] rounded-3xl  h-80 bg-cover bg-center bg-no-repeat transition-all duration-300 hover:scale-[1.02] overflow-hidden group`}
               style={{
                 backgroundImage: `url(/webp/AbhiwanTechnology${idx + 1}.webp)`,
+                boxShadow: "0px 0px 29px 0px rgba(251,0,255,0.9)",
               }}
             >
               {/* Optional overlay effect on hover */}

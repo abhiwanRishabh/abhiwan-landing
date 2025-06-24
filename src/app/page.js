@@ -33,27 +33,6 @@ const MainSlider = dynamic(() => import("@/components/MainSlider"), {
   loading: () => <div></div>,
 });
 
-// const ConceptToReality = dynamic(
-//   () => import("@/components/ConceptToReality"),
-//   {
-//     ssr: false,
-//     loading: () => <div></div>,
-//   }
-// );
-
-// const TechShowcase = dynamic(() => import("@/components/TechShowcase"), {
-//   ssr: false,
-//   loading: () => <div></div>,
-// });
-
-// const DigitalSolutions = dynamic(
-//   () => import("@/components/DigitalSolutions"),
-//   {
-//     ssr: false,
-//     loading: () => <div></div>,
-//   }
-// );
-
 const OurClients = dynamic(() => import("@/components/OurClients"), {
   ssr: false,
   loading: () => <div></div>,
@@ -70,21 +49,8 @@ const TeamSection = dynamic(() => import("@/components/TeamSection"), {
 });
 
 // Reusable wrapper for lazy loading on viewport
-const LazyComponent = ({ children }) => {
-  const isVisible = useLazyLoadOnView();
-  return isVisible ? children : null;
-};
 
 export default function Home() {
-  //  useEffect(() => {
-  //   // Initialize smooth scrollbar
-  //   Aos.init({
-  //     disable: function () {
-  //       return true; // custom logic (always disables)
-  //     },
-  //   });
-  // }, []);
-
   return (
     <>
       <Hero />

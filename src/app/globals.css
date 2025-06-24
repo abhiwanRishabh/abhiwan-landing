@@ -201,3 +201,37 @@ box-shadow: 0px 0.81px 4.78px 0px rgba(114, 0, 255, 1);
 .main-heading {
   font-size: var(--step-4);
 }
+
+.shadow-card-1:hover {
+ box-shadow : 0px 4px 28px 5px #008FFF;
+}
+
+.shadow-card-2:hover {
+ box-shadow :  0px 4px 28px 5px #FF060640;
+}
+
+.shadow-card-3:hover {
+ box-shadow :  0px 4px 28px 5px #2A37A6BD;
+}
+
+
+.shadow-card-4:hover {
+ box-shadow :  0px 4px 28px 5px #2A37A6BD;
+}
+
+.shadow-card-5:hover {
+ box-shadow :  0px 4px 28px 5px #2A37A6BD;
+}
+
+.shadow-card-6:hover {
+ box-shadow :  0px 4px 28px 5px #2A37A6BD;
+}
+
+.shadow-card-7:hover {
+  box-shadow :  0px 4px 28px 5px #02E3F8;
+}
+
+.shadow-card-8:hover {
+  box-shadow :  0px 4px 28px 5px #000000CF;
+}
+
