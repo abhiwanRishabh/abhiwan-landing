@@ -1,0 +1,22 @@
+.sliderWrapper {
+  position: relative;
+}
+
+.arrowButton {
+  background: linear-gradient(135deg, #7f00ff, #e100ff);
+  border: none;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 1.8rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.arrowButton:hover {
+  transform: scale(1.1);
+}

@@ -1,0 +1,55 @@
+.animatedTextGradientText {
+  /* background: linear-gradient(90deg, #2c72ff, #d227fc, #2c72ff); */
+  background: radial-gradient(
+    160.29% 255.99% at 53.83% 50%,
+    #2c72ff 0%,
+    #d227fc 49.04%,
+    #2c72ff 100%
+  );
+  /* radial-gradient(160.29% 255.99% at 53.83% 50%, #2C72FF 0%, #D227FC 49.04%, #2C72FF 100%) */
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: text-scroll-gradient 3s linear infinite;
+}
+
+.marqueeWrapper {
+  width: 100%;
+  overflow: hidden;
+  /* position: relative; */
+  /* background-color: #f0f0f0; */
+  /* height: 50px; */
+  height: 100%;
+}
+
+.marquee {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll-left 10s linear infinite;
+  color: transparent;
+  padding-left: 100%;
+  font-family: "Voltaire", sans-serif;
+  font-weight: 400;
+  -webkit-text-stroke: 1px #99999979;
+  text-stroke: 1px #99999979;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes text-scroll-gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 200% 0%;
+  }
+}

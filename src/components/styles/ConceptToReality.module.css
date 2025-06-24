@@ -1,0 +1,24 @@
+.animatedUnderline {
+  background: linear-gradient(90deg, #2c72ff, #d227fc, #2c72ff);
+  background-size: 200% 100%;
+  animation: scroll-gradient 3s linear infinite;
+}
+
+/* Animated Gradient Text */
+.animatedGradientText {
+  background: linear-gradient(90deg, #2c72ff, #d227fc, #2c72ff);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: scroll-gradient 3s linear infinite;
+}
+
+@keyframes scroll-gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 200% 0%;
+  }
+}

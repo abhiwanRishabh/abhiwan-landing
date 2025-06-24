@@ -1,0 +1,18 @@
+.marqueeContent {
+  display: flex;
+  white-space: nowrap;
+  animation: marquee 10s linear infinite;
+  font-weight: 600;
+  color: white;
+  gap: 6rem;
+  align-items: center;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

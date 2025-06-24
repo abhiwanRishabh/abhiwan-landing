@@ -1,0 +1,40 @@
+/* MarqueeBanner.module.css */
+.marqueeWrapper {
+  overflow: hidden;
+  /* background: linear-gradient(to right, #000000, #4b0082, #000000); */
+  background: linear-gradient(90deg, #000000 0%, #666666 100%);
+
+  padding: 0.5rem 0;
+}
+
+.marqueeContent {
+  display: flex;
+  white-space: nowrap;
+  animation: marquee 5s linear infinite;
+  font-weight: 600;
+
+  color: white;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem, 0.5rem;
+}
+
+.star {
+  color: #facc15;
+  font-size: 1rem;
+}

@@ -1,0 +1,82 @@
+.marquee {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: 1rem;
+  
+}
+
+/* Speed variations */
+.slow {
+  --duration: 40s;
+}
+
+.normal {
+  --duration: 20s;
+}
+
+.fast {
+  --duration: 10s;
+}
+
+
+.marqueeContent {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 100%;
+  gap: 1rem;
+}
+
+/* Left direction (default) */
+
+
+/* Right direction */
+.marqueeContent {
+  animation: scrollRight 20s linear infinite;
+  will-change: transform;
+}
+
+
+/* Pause on hover */
+.pauseOnHover:hover .marqueeContent {
+  animation-play-state: paused;
+}
+
+/* Keyframe animations */
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes scrollRight {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .marquee {
+    gap: 0.5rem;
+  }
+
+  .marqueeContent {
+    gap: 0.5rem;
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .marqueeContent {
+    animation-duration: 80s;
+  }
+}

@@ -1,0 +1,293 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContainer {
+  width: 90%;
+  max-width: 1000px;
+  max-height: 90vh;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.modalContent {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  position: relative;
+  background-image : url('/formbg.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.leftSection {
+  flex: 1;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.textContent {
+  z-index: 2;
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+  
+}
+
+.subheading {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 400px;
+  margin-bottom: 2rem;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.socialIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.socialIcon:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.astronautContainer {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 300px;
+  z-index: 1;
+}
+
+.astronautImage {
+  width: 100%;
+  height: auto;
+}
+
+.rightSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.logoContainer {
+  /* position: absolute; */
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  padding-top: 2rem;
+}
+
+.logo {
+  max-width: 200px;
+  height: auto;
+}
+
+.formContainer {
+  background-color: #d946ef;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin: 3rem 1.5rem 1rem;
+  color: white;
+  background: linear-gradient(162.85deg, #D227FC 12.34%, #2C72FF 146.49%);
+
+}
+
+.formHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.formHeader span {
+    font-family: 10px;
+}
+
+.copyButton {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.emailDisplay {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.formRow {
+  display: flex;
+  gap: 1rem;
+}
+
+.formGroup {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.label {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.input,
+.textarea {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 0.5rem 0;
+  color: white;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-bottom: 2px solid white;
+}
+
+.textarea {
+  resize: none;
+  min-height: 80px;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+.submitButton {
+  background-color: #4c1d95;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1.5rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.3s;
+}
+
+.submitButton:hover {
+  background-color: #5b21b6;
+}
+
+.signupText {
+  text-align: center;
+  color: white;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.signupText h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0;
+}
+
+.startedText {
+  background: linear-gradient(90deg, #4f46e5 0%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.closeButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .modalContent {
+    flex-direction: column;
+    overflow-y: auto;
+  }
+
+  .leftSection {
+    padding: 1.5rem;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+
+  .astronautContainer {
+    position: relative;
+    left: 0;
+    transform: none;
+    margin: 1rem auto;
+  }
+
+  .formRow {
+    flex-direction: column;
+  }
+
+  .rightSection {
+    padding-bottom: 2rem;
+  }
+
+  .formContainer {
+    margin: 1rem;
+  }
+}

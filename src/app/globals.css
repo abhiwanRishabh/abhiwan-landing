@@ -1,0 +1,195 @@
+@import "tailwindcss";
+
+/* @font-face {
+  font-family: "Nasalization";
+  src: url("/content/nasalization/nasalizationrg.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+} */
+
+
+
+@font-face {
+  font-family: "helvetica";
+  src: url("/fonts/helvetica.woff2") format("woff2"),
+       url("/fonts/helvetica.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --step--2: clamp(0.75rem, 0.8vw, 0.875rem);   /* Small text, captions */
+  --step--1: clamp(0.875rem, 1vw, 1rem);        /* Body text */
+  --step-0: clamp(.8rem, 1.2vw, 1.25rem);        /* Lead/large body */
+  --step-1: clamp(1.25rem, 1.6vw, 1.5rem);      /* Subheading */
+  --step-2: clamp(1.5rem, 2vw, 2rem);           /* Small heading */
+  --step-3: clamp(1.6rem, 3vw, 2.5rem);           /* Medium heading */
+  --step-4: clamp(1.6rem, 4vw, 3rem);         /* Main heading */
+
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  /* background-gradient-animation */
+  --animate-first: moveVertical 30s ease infinite;
+  --animate-second: moveInCircle 20s reverse infinite;
+  --animate-third: moveInCircle 40s linear infinite;
+  --animate-fourth: moveHorizontal 40s ease infinite;
+  --animate-fifth: moveInCircle 20s ease infinite;
+  /* Infinite Moving Cards */
+  --animate-scroll: scroll var(--animation-duration, 40s)
+    var(--animation-direction, forwards) linear infinite;
+  --animate-dash: dash 1s linear infinite;
+
+  @keyframes moveHorizontal {
+    0% {
+      transform: translateX(-50%) translateY(-10%);
+    }
+    50% {
+      transform: translateX(50%) translateY(10%);
+    }
+    100% {
+      transform: translateX(-50%) translateY(-10%);
+    }
+  }
+
+  @keyframes moveInCircle {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes moveVertical {
+    0% {
+      transform: translateY(-50%);
+    }
+    50% {
+      transform: translateY(50%);
+    }
+    100% {
+      transform: translateY(-50%);
+    }
+  }
+
+  @keyframes scroll {
+    to {
+      transform: translate(calc(-50% - 0.5rem));
+    }
+  }
+}
+@keyframes dash {
+  0% {
+    background-position-y: 0px;
+  }
+  100% {
+    background-position-y: 20px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  /* background: var(--background); */
+  background: linear-gradient(
+    180deg,
+    #37003c -17.03%,
+    #000000 4.51%,
+    #2e0032 24.02%,
+    #2e002d 37.95%,
+    #2d0023 54.48%,
+    #1a002e 109.21%
+  );
+
+  color: var(--foreground);
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  /* scroll-behavior: smooth; */
+  overflow-x: hidden !important;
+}
+
+.lineHeightFullPercentage {
+  line-height: 100%;
+}
+
+
+#titleRef span {
+  display: inline-block;
+}
+
+#titleRef {
+  /* border: 1px solid white; */
+  overflow: hidden;
+}
+
+.slide-arrow {
+  background: linear-gradient(130.27deg, #842DFF 25.14%, #4F1B99 73.24%);
+  border-bottom: 0.81px solid;
+
+
+border-image-source: linear-gradient(139.24deg, #832DFE 24.23%, #CCA3FF 85.35%);
+
+
+box-shadow: 0px 0.81px 4.78px 0px rgba(114, 0, 255, 1);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#Headings {
+  font-size: var(--step-4);
+}
+
+#SubHeadings {
+  font-size: clamp(1rem, 2vw, 2rem);
+}
+
+.rfm-marquee, .rfm-marquee-container {
+  display: flex;
+  gap: 5rem !important;
+}
+
+@media (width <= 1440px) {
+   .animated-arrow{
+     transform: translateY(-65px);
+   }
+}
+
+.lead {
+  font-size: var(--step-0);
+  font-weight: 300 !important;
+  color: rgb(182, 184, 187);
+}
+
+.subheading {
+  font-size: var(--step-1);
+  font-weight: 400 !important;
+}
+
+.small-heading {
+  font-size: var(--step-2);
+}
+
+.medium-heading {
+  font-size: var(--step-3);
+}
+
+.main-heading {
+  font-size: var(--step-4);
+}

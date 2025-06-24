@@ -1,0 +1,11 @@
+.nav_button {
+  border: 1px solid #842dff;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav_button:hover {
+  background: #842dff;
+}
+
+.white_dot {
+}

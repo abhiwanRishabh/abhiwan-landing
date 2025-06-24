@@ -1,0 +1,37 @@
+.cardBackgroundAnimation {
+  background: linear-gradient(106.42deg, #2c72ff 2.78%, #d227fc 101.49%);
+
+  /* width: max-content; */
+  /* background: linear-gradient(106.42deg, #2c72ff, #d227fc, #2c72ff); */
+  background-size: 300% 300%;
+  animation: moveingGradient 6s ease infinite;
+}
+.animatedTextGradientText {
+  background: linear-gradient(90deg, #2c72ff, #d227fc, #2c72ff);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: text-scroll-gradient 3s linear infinite;
+}
+
+@keyframes moveingGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes text-scroll-gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 200% 0%;
+  }
+}

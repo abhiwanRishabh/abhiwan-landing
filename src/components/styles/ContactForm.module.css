@@ -1,0 +1,27 @@
+.formInput {
+  transition: border-color 0.3s ease;
+}
+
+.formInput:focus {
+  border-color: #ff00c3;
+}
+
+.copyEmailButton {
+  transition: color 0.3s ease;
+}
+
+.copyEmailButton:hover {
+  color: #ffffff;
+}
+
+.bottomText {
+  text-shadow: 0 0 8px rgba(255, 0, 195, 0.6);
+}
+
+.bgimg {
+  /* bg-[#1b0032] */
+  background: url("/formbg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-origin: border-box;
+}

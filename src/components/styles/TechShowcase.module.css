@@ -1,0 +1,245 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Voltaire&display=swap"); */
+.imgCard {
+  box-shadow: 0px 0px 250px 122px #4c2397;
+  scale: .85;
+}
+.sliderimgCard:hover {
+  box-shadow: 0px 0px 12px 1px #4c2397, 0px 0px 50px 20px #4c2397;
+}
+
+.marqueeWrapper {
+  width: 100%;
+  overflow: hidden;
+  /* position: relative; */
+  /* background-color: #f0f0f0; */
+  /* height: 50px; */
+  height: 100%;
+}
+
+
+
+.marquee {
+  display: inline-block;
+  white-space: nowrap;
+  /* animation: scroll-left 10s linear infinite; */
+  color: transparent;
+  padding-left: 100%;
+  font-family: "Voltaire", sans-serif;
+  font-weight: 400;
+  -webkit-text-stroke: 1px #ffffff;
+  text-stroke: 1px #999999;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.nonMarquee {
+  display: inline-block;
+  white-space: nowrap;
+  color: transparent;
+  font-family: "Voltaire";
+  font-weight: 400;
+  -webkit-text-stroke: 1px #999999;
+  text-stroke: 1px #999999;
+  /* text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.floatingImage {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* .floatingImage:hover {
+  animation-play-state: paused;
+} */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.floatingImage {
+  animation: float 3s ease-in-out infinite;
+}
+
+.mainCardContent{
+  /* border: 1px solid white; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+@media (width <= 1440px) {
+  .mainCardTopHeading {
+    left: 0 !important;
+    font-size: clamp(2.5rem, 5vw, 5rem);
+  }
+
+  .mainCardBottomHeading {
+    right: 0 !important;
+    font-size: clamp(2.5rem, 5vw, 5rem);
+  }
+
+   .animatedArrow {
+    transform: translateY(-65px);
+  }
+
+  .techShowcaseGrid {
+    gap: 0rem !important;
+    padding: 0 2rem;
+  }
+
+  .imgCard {
+    scale: .7;
+  }
+
+
+  .top_right_OutlineText, .mainCardTopHeading {
+     top: -5rem !important;
+     font-size: 46px;
+  }
+
+  .top_right_OutlineText {
+    right: -60rem !important;
+  }
+
+  .mainCardBottomHeading, .bottom_left_OutlineText {
+    bottom: -2rem !important;
+    font-size: 46px;
+  }
+}
+
+@media (width >= 1280px) {
+  .animatedArrow {
+    transform: translateY(-65px);
+  }
+}
+
+@media (width >= 1440px) {
+  .mainCardBottomHeading, .bottom_left_OutlineText {
+    bottom: -5rem !important;
+    font-size: 46px;
+  }
+}
+
+@media (width <= 1200px) {
+  .top_right_OutlineText {
+     left: 45rem !important;
+  }
+  .bottom_left_OutlineText {
+    right: 50rem !important;
+ }
+
+}
+
+@media (width <= 1024px) {
+  .top_right_OutlineText {
+     left: 40rem !important;
+  }
+  .bottom_left_OutlineText {
+    right: 44rem !important;
+ }
+}
+
+@media (width <= 768px) {
+  .top_right_OutlineText {
+     left: 30rem !important;
+  }
+  .bottom_left_OutlineText {
+    right: 34rem !important;
+ }
+
+  .bottom_left_OutlineText {
+    bottom: 5rem !important;
+    font-size: 46px;
+  }
+
+ /* .slidecard:nth-child(2) {
+   transform: translateY(150px) !important;
+ } */
+
+
+}
+
+@media (width <= 768px) {
+   .bottom_left_OutlineText {
+     right: 31rem !important;
+     top: 450px !important;
+  }
+
+  .mainCardBottomHeading {
+    bottom: -3rem !important;
+    font-size: 46px;
+  }
+
+  .top_right_OutlineText {
+      left: 31rem !important;
+  }
+
+
+}
+
+@media (width <= 600px) {
+  .frontImage  {
+     scale: 1.3 !important;
+  }
+
+  .mainCardTopHeading {
+    top: -5rem !important;
+    /* left: 50% !important; */
+  }
+
+  .mainCardBottomHeading {
+    bottom: -2rem !important;
+  }
+
+  .mainCardContent p {
+    font-size: 10px;
+    text-align: center;
+  }
+
+  .bottom_left_OutlineText {
+    top: 0 !important;
+  }
+
+  .mainCardBottomHeading {
+    bottom: -5rem !important;
+    font-size: 26px;
+  }
+
+  .mainCardTopHeading {
+    font-size: 26px;
+  }
+
+   .top_right_OutlineText {
+     left: 15rem !important;
+     top : -4rem
+   }
+
+ 
+
+  .bottom_left_OutlineText {
+    right: 17rem !important;
+    top: 25.5rem !important;
+    font-size: 26px;
+  }
+
+  .techShowcaseGrid {
+    padding:  0 0;
+  }
+}
+
+
