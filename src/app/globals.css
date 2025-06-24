@@ -108,8 +108,19 @@
 }
 
 body {
-  background: "#37003c";
-  background-image: linear-gradient(
+  position: relative;
+  overflow-x: hidden;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  color: var(--foreground);
+  background: none !important; /* remove direct gradient */
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
     180deg,
     #37003c -17.03%,
     #000000 4.51%,
@@ -118,12 +129,8 @@ body {
     #2d0023 54.48%,
     #1a002e 109.21%
   );
-
-  color: var(--foreground);
-  font-family: Poppins, Arial, Helvetica, sans-serif;
-  /* scroll-behavior: smooth; */
-  overflow-x: hidden !important;
-  /* overscroll-behavior: none; */
+  will-change: transform;
+  transform: translateZ(0); /* force GPU acceleration */
 }
 
 .lineHeightFullPercentage {
