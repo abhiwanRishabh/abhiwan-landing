@@ -17,6 +17,9 @@ import ContactForm from "@/components/ContactForm";
 import { useLazyLoadOnView } from "@/components/hooks/useLazyLoadOnView";
 import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
+import TechShowcase from "@/components/TechShowcase";
+import DigitalSolutions from "@/components/DigitalSolutions";
+import ConceptToReality from "@/components/ConceptToReality";
 // import ScrollTrigger from "gsap/dist/ScrollTrigger";
 // import { useGSAP } from "@gsap/react";
 // import  Aos from "aos";
@@ -30,26 +33,26 @@ const MainSlider = dynamic(() => import("@/components/MainSlider"), {
   loading: () => <div></div>,
 });
 
-const ConceptToReality = dynamic(
-  () => import("@/components/ConceptToReality"),
-  {
-    ssr: false,
-    loading: () => <div></div>,
-  }
-);
+// const ConceptToReality = dynamic(
+//   () => import("@/components/ConceptToReality"),
+//   {
+//     ssr: false,
+//     loading: () => <div></div>,
+//   }
+// );
 
-const TechShowcase = dynamic(() => import("@/components/TechShowcase"), {
-  ssr: false,
-  loading: () => <div></div>,
-});
+// const TechShowcase = dynamic(() => import("@/components/TechShowcase"), {
+//   ssr: false,
+//   loading: () => <div></div>,
+// });
 
-const DigitalSolutions = dynamic(
-  () => import("@/components/DigitalSolutions"),
-  {
-    ssr: false,
-    loading: () => <div></div>,
-  }
-);
+// const DigitalSolutions = dynamic(
+//   () => import("@/components/DigitalSolutions"),
+//   {
+//     ssr: false,
+//     loading: () => <div></div>,
+//   }
+// );
 
 const OurClients = dynamic(() => import("@/components/OurClients"), {
   ssr: false,
@@ -87,57 +90,19 @@ export default function Home() {
       <Hero />
       <ContactForm />
       <ClientsMarquee />
-
-      <LazyComponent>
-        {/* <Suspense fallback={<div>Loading Tech Showcase...</div>}> */}
-        <TechShowcase />
-        {/* </Suspense> */}
-      </LazyComponent>
-
-      <LazyComponent>
-        {/* <Suspense fallback={<div>Loading Digital Solutions...</div>}> */}
-        <DigitalSolutions />
-        {/* </Suspense> */}
-      </LazyComponent>
-
+      <TechShowcase />
+      <DigitalSolutions />
       <StatsSection />
-
-      <LazyComponent>
-        <Suspense fallback={null}>
-          <MainSlider />
-        </Suspense>
-      </LazyComponent>
-
-      <LazyComponent>
-        <Suspense fallback={null}>
-          <ConceptToReality />
-        </Suspense>
-      </LazyComponent>
-
+      <MainSlider />
+      <ConceptToReality />
       <ShowcaseCard />
       <MarqueeBanner />
       <AbhiwanTechnology />
-
-      <LazyComponent>
-        <Suspense fallback={null}>
-          <TeamSection />
-        </Suspense>
-      </LazyComponent>
-
-      <LazyComponent>
-        <Suspense fallback={null}>
-          <OurClients />
-        </Suspense>
-      </LazyComponent>
-
-      <LazyComponent>
-        <Suspense fallback={null}>
-          <Awards />
-        </Suspense>
-      </LazyComponent>
-
+      <TeamSection />
+      <OurClients />
+      <Awards />
       <ContactUs />
-      <Footer />
+      <Footer /> */
     </>
   );
 }

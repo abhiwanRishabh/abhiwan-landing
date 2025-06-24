@@ -13,7 +13,7 @@ const projects = [
     image: "/content/projects/kundlipro.png",
     secondImg: "/content/projects/kundliproH.png",
     description: "The Most Trusted & Insightful Astrology App",
-    boxShadow: "shadow-[0px_0px_100.8px_0px_#008FFF]",
+    // boxShadow: "shadow-[0px_0px_100.8px_0px_#008FFF]",
     appStore: true,
     googlePlay: true,
     dataAos: "fade",
@@ -24,7 +24,7 @@ const projects = [
     image: "/content/projects/cocacola.png",
     secondImg: "/content/projects/cocacolaH.png",
     description: "Wanna be a movie star? Partnered with Box Office!",
-    boxShadow: "shadow-[0px_4px_138.8px_71px_#FF060640]",
+    // boxShadow: "shadow-[0px_4px_138.8px_71px_#FF060640]",
     appStore: false,
     googlePlay: false,
     dataAos: "fade",
@@ -36,7 +36,7 @@ const projects = [
     secondImg: "/content/projects/BattleSagaH.png",
     description:
       "Battle Saga is a Clash of Clan inspired game on Binance Smart Chain",
-    boxShadow: "shadow-[0px_4px_131.7px_17px_#2A37A6BD]",
+    // boxShadow: "shadow-[0px_4px_131.7px_17px_#2A37A6BD]",
     // box-shadow: 0px 4px 131.7px 17px #2A37A6BD;
     appStore: true,
     googlePlay: true,
@@ -50,7 +50,7 @@ const projectsSecondRow = [
     image: "/content/projects/Voxel.png",
     secondImg: "/content/projects/voxelcasestudy.png",
     description: "voxel",
-    boxShadow: "shadow-[0px_4px_131.7px_17px_#2A37A6BD]",
+    // boxShadow: "shadow-[0px_4px_131.7px_17px_#2A37A6BD]",
     appStore: true,
     googlePlay: true,
     dataAos: "fade",
@@ -61,7 +61,7 @@ const projectsSecondRow = [
     image: "/content/projects/diamondHook.png",
     secondImg: "/content/projects/diamondHookcasestudy.png",
     description: "diamondHook",
-    boxShadow: "shadow-[0px_4px_131.7px_17px_#2A37A6BD]",
+    // boxShadow: "shadow-[0px_4px_131.7px_17px_#2A37A6BD]",
     appStore: false,
     googlePlay: false,
     dataAos: "fade",
@@ -73,7 +73,7 @@ const projectsSecondRow = [
     secondImg: "/content/projects/Marine.png",
     description:
       "Battle Saga is a Clash of Clan inspired game on Binance Smart Chain",
-    boxShadow: "shadow-[0px_0px_100.8px_0px_#008FFF]",
+    // boxShadow: "shadow-[0px_0px_100.8px_0px_#008FFF]",
     // box-shadow: 0px 4px 131.7px 17px #2A37A6BD;
     appStore: true,
     googlePlay: true,
@@ -87,7 +87,7 @@ const projectlanscape = [
     title: "penguin cart",
     image: "/content/projects/penguincart.png",
     secondImg: "/content/projects/penguinKartsH.png",
-    boxShadow: " shadow-[0px_4px_93.3px_0px_#02E3F8]",
+    // boxShadow: " shadow-[0px_4px_93.3px_0px_#02E3F8]",
     dataAos: "fade",
   },
   {
@@ -95,7 +95,7 @@ const projectlanscape = [
     title: "ohzi",
     image: "/content/projects/ohzi.png",
     secondImg: "/content/projects/ohziH.png",
-    boxShadow: "shadow-[0px_4px_126.5px_0px_#000000CF]",
+    // boxShadow: "shadow-[0px_4px_126.5px_0px_#000000CF]",
     dataAos: "fade",
   },
 ];
@@ -160,7 +160,7 @@ const ConceptToReality = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 max-w-7xl mx-auto gap-6 px-4 py-12">
         {projects &&
           projects.map((project, index) => (
-            <div key={project.title} data-aos={project.dataAos}>
+            <div key={project.title}>
               <div className=" rounded-2xl  w-full shadow-lg transition-transform hover:scale-105 duration-300">
                 {/* <button
                 onClick={() => handleOpen(project.image)}
@@ -169,7 +169,7 @@ const ConceptToReality = () => {
                 View Image
               </button> */}
                 <div
-                  className={`${project.boxShadow}  h-[34rem] overflow-hidden rounded-2xl cursor-pointer`}
+                  className={`${project?.boxShadow ?? ''}  h-[34rem] overflow-hidden rounded-2xl cursor-pointer`}
                   onClick={() => handleOpen(project.secondImg)}
                 >
                   <Image
@@ -216,7 +216,7 @@ const ConceptToReality = () => {
                 View Image
               </button> */}
               <div
-                className={`${project.boxShadow}  h-[34rem] overflow-hidden rounded-2xl cursor-pointer`}
+                className={`${project.boxShadow ?? ''}  h-[34rem] overflow-hidden rounded-2xl cursor-pointer`}
                 onClick={() => handleOpen(project.secondImg)}
               >
                 <Image

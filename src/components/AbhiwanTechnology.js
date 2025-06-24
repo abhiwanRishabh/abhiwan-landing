@@ -261,7 +261,7 @@ const AbhiwanTechnology = () => {
         {secondCardData.map((item, idx) => (
           <div key={item.id} data-aos="fade-up" data-aos-delay={`${idx + 2}00`}>
             <div
-              className={`relative w-[320px] lg:w-[300px] shadow-[0px_0px_79px_0px_#FB00FFBF] hover:shadow-[0px_0px_49px_0px_rgba(251,0,255,0.9)] rounded-3xl  h-80 bg-cover bg-center bg-no-repeat transition-all duration-300 hover:scale-[1.02] overflow-hidden group`}
+              className={`relative w-[320px] lg:w-[300px]  hover:shadow-[0px_0px_49px_0px_rgba(251,0,255,0.9)] rounded-3xl  h-80 bg-cover bg-center bg-no-repeat transition-all duration-300 hover:scale-[1.02] overflow-hidden group`}
               style={{
                 backgroundImage: `url(/webp/AbhiwanTechnology${idx + 1}.webp)`,
               }}

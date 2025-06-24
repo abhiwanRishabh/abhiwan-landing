@@ -5,68 +5,43 @@ import React from "react";
 import AOS from "aos";
 import { gravesend, nasalization, helvetica } from "@/app/font/Fonts";
 import StatsComp from "./subComp/StateCounter";
-export const StatsSection = () => {
-  useEffect(() => {
-    // AOS.init({
-    //   duration: 1000,
-    //   once: true,
-    // });
-  }, []);
+import { useInView } from "framer-motion";
+import { v4 as uuidv4 } from "uuid";
 
-  const statsData = [
-    {
-      id: useId(),
-      number: "6 +",
-      text1: "Years of",
-      text2: "Innovation",
-    },
-    {
-      id: useId(),
-      number: "50%",
-      text1: "Repeated",
-      text2: "Clients",
-    },
-    {
-      id: useId(),
-      number: "100+",
-      text1: "Tech",
-      text2: "Experts",
-    },
-    {
-      id: useId(),
-      number: "600+",
-      text1: "Projects",
-      text2: "Delivered",
-    },
-  ];
+const statsData = [
+  {
+    id: uuidv4(),
+    number: "6 +",
+    text1: "Years of",
+    text2: "Innovation",
+  },
+  {
+    id: uuidv4(),
+    number: "50%",
+    text1: "Repeated",
+    text2: "Clients",
+  },
+  {
+    id: uuidv4(),
+    number: "100+",
+    text1: "Tech",
+    text2: "Experts",
+  },
+  {
+    id: uuidv4(),
+    number: "600+",
+    text1: "Projects",
+    text2: "Delivered",
+  },
+];
+
+export const StatsSection = () => {
   const sectionRef = useRef(null);
 
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    if (isVisible === false) {
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          console.log("entry", entry);
-          setIsVisible(entry.isIntersecting);
-        },
-        {
-          threshold: 0.2, // Adjust as needed
-        }
-      );
-
-      if (sectionRef.current) {
-        observer.observe(sectionRef.current);
-      }
-
-      return () => {
-        if (sectionRef.current) {
-          observer.unobserve(sectionRef.current);
-        }
-      };
-    }
-  }, [isVisible]);
-  // console.log("statsData", statsData);
+  const isInView = useInView(sectionRef, {
+    once: true, // animate only once
+    amount: 0.5, // 30% visible to trigger
+  });
 
   return (
     <>
@@ -75,7 +50,7 @@ export const StatsSection = () => {
         className="text-center p-6 md:pt-20 md:pb-15 px-6  mx-auto"
         id="aboutus"
       >
-        <div data-aos="fade-up">
+        <div>
           <h1
             className={`${gravesend.className} font-bold text-white leading-snug `}
             // lineHeightFullPercentage
@@ -97,6 +72,7 @@ export const StatsSection = () => {
           </h1>{" "}
         </div>
       </div>
+
       {/* for mobile 🔽 */}
       <div className="" data-aos="fade-up">
         <div className="flex gap-3 px-12 md:hidden ">
@@ -106,7 +82,7 @@ export const StatsSection = () => {
               width={400}
               height={400}
               alt="Blockchain Web3.0"
-              className="my-auto rounded-3xl w-full h-[320px] aspect-4/5 object-cover shadow-[0px_4.8px_231.84px_85.2px_#FFFFFF40]"
+              className="my-auto rounded-3xl w-full h-[320px] aspect-4/5 object-cover"
               // aspect-2/3
             />
           </div>
@@ -183,7 +159,7 @@ export const StatsSection = () => {
                   ref={sectionRef}
                   className="bg-[#230029]  grid grid-cols-1 md:grid-cols-4 gap-6 py-8 px-2 rounded-[4vw]  "
                 >
-                  {isVisible &&
+                  {isInView &&
                     statsData.map((item, idx) => {
                       return (
                         <>
@@ -261,7 +237,7 @@ export const StatsSection = () => {
                 width={400}
                 height={400}
                 alt="Blockchain Web3.0"
-                className="rounded-3xl w-full  h-[36.5rem] object-cover shadow-[0px_4.8px_231.84px_85.2px_#FFFFFF40]"
+                className="rounded-3xl w-full  h-[36.5rem] object-cover"
               />
             </div>
           </div>

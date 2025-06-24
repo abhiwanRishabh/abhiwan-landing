@@ -2,7 +2,7 @@
 import AOS from "aos";
 import Image from "next/image";
 import React, { useEffect } from "react";
-import "aos/dist/aos.css";
+
 import { gravesend, helvetica } from "@/app/font/Fonts";
 
 const teamMembers = [
