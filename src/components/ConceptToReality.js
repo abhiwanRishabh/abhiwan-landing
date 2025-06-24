@@ -94,7 +94,7 @@ const projectlanscape = [
     secondImg: "/content/projects/penguinKartsH.png",
     // boxShadow: " shadow-[0px_4px_93.3px_0px_#02E3F8]",
     dataAos: "fade",
-     class: "shadow-card-7"
+    class: "shadow-card-7",
   },
   {
     id: "b74983c9-fa26-4352-a91f-9ab5a4fe39df",
@@ -103,7 +103,7 @@ const projectlanscape = [
     secondImg: "/content/projects/ohziH.png",
     // boxShadow: "shadow-[0px_4px_126.5px_0px_#000000CF]",
     dataAos: "fade",
-     class: "shadow-card-8"
+    class: "shadow-card-8",
   },
 ];
 

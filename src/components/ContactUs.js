@@ -5,6 +5,7 @@ import AOS from "aos";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import toast, { Toaster } from "react-hot-toast";
+import { useInView } from "framer-motion";
 const ContactUs = () => {
   const container = useRef();
   const [result, setResult] = useState(null);
@@ -18,7 +19,6 @@ const ContactUs = () => {
   });
 
   const robotImage = useRef();
-  const formContainerRef = useRef();
 
   const handleChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -94,12 +94,10 @@ const ContactUs = () => {
     }
   };
 
-  useEffect(() => {
-    // AOS.init({
-    //   duration: 1000,
-    //   once: true,
-    // });
-  }, []);
+  const inView = useInView(container, {
+    once: false, // animate only once
+    amount: 0.5, // 50% visible to trigger
+  });
 
   return (
     <>
@@ -107,6 +105,7 @@ const ContactUs = () => {
         className="relative w-full bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center  py-30"
         style={{ backgroundImage: 'url("/content/abhiwan1.jpg")' }}
         id="contactus"
+        ref={container}
       >
         <div data-aos="fade-down">
           <div className="mb-8">
@@ -122,12 +121,14 @@ const ContactUs = () => {
             </button>
           </div>
         </div>
-        <div
-          ref={container}
-          className="w-[90%] md:w-[80%] lg:w-[70%] bg-black/10 backdrop-blur-md border border-white/20 rounded-2xl overflow-hidden flex flex-col lg:flex-row shadow-2xl"
-        >
+        <div className="w-[90%] md:w-[80%] lg:w-[70%] bg-black/10 backdrop-blur-md border border-white/20 rounded-2xl overflow-hidden flex flex-col lg:flex-row shadow-2xl">
           {/* Left Side - Avatar */}
-          <div className="w-full lg:w-1/2" ref={robotImage}>
+          <div
+            className={`w-full lg:w-1/2 transition-transform ${
+              inView ? "robot-image-animate" : "robot-image-none-animate"
+            }`}
+            ref={robotImage}
+          >
             <Image
               src="/content/cyberavatar.png"
               width={350}
@@ -139,8 +140,9 @@ const ContactUs = () => {
 
           {/* Right Side - Form */}
           <div
-            className="w-full lg:w-1/2 p-8 text-white"
-            ref={formContainerRef}
+            className={`w-full lg:w-1/2 p-8 text-white ${
+              inView ? "form-container-1" : "form-container-0"
+            }`}
           >
             <h2 className="text-2xl md:text-3xl font-bold mb-2">
               Let’s Connect & Create Magic!
