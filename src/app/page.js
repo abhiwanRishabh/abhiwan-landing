@@ -17,12 +17,12 @@ import ContactForm from "@/components/ContactForm";
 import { useLazyLoadOnView } from "@/components/hooks/useLazyLoadOnView";
 import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import { useGSAP } from "@gsap/react";
+// import ScrollTrigger from "gsap/dist/ScrollTrigger";
+// import { useGSAP } from "@gsap/react";
 // import  Aos from "aos";
 // Register plugins inside a client effect later for optimization
 
-gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollToPlugin);
+gsap.registerPlugin(ScrollToPlugin);
 
 // Lazy components
 const MainSlider = dynamic(() => import("@/components/MainSlider"), {

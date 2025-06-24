@@ -23,49 +23,49 @@ const ContactUs = () => {
   const handleChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
-  useGSAP(
-    () => {
-      gsap.fromTo(
-        robotImage.current,
-        {
-          x: 250,
-          autoAlpha: 0.5,
-        },
-        {
-          x: 0,
-          autoAlpha: 1,
-          duration: 1.5,
-          scrollTrigger: {
-            trigger: robotImage.current,
-            start: "top 80%",
-            // end: "top -50%",
-            // markers: true,
-            toggleActions: "play reverse play reverse",
-          },
-        }
-      );
+  // useGSAP(
+  //   () => {
+  //     gsap.fromTo(
+  //       robotImage.current,
+  //       {
+  //         x: 250,
+  //         autoAlpha: 0.5,
+  //       },
+  //       {
+  //         x: 0,
+  //         autoAlpha: 1,
+  //         duration: 1.5,
+  //         scrollTrigger: {
+  //           trigger: robotImage.current,
+  //           start: "top 80%",
+  //           // end: "top -50%",
+  //           // markers: true,
+  //           toggleActions: "play reverse play reverse",
+  //         },
+  //       }
+  //     );
 
-      gsap.fromTo(
-        formContainerRef.current,
-        {
-          autoAlpha: 0,
-        },
-        {
-          autoAlpha: 1,
-          duration: 1.5,
-          delay: 0.5,
-          scrollTrigger: {
-            trigger: formContainerRef.current,
-            start: "top 80%",
-            // end: "top -50%",
-            // markers: true,
-            toggleActions: "play reverse play reverse",
-          },
-        }
-      );
-    },
-    { scope: container }
-  );
+  //     gsap.fromTo(
+  //       formContainerRef.current,
+  //       {
+  //         autoAlpha: 0,
+  //       },
+  //       {
+  //         autoAlpha: 1,
+  //         duration: 1.5,
+  //         delay: 0.5,
+  //         scrollTrigger: {
+  //           trigger: formContainerRef.current,
+  //           start: "top 80%",
+  //           // end: "top -50%",
+  //           // markers: true,
+  //           toggleActions: "play reverse play reverse",
+  //         },
+  //       }
+  //     );
+  //   },
+  //   { scope: container }
+  // );
 
   const onSubmit = async (event) => {
     event.preventDefault();
