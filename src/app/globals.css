@@ -108,8 +108,8 @@
 }
 
 body {
-  position: relative;
-  overflow-x: hidden;
+  /* position: relative; */
+  overflow-x: hidden !important;
   font-family: Poppins, Arial, Helvetica, sans-serif;
   color: var(--foreground);
   background: none !important; /* remove direct gradient */

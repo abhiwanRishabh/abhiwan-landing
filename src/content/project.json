@@ -1,0 +1,1005 @@
+{
+  "Gaming": {
+    "2D Games": [
+      {
+        "Project Name": "Trivia",
+        "Short Description": "The Trivial Game is a Unity-based puzzle adventure featuring multiplayer modes, diverse levels, daily rewards, customizable cars, and thrilling robot transformations. Available on Android.",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      },
+      {
+        "Project Name": "Tetris",
+        "Short Description": "A timeless 2D block puzzle game where players strategically stack falling shapes to clear lines and chase high scores in a race.",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      },
+      {
+        "Project Name": "Tambola",
+        "Short Description": "Tambola is a classic real money 2D number-based game where players match the called numbers, aiming to complete winning patterns and claim exciting rewards.",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      },
+      {
+        "Project Name": "Song Pot",
+        "Short Description": "It is a puzzle game which contains the tournament mode which allow users to play the game after paying the required money",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      },
+      {
+        "Project Name": "Seeya",
+        "Short Description": "",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      },
+      {
+        "Project Name": "Royal Chees",
+        "Short Description": "An exciting 2D web chess game with AI challenges, multiplayer modes, leaderboards, and play-to-earn features.",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      },
+      {
+        "Project Name": "Rain Game",
+        "Short Description": "Rain Game is a fast-paced 2D word game where players must quickly select the correct words falling from a rain of letters. Accurate guesses help players win exciting rewards.",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      },
+      {
+        "Project Name": "Quiz Game",
+        "Short Description": "A fast-paced Unity quiz game with sound guessing, Q&A rounds, block puzzles, and a seamless sign-in system.",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      },
+      {
+        "Project Name": "Pyago Game",
+        "Short Description": "A high-graphic, action-packed WebGL game featuring power-ups, addictive levels, and three thrilling modes: Zap, Blitz, and Maze.",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      },
+      {
+        "Project Name": "Puzzle Game",
+        "Short Description": "A puzzle-based Unity game featuring jigsaw challenges, trivia questions, selfie captures, and dual-language support (English & Arabic).",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      },
+      {
+        "Project Name": "Quickee",
+        "Short Description": "Quickee is a thrilling 2D word challenge with three game modes: Practice, Multiplayer, and Tournament. Players must guess the correct words as quickly as possible to win.",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      },
+      {
+        "Project Name": "Ludo Casino",
+        "Short Description": "A multiplayer Ludo game with bot play, live chat, diamond-powered dice throws, and detailed analytics.",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      },
+      {
+        "Project Name": "Ice Crush",
+        "Short Description": "A fun 2D casual game where players train, compete live, and win real-time cash prizes on the leaderboard.",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      },
+      {
+        "Project Name": "Howling Castle",
+        "Short Description": "Howling Castle is a Mario-style 2D platformer where players navigate challenging levels, overcome obstacles, and race to complete each stage.",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      },
+      {
+        "Project Name": "GameHouse Game",
+        "Short Description": "GameHouse is a 2D hidden object game where players search for specific items within detailed environments. With Easy, Medium, and Hard modes, each level tests your observation skills against the clock.",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      },
+      {
+        "Project Name": "Flappy Bird",
+        "Short Description": "This 2D Flappy Bird-style game challenges players to navigate a bird through endless obstacles with perfect timing and precision to achieve the highest score.",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      },
+      {
+        "Project Name": "Dart Game",
+        "Short Description": "The Dart Game is a fun and engaging 2D skill game where players aim and throw darts at moving targets to score.",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      },
+      {
+        "Project Name": "Crypto Runner",
+        "Short Description": "Crypto Runner is a mission-based 2D endless runner where players must complete specific targets and challenges to progress, Players can also choose their character.",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      },
+      {
+        "Project Name": "Crazy Panda",
+        "Short Description": "A thrilling 2D runner with play-to-earn mechanics, Metamask integration, dynamic day-night themes, and action-packed enemy battles.",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      },
+      {
+        "Project Name": "Barrel- Blockchain Game",
+        "Short Description": "Barrel Blast is a blockchain-based game where users connect their wallets, place bids, and play to win rewards. After gameplay, users earn a certain amount based on the barrels they successfully blast.",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      }
+    ],
+    "3D Games": [
+      {
+        "Project Name": "8 Pool- Blockchain",
+        "Short Description": "An NFT-powered 8 Ball Pool game where players can challenge Facebook friends, join global tournaments, and redeem in-game rewards with customizable cues and tables.",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      },
+      {
+        "Project Name": "Arcade Game",
+        "Short Description": "A 3D Unity fighting game with avatar and weapon selection, offering Practice, NFT, and Cash modes in an exciting third-person shooter arena.",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      },
+      {
+        "Project Name": "Arsenal",
+        "Short Description": "A multiplayer FPS game featuring dynamic maps, free play, 20-kill targets, NFT integration, wallet connection, rankings, and tournament modes.",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      },
+      {
+        "Project Name": "Bowling",
+        "Short Description": "A global 1v1 bowling game with intuitive controls, tournaments, stunning alleys, mini-games, leaderboards, and over 60 collectible balls.",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      },
+      {
+        "Project Name": "Bull Pen",
+        "Short Description": "Bull Pen is a competitive blockchain-based dice game where players connect their wallets and face off against opponents whoever rolls the higher number wins.",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      },
+      {
+        "Project Name": "Casino Metaverse",
+        "Short Description": "Casino Metaverse is an immersive gaming experience where players connect their wallets and play a variety of casino games within a Metaverse environment.",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      },
+      {
+        "Project Name": "Combate Carnage",
+        "Short Description": "Combat Carnage is an interactive P2P battle game where players compete head-to-head in fast-paced, action-packed matches.",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      },
+      {
+        "Project Name": "Endless Running Game",
+        "Short Description": "Endless Running Game is a thrilling 3D runner where players race through challenging obstacle courses, aiming to go as far as possible.",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      },
+      {
+        "Project Name": "Galaxy Shooter",
+        "Short Description": "Galaxy Shooter is a space battle game where players must destroy enemy spaceships and defend the galaxy from dangerous invaders.",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      },
+      {
+        "Project Name": "Homa",
+        "Short Description": "Homa is a zombie survival game where players defeat waves of zombies to earn coins, which can be used to level up and unlock powerful upgrades.",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      },
+      {
+        "Project Name": "Metabet Casino",
+        "Short Description": "Metabet Casino offers a Metaverse casino experience where players can connect their wallets, explore virtual spaces, and play a range of casino games in an interactive 3D world.",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      },
+      {
+        "Project Name": "Meteroxracing game",
+        "Short Description": "An NFT-based horse racing game with tournaments, Metamask integration, customizable horses, and a wager system to amplify the thrill.",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      },
+      {
+        "Project Name": "Revolution Chess",
+        "Short Description": "A unique diagonal chess experience with AI, PvP, difficulty levels, daily rewards, customizations, and a competitive leaderboard system.",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      },
+      {
+        "Project Name": "Royal Game",
+        "Short Description": "Royal Game is a creature-capturing adventure where players select unique characters with special powers and set out to capture a variety of mystical creatures.",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      },
+      {
+        "Project Name": "Super cat Running",
+        "Short Description": "Super Cat is a fast-paced 3D running game where players control a cat, racing through exciting environments while dodging obstacles along the way.",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      },
+      {
+        "Project Name": "Wager Warrior",
+        "Short Description": "Wager Warrior is a pool game where players can customize their tables with different designs, compete in skill-based matches, and place wagers in a competitive environment.",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      }
+    ],
+    "Card Games": [
+      {
+        "Project Name": "Betfi",
+        "Short Description": "Players can place bets and enjoy a variety of games such as Derby, Blackjack, Teen Patti, and more.",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      },
+      {
+        "Project Name": "Crystal",
+        "Short Description": "Players battle in real-time using a strategic pool of 31 energy crystals to summon allies and launch powerful attacks against their opponents.",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      },
+      {
+        "Project Name": "Safari Rummy",
+        "Short Description": "",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      },
+      {
+        "Project Name": "Teen Patti",
+        "Short Description": "A high-quality 3D Teen Patti game built with Unity and Laravel, featuring real money play, in-game chat, and full admin control",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      }
+    ],
+    "HTML Games": [
+      {
+        "Project Name": "GoDot",
+        "Short Description": "Godot is a shooting-based game where players control a character on a mission to shoot down bats and complete challenging levels.",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      },
+      {
+        "Project Name": "Risk Coin",
+        "Short Description": "Risk Coin Flip is a free practice mode coin toss game with a 50/50 chance on heads or tails, where users can connect their wallets. Available on Mac and mobile.",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      },
+      {
+        "Project Name": "Vulcane Figther",
+        "Short Description": "",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      }
+    ],
+    "Isometric Games": [
+      {
+        "Project Name": "Battle Saga",
+        "Short Description": "Battle Saga is a Clash of Clans-inspired builder game with blockchain integration, metaverse features, PvP battles, clans, multiplayer, and isometric maps with diverse themes.",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      },
+      {
+        "Project Name": "Isometric Game",
+        "Short Description": "An educational isometric browser game featuring puzzles, inventory management, and free player movement in all directions.",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      },
+      {
+        "Project Name": "Thums-Up",
+        "Short Description": "A fun promotional game where players collect Biryani and Thums-Up combos, specially designed for food and beverage lovers.",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      }
+    ],
+    "Racing Games": [
+      {
+        "Project Name": "Penguin Kart",
+        "Short Description": "Penguin Kart is a 3D kart racing game with blockchain and NFT integration, featuring character, kart, and dress selection, along with a secure login system that locks wallet access post-login.",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      },
+      {
+        "Project Name": "Happy Racing",
+        "Short Description": "Hyper Racer is a 3D racing game featuring diverse environments and a variety of car models for an exciting racing experience.",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      },
+      {
+        "Project Name": "HyperRacer Unreal",
+        "Short Description": "Hyper Racer is the 3D Game that have different environment and different car models as well",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      },
+      {
+        "Project Name": "Mystic Motors",
+        "Short Description": "Mystic Motors is a unique racing game where players race using spells and magic in a single-map, single-car setup for a fresh twist on classic racing.",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      },
+      {
+        "Project Name": "Racing Games",
+        "Short Description": "Racing Game is a thrilling 3D racer where players can collect power-ups to boost their speed and outpace their opponents.",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      },
+      {
+        "Project Name": "Raze Racing",
+        "Short Description": "Raze Racing is a fast-paced Unity car racing game featuring basic gameplay, three unique maps, and six customizable cars.",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      }
+    ],
+    "RPG Games": [
+      {
+        "Project Name": "AOA",
+        "Short Description": "The Adventure of As Gard is an NFT-powered RPG fighting game with infinite runs, Metamask integration, avatar selection, boss battles, and play-to-earn rewards.",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      },
+      {
+        "Project Name": "Intrant Feris",
+        "Short Description": "Inttrant Feris is a mission-based adventure game where players must complete tasks by following in-game clues and guided objectives.",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      }
+    ]
+  },
+  "Blockchain": [
+    {
+      "Project Name": "Defi - Swapping , Staking,  Farming, and Pooling",
+      "Short Description": "A DeFi platform supporting Matic and BSC networks with key features like staking, farming, pooling, and seamless token swapping.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "NFT Marketplace - Fabwelt",
+      "Short Description": "Fabwelt is a feature-rich NFT marketplace supporting BSC and Polygon networks, offering minting, auctions, swapping, ERC721 & ERC1155 collections, user profiles, and full admin management.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "NFT Marketplace - Stripto",
+      "Short Description": "Stripto is a dynamic NFT marketplace offering stripping price mechanics, NFT minting, buying/selling, multi-network support (BSC & ETH), user profiles, KYC, and full admin control.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    }
+  ],
+  "Educational Simulator": [
+    {
+      "Project Name": "DC Motor",
+      "Short Description": "An educational Unity experience where users can interact with a DC motor, view internal structures, and learn detailed information about each component.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "EDU-VR",
+      "Short Description": "Edu-VR is an educational platform that provides real-life experiences for children, offering immersive learning across various environments.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "Mitochondira_Elearning",
+      "Short Description": "MitochondriaElearning VR, an immersive educational experience that allows users to explore the structure and functions of mitochondria in an interactive 3D environment.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "VR Animal cell",
+      "Short Description": "A virtual educational experience that allows users to explore the animal cell in 3D with transparent views, detailed part descriptions, and proper labeling.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "VR Fish",
+      "Short Description": "A VR educational experience that offers an interactive exploration of fish anatomy with detailed descriptions, transparent views, labels, and zoom functionality.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "VR Solar",
+      "Short Description": "An immersive VR educational experience where users can explore the solar system with detailed labels, transparent inside-out views, and informative content for each planet.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    }
+  ],
+  "ARVR Demo": [
+    {
+      "Project Name": "Abu-Dhabi Police",
+      "Short Description": "This is a VR training program where the client aims to provide training to their staff in a virtual environment. The training focuses on how to react in the event of a terrorist attack or emergency situation, preparing police staff for real-life scenarios.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "AR Chick",
+      "Short Description": "AR Chick is an interactive Augmented Reality experience showcasing the life stages of a chick, egg development, and lifestyle insights, with plain detection and multilingual support.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "Archviz VR Video",
+      "Short Description": "Archviz is a real-time interior customization platform that allows users to personalize and visualize interior spaces with instant updates.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "Classroom VR",
+      "Short Description": "Classroom VR offers a fully interactive 3D classroom environment where students can engage with study materials and enjoy immersive, real-time learning.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "Head AR",
+      "Short Description": "Head AR is a fun filter experience that lets users visualize and wear a virtual crown in real-time using augmented reality.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "Hololens with User",
+      "Short Description": "This interactive HoloLens project allows users to engage with lifelike 3D objects in real-time, enhancing spatial interaction and immersion.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "INRL AR",
+      "Short Description": "INRL AR is an augmented reality project that displays 3D objects in the real world, creating an immersive and interactive experience.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "Levitate Energy",
+      "Short Description": "Levitate is a meditation app designed to offer a serene experience through a variety of natural environments, creating the perfect ambiance for peace and mindfulness.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "Marhaba",
+      "Short Description": "It is an AR application with share the graphical representation of the neuron and models model it is interactive and also have a short MCQ quiz for the sub topic of the brain like neuron",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "Vehicle Simulator",
+      "Short Description": "A Virtual Reality driving simulator using Oculus Rift and Logitech steering controls, offering immersive, risk-free practice of driving basics, rules, and real-world scenarios",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "VR Etislate Metaverse",
+      "Short Description": "A VR metaverse platform offering voice chat, host assistance, Etisalat services, and digital product purchasing in a connected virtual world.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "VRArctitectural",
+      "Short Description": "VR Architecture allows users to customize home designs in an immersive virtual environment, tailoring every detail to their personal preferences.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "VR Villa",
+      "Short Description": "This is a metaverse real estate app where users can explore villas and customize floors, wall colors, gardens, and kitchen cabinets across PC, VR, and Android platforms.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    }
+  ],
+  "Industry App Demo": [
+    {
+      "Project Name": "Art Gallery",
+      "Short Description": "Art Gallery is a virtual exhibition where users can explore diverse artworks with interactive camera views, item displays, and presentation features.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "First Grade Education",
+      "Short Description": "First Grade Education App offers 30-40 fun, interactive activities across multiple subjects, designed to make early learning enjoyable.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "Helmet Configrator",
+      "Short Description": "Helmet Configurator is a simulation project where users can customize helmets in real-time based on their personal preferences and style choices",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "Holobox Immersive",
+      "Short Description": "Hoblox Project offers an interactive 3D experience where users can engage with models and participate in real-time virtual meetings.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "Interactive Wall",
+      "Short Description": "Interactive Wall is an engaging experience where users collect virtual Coke bottle caps using hand gestures to assemble a complete Coke bottle.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "Kitchen Game-Pasta",
+      "Short Description": "Kitchen Game Pasta is a fast-paced pasta-making game with timed sub-tasks, real-time feedback on missed steps, and detailed content in graphic mode.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "Kitchen Simulation",
+      "Short Description": "Kitchen Simulation is an interactive cooking experience that guides users step-by-step through recipes, highlighting missed steps at the end.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "Online property simulator",
+      "Short Description": "Online Property Show App offers a virtual real estate exhibition with 3D maps, chat, social media integration, booth ratings, and direct calling features.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "Vehicle Simulator",
+      "Short Description": "Vehicle Simulator showcases various vehicle capacities and functionalities, allowing users to explore options based on specific work requirements and preferences.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "VR Meeting Room",
+      "Short Description": "VR Meeting Room is an immersive 3D exhibition space featuring voice and chat functionality, collaborative tools, interactive whiteboards, avatars, and unlimited rooms for real-time virtual meetings.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "VR Store App",
+      "Short Description": "VR Store App is a virtual e-commerce experience with 3D product models, shopping cart functionality, tutorials, product details, and sign-in features.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    }
+  ],
+  "Metaverse": [
+    {
+      "Project Name": "Abu-Dhabi Police",
+      "Short Description": "The VR Training Program provides police staff with virtual emergency response training, simulating terrorist attacks and critical situations to enhance real-world preparedness.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "Agora Metaverse",
+      "Short Description": "Agora Metaverse is a blockchain-powered multiplayer store app with customizable avatars, interactive rooms, 1-on-1 calling, public/private chat, and VR conference spaces with whiteboards and web browsers.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "ClassRoom Desktop",
+      "Short Description": "Classroom Metaverse offers an immersive virtual learning experience where students can attend classes, interact with professors, and collaborate with peers in a 3D environment.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "DP World",
+      "Short Description": "DP World is a virtual mall replica that provides users with a realistic shopping experience in a fully immersive digital environment.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "Etisalat",
+      "Short Description": "Etisalat is a metaverse store app offering virtual shopping, voice chat, queue token management, avatar customization, and differentiated user and host experiences.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "Gaming Metaverse",
+      "Short Description": "Gaming Metaverse is a blockchain-enabled P2E mobile game with immersive metaverse environments and real-time chat functionality.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "HCT Metaverse",
+      "Short Description": "HCT is a virtual mall metaverse where users can explore stores, interact with the environment.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "Heiniken_Metaverse",
+      "Short Description": "This Project allows users to design and personalize their avatars in the metaverse, offering a wide range of options for appearance, outfits, and accessories to match their preferences.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "Iskon Metaverse",
+      "Short Description": "ISKCON Temple Virtual Tour is a multi-platform VR experience offering darshan, parikrama, NFT gifting, live-streamed events, avatar customization, and land purchasing within a spiritual metaverse.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "Jupiter Metaverse",
+      "Short Description": "Jupiter Metaverse is a blockchain-based multiplayer experience featuring virtual stores, a VR classroom, product interaction pop-ups, public chat, and group voice communication.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    }
+  ],
+  "Web Development": {
+    "Gaming Website": [
+      {
+        "Project Name": "Avtar SDK",
+        "Short Description": "User can create their own avatar and then use it as well",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      },
+      {
+        "Project Name": "Battle Saga",
+        "Short Description": "Battle Saga is a Clash of Clans-inspired builder game with blockchain integration, metaverse features, PvP battles, clans, multiplayer, and isometric maps with diverse themes.",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      },
+      {
+        "Project Name": "Fantacy Game",
+        "Short Description": "This project offers a dynamic gaming platform featuring multiple sports, combining the excitement of traditional sports with the thrill of daily fantasy gameplay. It supports the creation of individual game rooms, as well as leaderboard-based competitions across entire tournaments and seasons.",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      },
+      {
+        "Project Name": "Gaming Website",
+        "Short Description": "Theta Bulls are one of the first NFT collections launched on the all-encompassing Theta blockchain. These fierce newcomers charge through the Thetaverse, smashing obstacles in their path and leaving a trail of chaos, symbolizing the disruptive power of this groundbreaking collection.",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      },
+      {
+        "Project Name": "Trivial",
+        "Short Description": "This website featuring multiplayer modes, diverse levels, daily rewards, customizable cars, and thrilling robot transformations. Available on Android.",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      }
+    ],
+    "Interactive Website": [
+      {
+        "Project Name": "Bajaj Finserv",
+        "Short Description": "This Website helps customers engage in meaningful, Quiz about their finances and money management, offering valuable insights and guidance.",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      },
+      {
+        "Project Name": "OHZI",
+        "Short Description": "Ohzi is an interactive website that provides users with a real-time, engaging browsing experience, enhancing user interaction and website exploration.",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      }
+    ],
+    "Shopify  Website": [
+      {
+        "Project Name": "AnnaBlakan",
+        "Short Description": "Anna Walkan is a jewelry website that allows users to explore, view, and discover unique and trending jewelry designs",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      },
+      {
+        "Project Name": "Jewelry Website",
+        "Short Description": "The Jewelry Website offers users the ability to browse, customize, and purchase a wide range of jewelry designs directly online.",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      },
+      {
+        "Project Name": "Moms & ma custom dresses",
+        "Short Description": "Moms & Ma Custom Dresses is an online store specializing in customized dresses for babies and moms, offering personalized styles for women and children.",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      }
+    ],
+    "Wordpress  Website": [
+      {
+        "Project Name": "PureRX",
+        "Short Description": "PureRX is a dietary supplement website that offers a variety of health and wellness supplements to support daily nutrition and fitness goals.",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      },
+      {
+        "Project Name": "Unation",
+        "Short Description": "Unation is a platform that provides ratings and reviews for popular locations and destinations, helping users discover the best places to visit.",
+        "Thumbnail": "Link",
+        "Video": "Link",
+        "Working Links If Any": ""
+      }
+    ]
+  },
+  "Unreal Projects": [
+    {
+      "Project Name": "Car Configrator",
+      "Short Description": "Car Configurator is a product visualization app that allows users to fully customize vehicles, including wheels, seats, colors, and interactive car animations.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "Digital Twin",
+      "Short Description": "DP World is a virtual mall replica that provides users with a realistic shopping experience in a fully immersive digital environment.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "Weathor",
+      "Short Description": "Weather Live Update is a real-time weather application built with Unreal Engine, offering users an interactive and highly realistic weather experience.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    }
+  ],
+  "Mobile App Development": [
+    {
+      "Project Name": "KIXIFY - Buy & Sell Sneakers",
+      "Short Description": "Kixify is the world’s largest sneaker marketplace where users can buy, sell, and explore exclusive sneakers with curated listings, seller profiles, and secure transactions.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "Markeet",
+      "Short Description": "Markeet is an Android store template that helps businesses easily launch an online shop, manage products, send notifications, and deliver a smooth shopping experience.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "KicksOnFire",
+      "Short Description": "KicksOnFire is a sneaker release calendar and news app featuring launch dates, price guides, reminders, free sneaker contests, and social sharing for the sneaker community.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "Meditation App",
+      "Short Description": "MediTrain is a research-based digital meditation app developed by UCSF’s Neuroscape Center to enhance focus and attention through concentrated meditation practices.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "AdForest",
+      "Short Description": "AdForest Classified is a demo mobile app for the AdForest WordPress theme, allowing businesses to showcase and manage classified listings under their own brand on Android and iOS.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "Clipish Sound",
+      "Short Description": "CLIPish Sounds lets users add fun sound effects to texts and emails, with hundreds of sounds across categories, photo attachments, and seamless iMessage integration.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "Consultation App",
+      "Short Description": "The Consultation App offers online and offline doctor consultations, lab tests, medicine delivery, and bookings for various healthcare services including dental, vision, and home care.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "JSwipe",
+      "Short Description": "JSwipe is a Jewish dating app with a swipe-to-match feature, connecting Jewish singles worldwide with easy browsing, matching, and free chat options.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "Meditation Mindfulness",
+      "Short Description": "Lojong is a mindfulness app offering guided meditations, progress tracking, and relaxation tools to help reduce anxiety and improve well-being. It includes a Sleep Well program and offers premium features for deeper practice.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "Model Now_ Models & Castings",
+      "Short Description": "Model Now connects users with models, influencers, and creators, offering a seamless platform to find talent and explore modeling opportunities.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "Red Taxi",
+      "Short Description": "Red Taxi is a ride-hailing app providing safe, customizable rides with GPS tracking, multiple vehicle options, selective drivers, and women-only ride features across multiple cities.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "WeShare",
+      "Short Description": "WeShare is a social media app for sharing photos, text, and emojis, making it easy to stay connected with friends and family in a fun, interactive space.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    }
+  ],
+  "Real Estate": [
+    {
+      "Project Name": "Archviz PC",
+      "Short Description": "Archviz is a real-time interior customization platform that allows users to personalize and visualize interior spaces with instant updates.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "Digital Twin",
+      "Short Description": "Digital Twin is a virtual mall replica that provides users with a realistic shopping experience in a fully immersive digital environment.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "Imtiaz",
+      "Short Description": "The Imtiaz is a metaverse real estate app where users can select and explore building floors, view detailed 2D/3D plans, and navigate via hotspots and area buttons.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "MBR Villa",
+      "Short Description": "The MBR is a metaverse real estate app where users can explore villas and customize floors, wall colors, gardens, and kitchen cabinets across PC, VR, and Android platforms.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "Reaza",
+      "Short Description": "Reaza is a digital real estate platform that allows users to customize property interiors, navigate in drone mode, and explore immersive spaces with interactive UI controls.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "UnrealArchitectural",
+      "Short Description": "",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "Walk 1",
+      "Short Description": "The Walk 1 is a metaverse-based real estate app showcasing a photorealistic home interior with dynamic lighting and immersive, cinematic-quality walkthroughs.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "Walk 2",
+      "Short Description": "The Walk 2 offers a metaverse-based virtual tour of a modern office space, featuring photorealistic design, dynamic lighting, and a seamless walkthrough experience.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "Walk 4",
+      "Short Description": "The Walk 4 is a virtual interior experience focused on a fully detailed house design, providing photorealistic visuals, interactive customization, and cinematic-quality walkthroughs.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "Walk 5",
+      "Short Description": "The Walk 5 is a metaverse real estate application delivering high-quality virtual walkthroughs of premium interiors with lifelike textures and dynamic lighting effects.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "Walk 3",
+      "Short Description": "The Walk 3 is a metaverse-based real estate app offering photorealistic interiors, dynamic lighting, and a cinematic-quality virtual property walkthrough.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    }
+  ],
+  "AI": [
+    {
+      "Project Name": "FaceSwap",
+      "Short Description": "In the FaceSwap project, users can click their picture and instantly transform it into their chosen celebrity character.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    },
+    {
+      "Project Name": "Chatbot",
+      "Short Description": "The AI Chatbot enables real-time conversations and provides instant answers to user queries with natural, interactive responses.",
+      "Thumbnail": "Link",
+      "Video": "Link",
+      "Working Links If Any": ""
+    }
+  ]
+}
