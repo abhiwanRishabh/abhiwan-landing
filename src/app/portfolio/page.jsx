@@ -205,7 +205,7 @@ function ContainerMain({
           </div>
         )}
 
-        {loading === false && (
+        {loading === false && data?.length > 0 && (
           <div className={styles.paginationSection}>
             <button
               className={styles.pageButton}
