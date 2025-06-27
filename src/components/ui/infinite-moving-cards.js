@@ -107,7 +107,11 @@ export const InfiniteMovingCards = ({
             <Image
               src={item.imageUrl}
               alt={item.name || "image"}
-              width={getWidth(idx)}
+              width={
+                item?.imageUrl === "/content/client/stripto.png"
+                  ? 180
+                  : getWidth(idx)
+              }
               height={100}
               // className={`w-24 h-24 md:w-32 md:h-28 ${objectFit} `}
               // className={`w-full h-full object-contain `}

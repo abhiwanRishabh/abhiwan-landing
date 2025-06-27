@@ -30,7 +30,7 @@ const testimonials = [
       "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
     name: "Jane Austen",
     title: "Pride and Prejudice",
-    imageUrl: "/content/client/client4.svg",
+    imageUrl: "/content/client/stripto.png",
   },
   {
     quote:
