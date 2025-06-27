@@ -129,7 +129,7 @@ const AbhiwanTechnology = () => {
       </div>
       <div className="hidden md:block">
         <p
-          className={`text-[#DDDDDD] tracking-[2px] lead   px-4 max-w-[1752px] mx-auto ${helvetica.className}`}
+          className={`text-[#DDDDDD] lead   px-4 max-w-[1752px] mx-auto ${helvetica.className}`}
         >
           At Abhiwan Technology, we don’t just deliver solutions—we <br />
           craft experiences that drive innovation, scalability, and success.
