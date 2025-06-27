@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import styles from "./styles/AbhiwanTechnology.module.css";
 import { HoverEffect } from "./ui/card-hover-effect";
 import AOS from "aos";
-import { gravesend, montserrat, helvetica } from "@/app/font/Fonts";
+import { gravesend, montserrat, helvetica, voltaire } from "@/app/font/Fonts";
 const AbhiwanTechnology = () => {
   const cardData = [
     {
@@ -99,11 +99,11 @@ const AbhiwanTechnology = () => {
   }, []);
 
   return (
-    <div className=" p-2 relative">
+    <div className=" py-2 max-w-[1400px] m-auto relative">
       <div>
         <div className="px-4 py-2 md:py-10 max-w-[1752px] mx-auto z-10">
           <h2
-            className={`text-white text-center md:text-start small-heading font-bold uppercase ${gravesend.className}`}
+            className={`text-white text-center md:text-start main-heading font-bold uppercase ${gravesend.className}`}
           >
             Why Choose
             {/* , */}
@@ -114,14 +114,14 @@ const AbhiwanTechnology = () => {
             Abhiwan 
           </h2> */}
           <h2
-            className={`text-center w-full md:w-[auto] md:text-start medium-heading font-bold text-transparent bg-clip-text inline-block  ${styles.animatedGradientText} ${gravesend.className} uppercase`}
+            className={`text-center w-full md:w-[auto] md:text-start main-heading font-bold text-transparent bg-clip-text inline-block  ${styles.animatedGradientText} ${gravesend.className} uppercase`}
           >
             Abhiwan Technology
           </h2>
         </div>
         <div className="hidden md:block">
           <h2
-            className={`${styles.nonMarquee}  absolute top-[6rem] right-[-13rem] text-[11rem]  font-bold tracking-wide capitalize z-0`}
+            className={`${styles.nonMarquee} ${voltaire.className}  absolute top-[6rem] right-[-13rem] text-[11rem]  font-bold tracking-wide capitalize z-0`}
           >
             INNOVATION
           </h2>

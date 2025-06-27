@@ -14,8 +14,18 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Abhiwan",
-  description: "Abhiwan",
+  title: "Top metaverse game development companies in the USA",
+  description:
+    "Discover top-rated metaverse game development companies in the USA that offer digital twin, blockchain, AI, website and app development services. Explore now",
+  keywords: [
+    "game development companies",
+    "game development company in USA",
+    "metaverse development companies",
+    "digital twin companies",
+    "blockchain development services",
+    "artificial intelligence company",
+    "website and app development services",
+  ],
 };
 
 export default function RootLayout({ children }) {

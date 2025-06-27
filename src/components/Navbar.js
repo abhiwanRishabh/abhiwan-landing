@@ -23,7 +23,13 @@ const Navbar = () => {
       <nav className="sticky z-[999] py-2">
         <div className="py-3 px-6 flex justify-between items-center">
           <div>
-            <Image src="/abhiwan.png" alt="logo" width={100} height={100} className=""/>
+            <Image
+              src="/AbhiwanLogoPortfolio.png"
+              alt="logo"
+              width={100}
+              height={100}
+              className=""
+            />
           </div>
           <div className="flex  items-center gap-4">
             {/* <button

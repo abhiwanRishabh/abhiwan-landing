@@ -26,7 +26,7 @@ export default function MarqueeBanner() {
       <InfiniteMarquee speed="normal" pauseOnHover>
         {[...items, ...items].map((text, index) => (
           <div key={index} className={`${styles.item} `}>
-            <p className={` ${helvetica.className} text-lg text-white`}>
+            <p className={` ${helvetica.className} text-[24px] text-white`}>
               <span>{text}</span>
             </p>
             <span className={styles.star}>✶</span>

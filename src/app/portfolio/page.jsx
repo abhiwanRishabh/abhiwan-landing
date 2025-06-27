@@ -1,8 +1,8 @@
 "use client";
+import { useCallback, useState } from "react";
 import Image from "next/image";
 import styles from "../../components/styles/Portfolio.module.css";
 import { nasalization, helvetica, gravesend } from "@/app/font/Fonts";
-import { useState } from "react";
 import LinearBg from "@/components/ui/LinearBg";
 import RactBg from "@/components/ui/RactBg";
 import Awards from "@/components/Awards";
@@ -12,22 +12,43 @@ import { portfolioContent } from "@/content/portfolioContent";
 import { useRouter } from "next/navigation";
 import { goToSection } from "@/components/Hero";
 import Link from "next/link";
+import axios from "axios";
+import useFetchApi from "@/hooks/useFetchApi";
+import { BASE_URL } from "@/lib/base_url";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import ProjectSkeleton from "@/components/ui/ProjectSkeleton";
 
 export default function Page() {
   const [activeTabIndex, setActiveTabIndex] = useState(0);
   const [activeItem, setActiveItem] = useState(null);
+  const [activeTab, setActiveTab] = useState("Gaming");
+  const [currentPage, setCurrentPage] = useState(1);
   const [tabs, setTabs] = useState([
-    { name: "ALL WORKS", sup: "30" },
-    { name: "GAMING", sup: "12" },
-    { name: "METAVERSE", sup: "8" },
-    { name: "AR/VR", sup: "6" },
-    { name: "BLOCKCHAIN / NFT", sup: "4" },
-    { name: "WEB DEVELOPMENT", sup: "10" },
+    "Gaming",
+    "Blockchain",
+    "Educational Simulator",
+    "ARVR Demo",
+    "Industry App Demo",
+    "Metaverse",
+    "Web Development",
+    "Unreal Projects",
+    "Mobile App Development",
+    "Real Estate",
+    "AI",
   ]);
 
   const handleBack = () => {
     setActiveItem(null);
   };
+
+  const fetchProjects = useCallback(
+    () =>
+      axios.get(
+        `${BASE_URL}/portfolio/getProjects?page=${currentPage}&category=${activeTab}`
+      ),
+    [currentPage, activeTab]
+  );
+  const { data, loading, totalPages } = useFetchApi(fetchProjects);
 
   return (
     <div className={styles.container}>
@@ -40,10 +61,16 @@ export default function Page() {
           activeTabIndex={activeTabIndex}
           setActiveTabIndex={setActiveTabIndex}
           setActiveItem={setActiveItem}
+          loading={loading}
+          data={data}
+          totalPages={totalPages}
+          currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
+          setActiveTab={setActiveTab}
         />
       ) : (
         <>
-          <nav className={styles.navigation}>
+          {/* <nav className={styles.navigation}>
             {tabs.map((item, index) => (
               <button
                 key={index}
@@ -52,20 +79,18 @@ export default function Page() {
                 }`}
                 onClick={() => setActiveTabIndex(index)}
               >
-                <h3 className={gravesend.className}>
-                  {item.name} <sup className={styles.navSup}>{item.sup}</sup>
-                </h3>
+                <h3 className={gravesend.className}>{item}</h3>
               </button>
             ))}
-          </nav>
+          </nav> */}
           <ActiveProject activeItem={activeItem} handleBack={handleBack} />
         </>
       )}
 
       <LinearBg />
-      <div className={styles.awardSection}>
+      {/* <div className={styles.awardSection}>
         <Awards title={false} />
-      </div>
+      </div> */}
       <div className="bg-black p-3 z-[10]">
         <ClientsMarquee />
       </div>
@@ -79,7 +104,22 @@ function ContainerMain({
   activeTabIndex,
   setActiveTabIndex,
   setActiveItem,
+  loading,
+  data,
+  currentPage,
+  totalPages,
+  setCurrentPage,
+  setActiveTab,
 }) {
+  const totalVisiblePages = 5;
+  const half = Math.floor(totalVisiblePages / 2);
+
+  const startPage = Math.max(
+    1,
+    Math.min(currentPage - half, totalPages - totalVisiblePages + 1)
+  );
+  const endPage = Math.min(totalPages, startPage + totalVisiblePages - 1);
+
   return (
     <main className={styles.main}>
       {/* Hero Text */}
@@ -98,11 +138,12 @@ function ContainerMain({
             className={`${styles.navItem} ${
               index === activeTabIndex ? styles.tabACtive : ""
             }`}
-            onClick={() => setActiveTabIndex(index)}
+            onClick={() => {
+              setActiveTabIndex(index);
+              setActiveTab(item);
+            }}
           >
-            <h3 className={gravesend.className}>
-              {item.name} <sup className={styles.navSup}>{item.sup}</sup>
-            </h3>
+            <h3 className={gravesend.className}>{item}</h3>
           </button>
         ))}
       </nav>
@@ -110,38 +151,134 @@ function ContainerMain({
       {/* Portfolio Grid */}
       <div className={styles.portfolioGridContainer}>
         {/* Project Cards */}
+
         <div className={styles.portfolioGrid}>
-          {portfolioContent?.map((project, index) => (
-            <div
-              className={styles.projectCard}
-              key={project.id}
-              onClick={() => setActiveItem({ ...project, index: index })}
-            >
-              <div className={`${styles.projectImage} ${styles.projectImage1}`}>
-                <Image
-                  src={`/webp/portfolio/project${index + 1}.webp`}
-                  alt="Unbounded Earth"
-                  width={300}
-                  height={200}
-                  className={styles.image}
-                />
-              </div>
-              <h3 className={`${styles.projectTitle} ${helvetica.className}`}>
-                {project.project_name}
-              </h3>
-              <p
-                className={`${styles.projectDescription} ${helvetica.className}`}
-              >
-                Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Sed Do
-                Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut
-                Enim
-              </p>
-              <div className={styles.dots}>
-                <div className={`${styles.dot}`}></div>
-              </div>
-            </div>
-          ))}
+          {loading &&
+            [...Array(9)].map((_, index) => <ProjectSkeleton key={index} />)}
         </div>
+
+        {loading === false && (
+          <div className={styles.portfolioGrid}>
+            {data?.map((project, index) => (
+              <div
+                className={styles.projectCard}
+                key={project._id}
+                onClick={() => setActiveItem({ ...project, index: index })}
+              >
+                <div
+                  className={`${styles.projectImage} ${styles.projectImage1}`}
+                >
+                  <img
+                    src={
+                      project?.thumbnail ||
+                      `/webp/portfolio/project${index + 1}.webp`
+                    }
+                    alt="Unbounded Earth"
+                    width={300}
+                    height={200}
+                    className={styles.image}
+                  />
+                </div>
+                <h3 className={`${styles.projectTitle} ${helvetica.className}`}>
+                  {project.projectName}
+                </h3>
+                <p
+                  className={`${styles.projectDescription} ${helvetica.className}`}
+                >
+                  {project.shortDescription.length > 120
+                    ? `${project.shortDescription.substring(0, 120)}...`
+                    : project.shortDescription}
+                </p>
+                <div className={styles.dots}>
+                  <div className={`${styles.dot}`}></div>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {loading === false && data?.length === 0 && (
+          <div className="">
+            <h2 className={`${styles.noProjects} ${helvetica.className} `}>
+              No projects found for this category.
+            </h2>
+          </div>
+        )}
+
+        {loading === false && (
+          <div className={styles.paginationSection}>
+            <button
+              className={styles.pageButton}
+              onClick={() => setCurrentPage(currentPage - 1)}
+              disabled={currentPage === 1}
+            >
+              <ChevronLeft size={18} />
+              Previous
+            </button>
+
+            <div className={styles.pageNumbers}>
+              {/* First page */}
+              {currentPage > 3 && (
+                <>
+                  <button
+                    className={`${styles.pageNumber} ${
+                      1 === currentPage ? styles.active : ""
+                    }`}
+                    onClick={() => setCurrentPage(1)}
+                  >
+                    1
+                  </button>
+                  {currentPage > 4 && (
+                    <span className={styles.ellipsis}>...</span>
+                  )}
+                </>
+              )}
+
+              {/* Pages around current page */}
+              {Array.from({ length: endPage - startPage + 1 }, (_, i) => {
+                const pageNum = startPage + i;
+
+                return (
+                  <button
+                    key={pageNum}
+                    className={`${styles.pageNumber} ${
+                      pageNum === currentPage ? styles.active : ""
+                    }`}
+                    onClick={() => setCurrentPage(pageNum)}
+                  >
+                    {pageNum}
+                  </button>
+                );
+              })}
+
+              {/* Last page */}
+              {currentPage < totalPages - 2 && (
+                <>
+                  {currentPage < totalPages - 3 && (
+                    <span className={styles.ellipsis}>...</span>
+                  )}
+                  <button
+                    className={`${styles.pageNumber} ${
+                      totalPages === currentPage ? styles.active : ""
+                    }`}
+                    onClick={() => setCurrentPage(totalPages)}
+                  >
+                    {totalPages}
+                  </button>
+                </>
+              )}
+            </div>
+
+            <button
+              className={styles.pageButton}
+              onClick={() => setCurrentPage(currentPage + 1)}
+              disabled={currentPage >= totalPages}
+            >
+              Next
+              <ChevronRight size={18} />
+            </button>
+          </div>
+        )}
         <RactBg />
       </div>
     </main>
@@ -181,31 +318,49 @@ function Header() {
 }
 
 function ActiveProject({ activeItem, handleBack }) {
+  function getEmbedUrl(url) {
+    if (!url) return "https://www.youtube.com/embed/XceElLFdKiw";
+
+    // Handle youtu.be short links
+    if (url.includes("youtu.be")) {
+      const videoId = url.split("youtu.be/")[1]?.split("?")[0];
+      return `https://www.youtube.com/embed/${videoId}`;
+    }
+
+    // Handle youtube.com/watch?v= links
+    if (url.includes("watch?v=")) {
+      const videoId = new URL(url).searchParams.get("v");
+      return `https://www.youtube.com/embed/${videoId}`;
+    }
+
+    // Already an embed link
+    return url;
+  }
+  console.log("activeItem", getEmbedUrl(activeItem.video));
   return (
     <div className={styles.activeProjectContainer}>
       <div className={styles.project}>
         <div className={styles.activeprojectImage}>
-          <Image
-            src={`/webp/portfolio/project${activeItem?.index + 1}.webp`}
-            alt="Unbounded Earth"
-            width={600}
-            height={400}
-          />
+          <iframe
+            src={
+              getEmbedUrl(activeItem?.video) ||
+              `https://www.youtube.com/embed/XceElLFdKiw`
+            }
+            title="YouTube video"
+            // frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            style={{
+              width: "100%",
+              height: "400px",
+            }}
+          ></iframe>
         </div>
         <h3 className={`${styles.projectTitle} ${helvetica.className}`}>
-          {activeItem.project_name}
+          {activeItem.projectName}
         </h3>
         <p className={`${styles.projectDescription} ${helvetica.className}`}>
-          Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Sed Do
-          Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim
-          Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Sed Do
-          Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim
-          Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Sed Do
-          Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim
-          Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Sed Do
-          Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim
-          Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Sed Do
-          Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim
+          {activeItem?.shortDescription}
         </p>
 
         <svg
