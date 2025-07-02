@@ -185,9 +185,9 @@ function ContainerMain({
                 <p
                   className={`${styles.projectDescription} ${helvetica.className}`}
                 >
-                  {project.shortDescription.length > 120
-                    ? `${project.shortDescription.substring(0, 120)}...`
-                    : project.shortDescription}
+                  {project?.shortDescription2?.length > 120
+                    ? `${project?.shortDescription2?.substring(0, 120)}...`
+                    : project?.shortDescription2}
                 </p>
                 <div className={styles.dots}>
                   <div className={`${styles.dot}`}></div>
@@ -359,9 +359,12 @@ function ActiveProject({ activeItem, handleBack }) {
         <h3 className={`${styles.projectTitle} ${helvetica.className}`}>
           {activeItem.projectName}
         </h3>
-        <p className={`${styles.projectDescription} ${helvetica.className}`}>
-          {activeItem?.shortDescription}
-        </p>
+        <div
+          className={`${styles.projectDescription} ${helvetica.className}`}
+          dangerouslySetInnerHTML={{ __html: activeItem?.shortDescription }}
+        >
+          {/* {activeItem?.shortDescription} */}
+        </div>
 
         <svg
           xmlns="http://www.w3.org/2000/svg"

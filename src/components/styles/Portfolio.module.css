@@ -454,7 +454,16 @@
   color: rgba(255, 255, 255, 0.904);
   font-size: 0.875rem;
   margin-bottom: 1rem;
-  line-height: 1.5;
+  line-height: 1.6;
+  text-align:start;
+}
+
+.projectDescription a {
+   color: rgb(157, 82, 255);
+}
+
+.projectDescription li {
+  list-style-type:disc;
 }
 
 .dots {
