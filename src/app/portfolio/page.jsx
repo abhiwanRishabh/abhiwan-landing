@@ -1,5 +1,5 @@
 "use client";
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import styles from "../../components/styles/Portfolio.module.css";
 import { nasalization, helvetica, gravesend } from "@/app/font/Fonts";
@@ -15,19 +15,43 @@ import Link from "next/link";
 import axios from "axios";
 import useFetchApi from "@/hooks/useFetchApi";
 import { BASE_URL } from "@/lib/base_url";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Tag } from "lucide-react";
 import ProjectSkeleton from "@/components/ui/ProjectSkeleton";
+
+const SUB_CATEGORIES = {
+  Gaming: {
+    subcategories: [
+      "2D Games",
+      "3D Games",
+      "Card Games",
+      "HTML Games",
+      "Isometric Games",
+      "Racing Games",
+      "RPG Games",
+    ],
+  },
+  "Web Development": {
+    subcategories: [
+      "Gaming Website",
+      "Interactive Website",
+      "Shopify Website",
+      "Wordpress Website",
+    ],
+  },
+};
 
 export default function Page() {
   const [activeTabIndex, setActiveTabIndex] = useState(0);
+  const [activeTabIndex2, setActiveTabIndex2] = useState(0);
   const [activeItem, setActiveItem] = useState(null);
   const [activeTab, setActiveTab] = useState("Gaming");
+  const [activeTab2, setActiveTab2] = useState("2D Games");
   const [currentPage, setCurrentPage] = useState(1);
   const [tabs, setTabs] = useState([
     "Gaming",
     "Blockchain",
     "Educational Simulator",
-    "ARVR Demo",
+    "AR & VR Demo",
     "Industry App Demo",
     "Metaverse",
     "Web Development",
@@ -36,6 +60,7 @@ export default function Page() {
     "Real Estate",
     "AI",
   ]);
+  const [subCategories, setSubCategories] = useState([]);
 
   const handleBack = () => {
     setActiveItem(null);
@@ -44,11 +69,29 @@ export default function Page() {
   const fetchProjects = useCallback(
     () =>
       axios.get(
-        `${BASE_URL}/portfolio/getProjects?page=${currentPage}&category=${activeTab}`
+        `${BASE_URL}/portfolio/getProjects?page=${currentPage}&subcategory=${activeTab2}&category=${activeTab}`
       ),
-    [currentPage, activeTab]
+    [currentPage, activeTab, activeTab2]
   );
   const { data, loading, totalPages } = useFetchApi(fetchProjects);
+
+  useEffect(() => {
+    const subCat = SUB_CATEGORIES[activeTab];
+    if (subCat && subCat.subcategories) {
+      setSubCategories(subCat.subcategories);
+    } else {
+      setSubCategories([]);
+    }
+  }, [activeTab]);
+
+  useEffect(() => {
+    if (activeItem) {
+      window.scrollBy({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
+  }, [activeItem]);
 
   return (
     <div className={styles.container}>
@@ -59,7 +102,9 @@ export default function Page() {
         <ContainerMain
           tabs={tabs}
           activeTabIndex={activeTabIndex}
+          activeTabIndex2={activeTabIndex2}
           setActiveTabIndex={setActiveTabIndex}
+          setActiveTabIndex2={setActiveTabIndex2}
           setActiveItem={setActiveItem}
           loading={loading}
           data={data}
@@ -67,6 +112,8 @@ export default function Page() {
           currentPage={currentPage}
           setCurrentPage={setCurrentPage}
           setActiveTab={setActiveTab}
+          setActiveTab2={setActiveTab2}
+          subCategories={subCategories}
         />
       ) : (
         <>
@@ -83,7 +130,12 @@ export default function Page() {
               </button>
             ))}
           </nav> */}
-          <ActiveProject activeItem={activeItem} handleBack={handleBack} />
+          <ActiveProject
+            activeItem={activeItem}
+            handleBack={handleBack}
+            setActiveTab2={setActiveTab2}
+            setActiveTabIndex2={setActiveTabIndex2}
+          />
         </>
       )}
 
@@ -102,6 +154,7 @@ export default function Page() {
 function ContainerMain({
   tabs,
   activeTabIndex,
+  activeTabIndex2,
   setActiveTabIndex,
   setActiveItem,
   loading,
@@ -110,6 +163,9 @@ function ContainerMain({
   totalPages,
   setCurrentPage,
   setActiveTab,
+  setActiveTab2,
+  subCategories,
+  setActiveTabIndex2,
 }) {
   const totalVisiblePages = 5;
   const half = Math.floor(totalVisiblePages / 2);
@@ -140,13 +196,35 @@ function ContainerMain({
             }`}
             onClick={() => {
               setActiveTabIndex(index);
-              setActiveTab(item);
+              setActiveTab(item === "AR & VR Demo" ? "ARVR Demo" : item);
+              setActiveTabIndex2(0);
+              setActiveTab2("");
             }}
           >
             <h3 className={gravesend.className}>{item}</h3>
           </button>
         ))}
       </nav>
+
+      {/* sub categor */}
+      {subCategories?.length > 0 && (
+        <nav className={styles.navigation}>
+          {subCategories.map((item, index) => (
+            <button
+              key={index}
+              className={`${styles.navItem} ${
+                index === activeTabIndex2 ? styles.tabACtive : ""
+              }`}
+              onClick={() => {
+                setActiveTabIndex2(index);
+                setActiveTab2(item);
+              }}
+            >
+              <h3 className={gravesend.className}>{item}</h3>
+            </button>
+          ))}
+        </nav>
+      )}
 
       {/* Portfolio Grid */}
       <div className={styles.portfolioGridContainer}>
@@ -174,8 +252,6 @@ function ContainerMain({
                       `/webp/portfolio/project${index + 1}.webp`
                     }
                     alt="Unbounded Earth"
-                    width={300}
-                    height={200}
                     className={styles.image}
                   />
                 </div>
@@ -184,9 +260,10 @@ function ContainerMain({
                 </h3>
                 <p
                   className={`${styles.projectDescription} ${helvetica.className}`}
+                  style={{ textAlign: "center" }}
                 >
-                  {project?.shortDescription2?.length > 120
-                    ? `${project?.shortDescription2?.substring(0, 120)}...`
+                  {project?.shortDescription2?.length > 200
+                    ? `${project?.shortDescription2?.substring(0, 200)}...`
                     : project?.shortDescription2}
                 </p>
                 <div className={styles.dots}>
@@ -279,7 +356,7 @@ function ContainerMain({
             </button>
           </div>
         )}
-        <RactBg />
+        {/* <RactBg /> */}
       </div>
     </main>
   );
@@ -317,7 +394,30 @@ function Header() {
   );
 }
 
-function ActiveProject({ activeItem, handleBack }) {
+function ActiveProject({
+  activeItem,
+  handleBack,
+  setActiveTabIndex2,
+  setActiveTab2,
+}) {
+  function handleRedirect() {
+    // if (activeItem?.subcategory) {
+    // debugger;
+    // setActiveTab2(activeItem?.subcategory);
+    // let activeSubCat = activeItem?.subcategory;
+    // const subCat = SUB_CATEGORIES[activeItem.category];
+    // if (subCat.subcategories) {
+    //   const findIndex = subCat?.subcategories?.findIndex(
+    //     (it) => it == activeSubCat
+    //   );
+    //   setActiveTabIndex2(findIndex);
+    //   }
+    // } else {
+    //   setActiveTab2("");
+    // }
+    handleBack();
+  }
+
   function getEmbedUrl(url) {
     if (!url) return "https://www.youtube.com/embed/XceElLFdKiw";
 
@@ -342,7 +442,7 @@ function ActiveProject({ activeItem, handleBack }) {
     // Already an embed link
     return url;
   }
-  console.log("activeItem", getEmbedUrl(activeItem.video));
+  console.log("activeItem", activeItem, getEmbedUrl(activeItem.video));
   return (
     <div className={styles.activeProjectContainer}>
       <div className={styles.project}>
@@ -371,6 +471,13 @@ function ActiveProject({ activeItem, handleBack }) {
         >
           {/* {activeItem?.shortDescription} */}
         </div>
+
+        {activeItem.subcategory && (
+          <div className={styles.tags}>
+            <Tag color="gray" size={20} />{" "}
+            <span onClick={handleRedirect}>{activeItem?.subcategory}</span>
+          </div>
+        )}
 
         <svg
           xmlns="http://www.w3.org/2000/svg"
