@@ -208,7 +208,7 @@ const ConceptToReality = () => {
                     height={400}
                     src={project.image}
                     alt={project.title}
-                    className={`w-full h-full object-cover rounded-2xl`}
+                    className={`w-full h-full object-fill lg:object-cover rounded-2xl`}
                     loading="lazy"
                     // className={`rounded-2xl object-cover w-full h-full border border-[#8D8D8D] shadow-[${project.boxShadow}] hover:shadow-xl hover:shadow-purple-500/30 transition-shadow duration-300`}
                   />
@@ -259,7 +259,7 @@ const ConceptToReality = () => {
                   height={400}
                   src={project.image}
                   alt={project.title}
-                  className={`w-full h-full object-cover rounded-2xl`}
+                  className={`w-full h-full object-fill lg:object-cover rounded-2xl`}
                   // className={`rounded-2xl object-cover w-full h-full border border-[#8D8D8D] shadow-[${project.boxShadow}] hover:shadow-xl hover:shadow-purple-500/30 transition-shadow duration-300`}
                 />
               </div>

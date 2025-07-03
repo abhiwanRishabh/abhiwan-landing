@@ -82,7 +82,7 @@ export const StatsSection = () => {
               width={400}
               height={400}
               alt="Blockchain Web3.0"
-              className="my-auto rounded-3xl w-full h-[320px] aspect-4/5 object-cover"
+              className="my-auto rounded-3xl w-full h-full md:h-[320px] aspect-4/5 object-cover"
               // aspect-2/3
             />
           </div>
@@ -108,7 +108,7 @@ export const StatsSection = () => {
                       </h2> */}
                     <p
                       // className={`${helvetica.className} text-white mt-2 text-[20px]`}
-                      className={`${helvetica.className}  text-nowrap mt-0 md:mt-2 text-sm md:text-3xl font-bold  text-transparent bg-clip-text`}
+                      className={`${helvetica.className}  text-nowrap mt-0 md:mt-2 text-xs md:text-3xl font-bold  text-transparent bg-clip-text`}
                       style={{
                         backgroundImage:
                           "radial-gradient(50% 167.69% at 50% 87.9%, #3625ff 0%, #2C72FF 50%)",

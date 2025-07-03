@@ -12,7 +12,7 @@
 }
 
 .normal {
-  --duration: 20s;
+  --duration: 30s;
 }
 
 .fast {
@@ -34,7 +34,7 @@
 
 /* Right direction */
 .marqueeContent {
-  animation: scrollRight 20s linear infinite;
+  animation: scrollRight 25s linear infinite;
   will-change: transform;
 }
 

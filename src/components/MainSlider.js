@@ -7,7 +7,6 @@ import AOS from "aos";
 import styles from "./styles/TechShowcase.module.css";
 import { gravesend, nasalization, helvetica } from "@/app/font/Fonts";
 
-
 const data = [
   {
     title: "Metaverse",
