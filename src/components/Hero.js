@@ -50,7 +50,7 @@ const RightLongBaseLine = ({ text1, text2, hrefid, iconp }) => {
     <>
       {/* <Link href={`${hrefid}`}> */}
       <div
-        className={`w-[max-content] relative`}
+        className={`w-[max-content] relative `}
         onClick={() => goToSection(hrefid)}
       >
         <div className=" w-[-webkit-fill-available] absolute  right-[44px]">
@@ -119,10 +119,10 @@ const LeftLongBaseLine = ({ text1, text2, iconp, hrefid }) => {
   return (
     <>
       <div
-        className={`w-[max-content] relative`}
+        className={`w-[max-content] relative `}
         onClick={() => goToSection(hrefid)}
       >
-        <div className=" w-[-webkit-fill-available] absolute  left-[12px] ">
+        <div className=" w-[-webkit-fill-available] absolute  left-[12px]">
           <div className="flex  items-center justify-between ">
             <p className={`text-white text-sm`}>
               {text1} <br /> {text2}
@@ -204,9 +204,9 @@ const Hero = () => {
                 />
               </div>
             </div>
-            <div className="flex flex-col justify-between items-between relative z-[99] h-10/12">
+            <div className="flex flex-col justify-between items-between relative z-[98] h-10/12">
               {/* heading */}
-              <div className="translate-y-[100px] sm:translate-y-[200px] lg:translate-0">
+              <div className="translate-y-[40px] sm:translate-y-[100px] lg:translate-0">
                 {/* <div data-aos="fade-down"> */}
                 <h1
                   id={"titleRef"}
@@ -259,7 +259,7 @@ const Hero = () => {
               </div>
               {/* bottom container */}
               <div
-                className={`${styles.statsContainer} w-full hidden md:flex justify-between items-center  pb-6 px-12`}
+                className={`${styles.statsContainer} w-full hidden lg:flex justify-between items-center  pb-6 px-12`}
               >
                 <div className="flex gap-7 ">
                   <div data-aos="fade-up">
@@ -308,7 +308,7 @@ const Hero = () => {
             >
               <p className="text:xs md:text-1xl text-white  px-4 py-2 rounded-full capitalize">
                 Your Gateway to Game Development,
-                <br className="block md:hidden " /> Blockchain, ai, and the
+                <br className="block lg:hidden " /> Blockchain, ai, and the
                 metaverse
               </p>
             </div>

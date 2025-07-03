@@ -193,7 +193,7 @@ const ConceptToReality = () => {
                 <div
                   className={`${
                     project?.boxShadow ?? ""
-                  }  h-[34rem] overflow-hidden rounded-2xl cursor-pointer ${
+                  }  h-auto overflow-hidden rounded-2xl cursor-pointer ${
                     project?.class
                   }`}
                   onClick={() => handleOpen(project.secondImg)}
@@ -244,7 +244,7 @@ const ConceptToReality = () => {
               <div
                 className={`${
                   project.boxShadow ?? ""
-                }  h-[34rem] overflow-hidden rounded-2xl cursor-pointer ${
+                }  h-auto overflow-hidden rounded-2xl cursor-pointer ${
                   project?.class
                 }`}
                 onClick={() => handleOpen(project.secondImg)}

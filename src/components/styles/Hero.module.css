@@ -150,8 +150,12 @@
   position: absolute;
   bottom: 0;
   z-index: 100;
-  justify-self: anchor-center;
+  /* justify-self: anchor-center; */
+  left: 50%;
+  transform: translate(-50%, 0%);
 }
+
+
 .statsContainer {
   position: absolute;
   bottom: 0;
@@ -163,6 +167,8 @@
   left : 5rem;
   top: 1rem;
   scale: .7;
+  z-index: 100;
+  cursor: pointer;
 }
 
 .arrowRightSection {
@@ -170,6 +176,8 @@
   right : 5rem;
   top : 7rem;
   scale: .7;
+  z-index: 100;
+  cursor: pointer;
 }
 
 .arrowLeftSection svg, .arrowRightSection svg {
@@ -237,7 +245,7 @@
   }
 
   .arrowRightSection {
-    top : -3rem;
+    top : 0rem;
     right: 2rem;
     scale: .6;
   }
@@ -252,12 +260,17 @@
   }
 
   .arrowRightSection {
-     right : 0rem;
+     right : -2rem;
      scale: .6;
   }
 
   .statsContainer p {
      font-size: 11px;
+  }
+
+  .vrGirl img {
+    object-fit: contain;
+    scale: 1.3;
   }
 }
 
@@ -267,7 +280,7 @@
   }
 
   .arrowLeftSection{
-     top : 16rem;
+     top : 14rem;
   }
 }
 
@@ -294,4 +307,17 @@
      border-radius: 14px !important;
      font-size : 10px !important;
    }
+
+   .vrGirl {
+     left: 0% !important;
+     transform: translateX(0%);
+     justify-self: anchor-center;
+  }
+}
+
+@media (min-width : 1500px) {
+  .sabHeading {
+    letter-spacing: 6.5vw;
+    margin-left: 100px;
+  }
 }
