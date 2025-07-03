@@ -12,7 +12,7 @@ import { CornerUpLeft, X } from "lucide-react";
 // import PenguinkartMobileImage from "/content/projects/mobile/Penguinkart.png";
 
 let isMobileView = false;
-if (window !== undefined) {
+if (typeof window !== "undefined") {
   isMobileView = window.matchMedia("(max-width:900px)");
 }
 
