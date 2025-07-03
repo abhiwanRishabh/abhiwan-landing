@@ -119,7 +119,7 @@ const projectlanscape = [
     title: "ohzi",
     image: "/content/projects/ohzi.png",
     secondImg: isMobileView?.matches
-      ? "/content/projects/mobile/ohzi.png"
+      ? "/content/projects/mobile/ohzi2.png"
       : "/content/projects/ohziH.png",
     // boxShadow: "shadow-[0px_4px_126.5px_0px_#000000CF]",
     dataAos: "fade",
@@ -301,7 +301,8 @@ const ConceptToReality = () => {
                   <Image
                     src={selectedImage}
                     alt="Full screen preview"
-                    fill
+                    width={325}
+                    height={400}
                     className="object-contain p-4 w-full h-full"
                   />
                 </div>
