@@ -135,12 +135,7 @@ const useDisableBodyScroll = (isActive) => {
 };
 
 const ConceptToReality = () => {
-  useEffect(() => {
-    // AOS.init({
-    //   duration: 1000,
-    //   once: true,
-    // });
-  }, []);
+ 
 
   const [selectedImage, setSelectedImage] = useState(null);
 
@@ -298,13 +293,22 @@ const ConceptToReality = () => {
                   <X color="#000" size={29} />
                 </button>
                 <div className="relative w-[100%] m-auto h-[85%] ">
-                  <Image
-                    src={selectedImage}
-                    alt="Full screen preview"
-                    width={325}
-                    height={400}
-                    className="object-contain p-4 w-full h-full"
-                  />
+                  {isMobileView.matches ? (
+                    <Image
+                      src={selectedImage}
+                      alt="Full screen preview"
+                      width={325}
+                      height={400}
+                      className="object-contain p-4 w-full h-full"
+                    />
+                  ) : (
+                    <Image
+                      src={selectedImage}
+                      alt="Full screen preview"
+                      fill
+                      className="object-contain p-4 w-full h-full"
+                    />
+                  )}
                 </div>
               </motion.div>
             </motion.div>
