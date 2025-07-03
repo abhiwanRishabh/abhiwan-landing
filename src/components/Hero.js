@@ -206,7 +206,7 @@ const Hero = () => {
             </div>
             <div className="flex flex-col justify-between items-between relative z-[99] h-10/12">
               {/* heading */}
-              <div className="translate-y-[100px] sm:translate-y-[50px] md:translate-0">
+              <div className="translate-y-[100px] sm:translate-y-[200px] lg:translate-0">
                 {/* <div data-aos="fade-down"> */}
                 <h1
                   id={"titleRef"}
