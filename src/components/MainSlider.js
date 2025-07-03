@@ -107,7 +107,7 @@ export default function MainSlider() {
                   {/* Left Arrow */}
                   <button
                     onClick={handlePrev}
-                    className="transform translate-y-[50px] sm:translate-y-[100px] translate-x-[15px] bg-purple-700 hover:bg-purple-800 text-white p-2 rounded-full shadow-lg transition-colors"
+                    className="transform translate-y-[5px] md:translate-y-[100px] translate-x-[15px] bg-purple-700 hover:bg-purple-800 text-white p-2 rounded-full shadow-lg transition-colors"
                   >
                     <ChevronLeft size={18} />
                   </button>
@@ -115,7 +115,7 @@ export default function MainSlider() {
                   {/* Right Arrow */}
                   <button
                     onClick={handleNext}
-                    className="transform translate-y-[50px] sm:translate-y-[100px] translate-x-[-15px] bg-purple-700 hover:bg-purple-800 text-white p-2 rounded-full shadow-lg transition-colors"
+                    className="transform translate-y-[5px] md:translate-y-[100px] translate-x-[-15px] bg-purple-700 hover:bg-purple-800 text-white p-2 rounded-full shadow-lg transition-colors"
                   >
                     <ChevronRight size={18} />
                   </button>

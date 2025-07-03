@@ -133,7 +133,7 @@ export default function Sliderr() {
   return (
     <>
       <div
-        className="relative w-full h-screen  text-white overflow-hidden px-4"
+        className="relative w-full h-[80dvh] md:h-screen text-white overflow-hidden px-4"
         // className="relative w-full h-screen flex flex-col items-center justify-center text-white overflow-hidden px-4"
         style={{
           backgroundImage: `url(${slides[current].backgroundImage})`,
@@ -177,7 +177,7 @@ export default function Sliderr() {
 
               borderBottom: "1px solid white",
             }}
-            className="absolute top-60 2xl:top-80 right-[80%] md:left-[42%] w-10 h-10 md:w-14 md:h-14 rounded-full bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center text-white shadow-lg hover:shadow-xl transition-all cursor-pointer"
+            className="absolute top-60 2xl:top-80 right-[90%] md:left-[37%] w-10 h-10 md:w-14 md:h-14 rounded-full bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center text-white shadow-lg hover:shadow-xl transition-all cursor-pointer"
           >
             <ChevronLeft size={32} />
           </button>

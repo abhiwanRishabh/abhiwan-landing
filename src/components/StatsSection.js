@@ -180,7 +180,7 @@ export const StatsSection = () => {
                             />
                             <p
                               // className={`${helvetica.className} text-white mt-2 text-[20px]`}
-                              className={`${helvetica.className}  mt-1 md:mt-2 md:text-lg lg:text-2xl text-xs font-bold  text-transparent bg-clip-text`}
+                              className={`${helvetica.className}  mt-1 text-xs md:mt-2 md:text-lg lg:text-2xl  font-bold  text-transparent bg-clip-text`}
                               style={{
                                 backgroundImage:
                                   "radial-gradient(50% 167.69% at 50% 87.9%, #3625ff 0%, #2C72FF 50%)",

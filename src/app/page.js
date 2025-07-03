@@ -63,12 +63,14 @@ export default function Home() {
       <ConceptToReality />
       <ShowcaseCard />
       <MarqueeBanner />
-      <AbhiwanTechnology />
+      <div className="overflow-x-hidden">
+        <AbhiwanTechnology />
+      </div>
       <TeamSection />
       <OurClients />
       <Awards />
       <ContactUs />
-      <Footer /> 
+      <Footer />
     </>
   );
 }

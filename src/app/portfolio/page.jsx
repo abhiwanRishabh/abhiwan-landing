@@ -322,15 +322,21 @@ function ActiveProject({ activeItem, handleBack }) {
     if (!url) return "https://www.youtube.com/embed/XceElLFdKiw";
 
     // Handle youtu.be short links
-    if (url.includes("youtu.be")) {
+    if (url?.includes("youtu.be")) {
       const videoId = url.split("youtu.be/")[1]?.split("?")[0];
       return `https://www.youtube.com/embed/${videoId}`;
     }
 
     // Handle youtube.com/watch?v= links
-    if (url.includes("watch?v=")) {
+    if (url?.includes("watch?v=")) {
       const videoId = new URL(url).searchParams.get("v");
       return `https://www.youtube.com/embed/${videoId}`;
+    }
+
+    // Handle youtube.com/watch?v= links
+    if (url?.includes("shorts")) {
+      let id = url.split("shorts")[1];
+      return `https://www.youtube.com/embed${id}`;
     }
 
     // Already an embed link

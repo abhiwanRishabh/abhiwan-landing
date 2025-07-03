@@ -77,7 +77,7 @@ const Footer = () => {
           </div>
         </section>
         <footer className=" text-white py-10 px-6 md:px-20">
-          <div className="grid md:grid-cols-4 md:justify-items-center gap-10">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 md:justify-items-center gap-10">
             {/* About Section */}
             <div className={` ${helvetica.className}`}>
               <Image

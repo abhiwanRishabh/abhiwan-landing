@@ -5,12 +5,25 @@ import Image from "next/image";
 import { gravesend, helvetica } from "@/app/font/Fonts";
 import { motion, AnimatePresence } from "framer-motion";
 import { CornerUpLeft, X } from "lucide-react";
+// import battleSagaMobileImage from "/content/projects/mobile/battleSaga.png";
+// import cocaColaMobileImage from "/content/projects/mobile/cocaCola.png";
+// import kundliMobileImage from "/content/projects/mobile/kundli.png";
+// import ohziMobileImage from "/content/projects/mobile/ohzi.png";
+// import PenguinkartMobileImage from "/content/projects/mobile/Penguinkart.png";
+
+let isMobileView = false;
+if (window !== undefined) {
+  isMobileView = window.matchMedia("(max-width:900px)");
+}
+
 const projects = [
   {
     id: "7dfdcf0f-2cce-4de2-ad2b-6846dce6f4ba",
     title: "The Kundli Pro",
     image: "/content/projects/kundlipro.png",
-    secondImg: "/content/projects/kundliproH.png",
+    secondImg: isMobileView?.matches
+      ? "/content/projects/mobile/kundli.png"
+      : "/content/projects/kundliproH.png",
     description: "The Most Trusted & Insightful Astrology App",
     // boxShadow: "shadow-[0px_0px_100.8px_0px_#008FFF]",
     appStore: true,
@@ -22,7 +35,9 @@ const projects = [
     id: "ac999e19-3364-4b23-bc3b-97e1148cc0c8",
     title: "CocaCola",
     image: "/content/projects/cocacola.png",
-    secondImg: "/content/projects/cocacolaH.png",
+    secondImg: isMobileView?.matches
+      ? "/content/projects/mobile/cocaCola.png"
+      : "/content/projects/cocacolaH.png",
     description: "Wanna be a movie star? Partnered with Box Office!",
     // boxShadow: "shadow-[0px_4px_138.8px_71px_#FF060640]",
     appStore: false,
@@ -34,7 +49,9 @@ const projects = [
     id: "ca0908f0-03e3-4072-bf8e-5aa79c4bb2b7",
     title: "Battle Saga",
     image: "/content/projects/battlesaga.png",
-    secondImg: "/content/projects/BattleSagaH.png",
+    secondImg: isMobileView?.matches
+      ? "/content/projects/mobile/battleSaga.png"
+      : "/content/projects/BattleSagaH.png",
     description:
       "Battle Saga is a Clash of Clan inspired game on Binance Smart Chain",
     // boxShadow: "shadow-[0px_4px_131.7px_17px_#2A37A6BD]",
@@ -85,13 +102,14 @@ const projectsSecondRow = [
     class: "shadow-card-6",
   },
 ];
-
 const projectlanscape = [
   {
     id: "a69c2bcb-d754-4a20-b06a-7e4cb84606f1",
     title: "penguin cart",
     image: "/content/projects/penguincart.png",
-    secondImg: "/content/projects/penguinKartsH.png",
+    secondImg: isMobileView?.matches
+      ? "/content/projects/mobile/Penguinkart.png"
+      : "/content/projects/penguinKartsH.png",
     // boxShadow: " shadow-[0px_4px_93.3px_0px_#02E3F8]",
     dataAos: "fade",
     class: "shadow-card-7",
@@ -100,7 +118,9 @@ const projectlanscape = [
     id: "b74983c9-fa26-4352-a91f-9ab5a4fe39df",
     title: "ohzi",
     image: "/content/projects/ohzi.png",
-    secondImg: "/content/projects/ohziH.png",
+    secondImg: isMobileView?.matches
+      ? "/content/projects/mobile/ohzi.png"
+      : "/content/projects/ohziH.png",
     // boxShadow: "shadow-[0px_4px_126.5px_0px_#000000CF]",
     dataAos: "fade",
     class: "shadow-card-8",
@@ -210,7 +230,7 @@ const ConceptToReality = () => {
                 height={400}
                 src={item.image}
                 alt={item.title}
-                className={`cursor-pointer w-full h-70 md:h-96 rounded-[2.1rem] ${item?.class}  transition-transform hover:scale-105 duration-300`}
+                className={`cursor-pointer w-full h-70 lg:h-96 rounded-[2.1rem] ${item?.class}  transition-transform hover:scale-105 duration-300`}
               />
             </div>
           );
