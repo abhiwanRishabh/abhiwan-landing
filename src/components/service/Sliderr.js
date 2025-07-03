@@ -133,7 +133,7 @@ export default function Sliderr() {
   return (
     <>
       <div
-        className="relative w-full h-[80dvh] md:h-screen text-white overflow-hidden px-4"
+        className="relative w-full h-[80vh] md:h-screen text-white overflow-hidden px-4"
         // className="relative w-full h-screen flex flex-col items-center justify-center text-white overflow-hidden px-4"
         style={{
           backgroundImage: `url(${slides[current].backgroundImage})`,
@@ -221,7 +221,7 @@ export default function Sliderr() {
                     <div className="cursor-pointer">
                       <button
                         onClick={() => handleOpen(img.data)}
-                        className={`absolute top-[180px] sm:top-[250px] -left-[200px] md:-left-[350px] z-30 px-4 py-3 text-nowrap   text-white text-[16px] font-semibold rounded-[10px]  hover:scale-100 transition  ${helvetica.className} cursor-pointer`}
+                        className={`absolute top-[180px] -left-[260px] sm:top-[250px]  md:-left-[350px] z-30 px-4 py-3 text-nowrap   text-white text-[16px] font-semibold rounded-[10px]  hover:scale-100 transition  ${helvetica.className} cursor-pointer`}
                         style={{
                           boxShadow: ` rgba(255, 255, 255, 0.33) 0px 21px 28px`,
                           backgroundImage:
@@ -292,9 +292,9 @@ export default function Sliderr() {
                 <div className="relative w-full h-full ">
                   <button
                     onClick={handleClose}
-                    className="cursor-pointer absolute bg-neutral-300 p-1  top-[7%] right-[10%]  text-white rounded-full w-18 h-18 flex items-center justify-center text-2xl font-bold shadow-lg z-50"
+                    className="cursor-pointer absolute bg-neutral-300 p-1  top-[7%] right-[10%]  text-white rounded-full w-12 h-12 flex items-center justify-center text-2xl font-bold shadow-lg z-50"
                   >
-                    <CornerUpLeft color="#000" size={29} />
+                    <X color="#000" size={24} />
                   </button>
                   <Image
                     src={selectedImage}
