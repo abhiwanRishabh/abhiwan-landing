@@ -86,7 +86,7 @@ export default function Page() {
 
   useEffect(() => {
     if (activeItem) {
-      window.scrollBy({
+      window.scrollTo({
         top: 0,
         behavior: "smooth",
       });
@@ -143,10 +143,12 @@ export default function Page() {
       {/* <div className={styles.awardSection}>
         <Awards title={false} />
       </div> */}
-      <div className="bg-black p-3 z-[10]">
+      <div className="bg-black p-3 relative   z-[10]">
         <ClientsMarquee />
       </div>
-      <Footer />
+      <div className="relative z-[10]">
+        <Footer />
+      </div>
     </div>
   );
 }
