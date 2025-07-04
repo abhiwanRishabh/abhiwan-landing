@@ -59,6 +59,7 @@ export default function Page() {
     "Mobile App Development",
     "Real Estate",
     "AI",
+    "Adver Gaming",
   ]);
   const [subCategories, setSubCategories] = useState([]);
 
