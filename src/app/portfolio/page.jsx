@@ -254,7 +254,7 @@ function ContainerMain({
                       project?.thumbnail ||
                       `/webp/portfolio/project${index + 1}.webp`
                     }
-                    alt="Unbounded Earth"
+                    alt={project.projectName}
                     className={styles.image}
                   />
                 </div>
