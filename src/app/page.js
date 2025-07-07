@@ -58,9 +58,13 @@ export default function Home() {
       <ClientsMarquee />
       <TechShowcase />
       <DigitalSolutions />
-      <StatsSection />
+      <div className="mt-18 lg:mt-0">
+        <StatsSection />
+      </div>
       <MainSlider />
-      <ConceptToReality />
+      <div className="-mt-18 lg:mt-0">
+        <ConceptToReality />
+      </div>
       <ShowcaseCard />
       <MarqueeBanner />
       <div className="overflow-x-hidden">

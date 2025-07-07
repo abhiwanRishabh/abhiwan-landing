@@ -70,7 +70,7 @@ export default function Page() {
   const fetchProjects = useCallback(
     () =>
       axios.get(
-        `${BASE_URL}/portfolio/getProjects?page=${currentPage}&subcategory=${activeTab2}&category=${activeTab}`
+        `${BASE_URL}/portfolio/getProjects?page=${currentPage}&limit=${12}&subcategory=${activeTab2}&category=${activeTab}`
       ),
     [currentPage, activeTab, activeTab2]
   );
@@ -86,13 +86,13 @@ export default function Page() {
   }, [activeTab]);
 
   useEffect(() => {
-    if (activeItem) {
+    if (activeItem || currentPage) {
       window.scrollTo({
         top: 0,
         behavior: "smooth",
       });
     }
-  }, [activeItem]);
+  }, [activeItem, currentPage]);
 
   return (
     <div className={styles.container}>
@@ -171,13 +171,32 @@ function ContainerMain({
   setActiveTabIndex2,
 }) {
   const totalVisiblePages = 5;
-  const half = Math.floor(totalVisiblePages / 2);
 
-  const startPage = Math.max(
-    1,
-    Math.min(currentPage - half, totalPages - totalVisiblePages + 1)
-  );
-  const endPage = Math.min(totalPages, startPage + totalVisiblePages - 1);
+  // Calculate start and end pages
+  let startPage, endPage;
+
+  if (totalPages <= totalVisiblePages) {
+    // Case 1: Less than total visible pages
+    startPage = 1;
+    endPage = totalPages;
+  } else {
+    // Case 2: More than total visible pages
+    const half = Math.floor(totalVisiblePages / 2);
+
+    if (currentPage <= half + 1) {
+      // Near the beginning
+      startPage = 1;
+      endPage = totalVisiblePages;
+    } else if (currentPage >= totalPages - half) {
+      // Near the end
+      startPage = totalPages - totalVisiblePages + 1;
+      endPage = totalPages;
+    } else {
+      // In the middle
+      startPage = currentPage - half;
+      endPage = currentPage + half;
+    }
+  }
 
   return (
     <main className={styles.main}>
@@ -204,7 +223,9 @@ function ContainerMain({
               setActiveTab2("");
             }}
           >
-            <h3 className={gravesend.className}>{item}</h3>
+            <h3 className={gravesend.className}>
+              {item === "Adver Gaming" ? "Advergaming" : item}
+            </h3>
           </button>
         ))}
       </nav>
@@ -297,8 +318,8 @@ function ContainerMain({
             </button>
 
             <div className={styles.pageNumbers}>
-              {/* First page */}
-              {currentPage > 3 && (
+              {/* Show first page and ellipsis if needed */}
+              {startPage > 1 && (
                 <>
                   <button
                     className={`${styles.pageNumber} ${
@@ -308,16 +329,15 @@ function ContainerMain({
                   >
                     1
                   </button>
-                  {currentPage > 4 && (
+                  {startPage > 2 && (
                     <span className={styles.ellipsis}>...</span>
                   )}
                 </>
               )}
 
-              {/* Pages around current page */}
+              {/* Page numbers */}
               {Array.from({ length: endPage - startPage + 1 }, (_, i) => {
                 const pageNum = startPage + i;
-
                 return (
                   <button
                     key={pageNum}
@@ -331,10 +351,10 @@ function ContainerMain({
                 );
               })}
 
-              {/* Last page */}
-              {currentPage < totalPages - 2 && (
+              {/* Show last page and ellipsis if needed */}
+              {endPage < totalPages && (
                 <>
-                  {currentPage < totalPages - 3 && (
+                  {endPage < totalPages - 1 && (
                     <span className={styles.ellipsis}>...</span>
                   )}
                   <button

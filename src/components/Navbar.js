@@ -28,7 +28,7 @@ const Navbar = () => {
               alt="logo"
               width={100}
               height={100}
-              className=""
+              className="object-contain"
             />
           </div>
           <div className="flex  items-center gap-4">
