@@ -318,6 +318,12 @@
   }
 }
 
+@media (width >= 1500px) and (height <= 700px) {
+  .vrGirl {
+     transform: translate(-50%, 15%) scale(.6);
+  }
+}
+
 
 @media (width <= 1370px)  and (height <= 700px) {
   .vrGirl {
