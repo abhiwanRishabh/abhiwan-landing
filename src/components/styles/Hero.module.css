@@ -261,7 +261,7 @@
 
   .arrowRightSection {
      right : -2rem;
-     bottom: -50rem;
+     bottom: -45rem;
      scale: .6;
   }
 
@@ -276,7 +276,7 @@
 
   .vrGirl img {
     object-fit: contain;
-    scale: 1.9;
+    scale: 1.8;
   }
 }
 
@@ -290,36 +290,6 @@
   }
 }
 
-@media (width <= 600px) {
-  .vrGirl {
-    height: 100%;
-    bottom: -20%;
-  }
-  
-   .vrGirl img {
-     object-fit: contain;
-     scale: 1.25;
-   }
-
-   .hero{
-     height: 96dvh;
-    }
-    .hero_content {
-      border-radius: 20px !important;
-      
-    }
-
-   .tagLine p {
-     border-radius: 14px !important;
-     font-size : 10px !important;
-   }
-
-   .vrGirl {
-     left: 0% !important;
-     transform: translateX(0%);
-     justify-self: anchor-center;
-  }
-}
 
 @media (min-width : 1500px) {
   .sabHeading {
@@ -365,5 +335,37 @@
   .sabHeading {
     letter-spacing: 6vw;
      margin-left: 80px;
+  }
+}
+
+@media (width <= 600px) {
+  .vrGirl {
+    height: 100%;
+    bottom: -20%;
+    transform: translate(0%, 0%);
+  }
+  
+   .vrGirl img {
+     object-fit: contain;
+     scale: 1.25;
+   }
+
+   .hero{
+     height: 96dvh;
+    }
+    .hero_content {
+      border-radius: 20px !important;
+      
+    }
+
+   .tagLine p {
+     border-radius: 14px !important;
+     font-size : 10px !important;
+   }
+
+   .vrGirl {
+     left: 0% !important;
+     transform: translateX(0%);
+     justify-self: anchor-center;
   }
 }

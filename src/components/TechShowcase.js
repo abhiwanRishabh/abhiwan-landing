@@ -429,6 +429,7 @@ export default function TechShowcase() {
                         </div>
                       </div>
                     </div>
+
                     {item.title == "Blockchain" && (
                       <h2
                         style={{
@@ -443,6 +444,7 @@ export default function TechShowcase() {
                         Blockchain
                       </h2>
                     )}
+
                     {item.title == "Game Design" && (
                       <h2
                         style={{
@@ -476,6 +478,8 @@ export default function TechShowcase() {
                         />
                       </>
                     )}
+
+
                     {item.title == "Blockchain" && (
                       <Image
                         src="/Innovation.webp"
@@ -492,6 +496,8 @@ export default function TechShowcase() {
                         className={`w-auto object-contain ${styles.bottom_left_OutlineText}`}
                       />
                     )}
+
+                    
                   </div>
                 </motion.div>
               ))}
