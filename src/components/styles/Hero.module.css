@@ -318,7 +318,7 @@
   }
 }
 
-@media (width >= 1500px) and (height <= 700px) {
+@media (width >= 1500px) and (height <= 800px) {
   .vrGirl {
      transform: translate(-50%, 15%) scale(.6);
   }
