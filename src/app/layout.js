@@ -33,6 +33,10 @@ export default function RootLayout({ children }) {
     <html lang="en" data-locator-target="vscode">
       <head>
         <link rel="icon" href="favicon.svg" type="image/svg" sizes="32x32" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
         {/* <link rel="preload" as="image" href="/vrgirl.avif" /> */}
       </head>
       <body

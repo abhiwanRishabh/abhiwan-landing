@@ -334,7 +334,7 @@
      scale: .8;
   }
 
-   .arrowLeftSection {
+  .arrowLeftSection {
      top: 0;
   }
 
@@ -343,9 +343,18 @@
   }
 }
 
+
+@media (width <= 1360px) and (height <= 700px) {
+  .vrGirl {
+     transform: translate(-50%, 15%) scale(.8);
+  }
+}
+
+
 @media (width <= 1024px) and (height <= 768px) {
   .arrowLeftSection {
      top: 2%;
+     /* scale: .6; */
   }
 
   .statsContainer {
