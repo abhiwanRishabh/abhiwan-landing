@@ -301,24 +301,48 @@
 
 @media (width <= 1400px) and (height <= 700px) {
   .statsContainer {
-     bottom: 5%;
-     scale: .8;
+     bottom: 2%;
+     /* scale: .8; */
   }
 
   .arrowLeftSection {
-     top: 0;
+     left: 0;
   }
 
   .arrowRightSection {
-    top: 0;
+    right: 0;
+  }
+
+  .tagLine p {
+    font-size : .6rem !important;
   }
 }
 
 
-@media (width <= 1360px) and (height <= 700px) {
+@media (width <= 1370px)  and (height <= 700px) {
   .vrGirl {
      transform: translate(-50%, 15%) scale(.8);
   }
+
+   .arrowLeftSection {
+     top: -1rem;
+     scale: .7;
+  }
+
+  .arrowRightSection {
+    top: -1rem;
+    scale: .7;
+  }
+
+  .mainHeading {
+    font-size: clamp(2rem, 12vw, 10rem);
+  }
+
+  .sabHeading {
+    letter-spacing: 6vw !important;
+  }
+
+
 }
 
 
@@ -372,8 +396,3 @@
 }
 
 
-@media (min-resolution: 1.5dppx) {
-  .arrowLeftSection,.arrowRightSection {
-     scale: .7;
-  }
-}
