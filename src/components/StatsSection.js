@@ -147,7 +147,7 @@ export const StatsSection = () => {
                 <p
                   className={`${helvetica.className} mt-2 md:mt-5 lead text-center md:text-start  text-gray-300 tracking-[0.56px] md:tracking-wide`}
                 >
-                  Since 2018, Abhiwan Technologies has been at the forefront of
+                  Since 2018, Abhiwan Technology has been at the forefront of
                   Game Development, Blockchain, AI, Web & App Development, and
                   Metaverse Solutions, delivering cutting-edge technology to
                   startups, enterprises, and global brands.
