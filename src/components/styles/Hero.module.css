@@ -186,6 +186,7 @@
 
 .counterText {
   font-family: 'CustomHelvetica', sans-serif;
+  font-size: clamp(.8rem, 1vw, .9rem);
 }
 
 @media (width <= 1440px) {
@@ -367,5 +368,12 @@
      left: 0% !important;
      transform: translateX(0%);
      justify-self: anchor-center;
+  }
+}
+
+
+@media (min-resolution: 1.5dppx) {
+  .arrowLeftSection,.arrowRightSection {
+     scale: .7;
   }
 }

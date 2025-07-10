@@ -61,7 +61,7 @@ const RightLongBaseLine = ({ text1, text2, hrefid, iconp }) => {
               <MoveLeft className="mb-4" color="#fff" size={16} />
             )}
 
-            <p className={`text-white text-[18px]`}>
+            <p className={`text-white text-[1rem]`}>
               {text1} <br /> {text2}
             </p>
           </div>
@@ -124,7 +124,7 @@ const LeftLongBaseLine = ({ text1, text2, iconp, hrefid }) => {
       >
         <div className=" w-[-webkit-fill-available] absolute  left-[12px]">
           <div className="flex  items-center justify-between ">
-            <p className={`text-white text-[18px]`}>
+            <p className={`text-white text-[1rem]`}>
               {text1} <br /> {text2}
             </p>
             {iconp ? (
@@ -306,7 +306,7 @@ const Hero = () => {
             <div
               className={`${styles.tagLine} relative z-12 ${gravesend.className}`}
             >
-              <p className="text:xs md:text-1xl text-white  px-4 py-2 rounded-full capitalize">
+              <p className="text:xs md:text-xl text-white  px-4 py-2 rounded-full capitalize">
                 Your Gateway to Game Development,
                 <br className="block lg:hidden " /> Blockchain, ai, and the
                 metaverse
