@@ -11,27 +11,27 @@ import { v4 as uuidv4 } from "uuid";
 const statsData = [
   {
     id: uuidv4(),
-    number: "6 +",
+    number: "7 +",
     text1: "Years of",
-    text2: "Innovation",
+    text2: "Experience",
   },
   {
     id: uuidv4(),
-    number: "50%",
+    number: "80%",
     text1: "Repeated",
     text2: "Clients",
   },
   {
     id: uuidv4(),
-    number: "100+",
-    text1: "Tech",
-    text2: "Experts",
+    number: "90+",
+    text1: "Team",
+    text2: "Members",
   },
   {
     id: uuidv4(),
-    number: "600+",
-    text1: "Projects",
-    text2: "Delivered",
+    number: "300+",
+    text1: "Happy",
+    text2: "Clients",
   },
 ];
 

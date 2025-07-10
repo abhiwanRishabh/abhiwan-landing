@@ -6,6 +6,10 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import toast, { Toaster } from "react-hot-toast";
 import { useInView } from "framer-motion";
+import axios from "axios";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
+
 const ContactUs = () => {
   const container = useRef();
   const [result, setResult] = useState(null);
@@ -16,7 +20,10 @@ const ContactUs = () => {
     email: "",
     phone: "",
     message: "",
+    requirement: "",
   });
+
+  // console.log("---formData----", formData);
 
   const robotImage = useRef();
 
@@ -69,26 +76,45 @@ const ContactUs = () => {
 
   const onSubmit = async (event) => {
     event.preventDefault();
+    // if (formData?.phone?.length !== 10) {
+    //   toast.error("Please enter a valid 10-digit phone number");
+    //   return;
+    // }
+
+    if (formData?.requirement === "") {
+      toast.error("Requirement field is required");
+      return;
+    }
+
     setResult("Sending....");
-    const formData = new FormData(event.target);
 
-    formData.append("access_key", "461c108a-11a1-4e3e-bf4d-354a8dfd89d8");
     setLoading(true);
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData,
-    });
+    const response = await axios(
+      "https://api.abhiwan.com/api/support/submit-form",
+      // "http://localhost:3021/api/support/submit-form",
+      {
+        method: "POST",
+        data: formData,
+      }
+    );
 
-    const data = await response.json();
+    const data = response.data;
 
     if (data.success) {
       toast.success("Success! We’ll review your submission");
-      event.target.reset();
+
       setLoading(false);
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
     } else {
       console.log("Error", data);
       if (data.success === false) {
-        toast.error("Please enter valid email address");
+        toast.error(data.message);
       }
       setLoading(false);
     }
@@ -183,7 +209,7 @@ const ContactUs = () => {
                 className="w-full px-4 py-2 rounded-md bg-black/20  border border-white/30 text-white placeholder-white/60 focus:outline-none"
               />
 
-              <input
+              {/* <input
                 type="text"
                 name="phone"
                 placeholder="Phone Number"
@@ -191,7 +217,57 @@ const ContactUs = () => {
                 onChange={handleChange}
                 required
                 className="w-full px-4 py-2 rounded-md bg-black/20  border border-white/30 text-white placeholder-white/60 focus:outline-none"
+              /> */}
+
+              <PhoneInput
+                country={"us"}
+                value={formData.phone}
+                onChange={(phone) => {
+                  setFormData({ ...formData, ["phone"]: phone });
+                }}
+                inputStyle={{
+                  width: "100%",
+                  background: "#0000003b",
+                  border: "1px solid rgb(255 255 255 / 42%)",
+                  height: "45px",
+                }}
+                buttonStyle={{
+                  background: "#0000003b",
+                  border: "1px solid rgb(255 255 255 / 42%)",
+                }}
+                dropdownStyle={{
+                  color: "black",
+                }}
+
+                // inputClass="w-full px-4 py-2 rounded-md bg-black/20  border border-white/30 text-white placeholder-white/60 focus:outline-none"
               />
+
+              <div className="custom-select">
+                <select name="requirement" onChange={handleChange}>
+                  <option value="">Select Requirement</option>
+
+                  <option value="Metaverse Blockchain">
+                    Metaverse Blockchain
+                  </option>
+                  <option value="Game Development">Game Development</option>
+                  <option value="Real Estate Metaverse">
+                    Real Estate Metaverse
+                  </option>
+                  <option value="NFT Marketplace | DEFI">
+                    NFT Marketplace | DEFI
+                  </option>
+                  <option value="Web And App Development">
+                    Web And App Development
+                  </option>
+                  <option value="AR / VR Development">
+                    AR / VR Development
+                  </option>
+                  <option value="UI / UX Development">
+                    UI / UX Development
+                  </option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
 
               <textarea
                 name="message"
@@ -200,6 +276,7 @@ const ContactUs = () => {
                 value={formData.message}
                 onChange={handleChange}
                 required
+                maxLength={200}
                 className="w-full px-4 py-2 rounded-md bg-black/20  border border-white/30 text-white placeholder-white/60 focus:outline-none resize-none"
               ></textarea>
 
@@ -208,7 +285,7 @@ const ContactUs = () => {
                 disabled={loading}
                 className="w-full bg-[#d100f8] hover:bg-[#bd00deab] cursor-pointer text-white font-semibold py-2 rounded-md transition"
               >
-                {loading ? "submitting..." : "SEND"}
+                {loading ? "Submitting..." : "SEND"}
               </button>
             </form>
           </div>

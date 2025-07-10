@@ -154,6 +154,15 @@
  }
 }
 
+@media (width <= 900px) {
+  .top_right_OutlineText {
+     left: 30rem !important;
+  }
+  .bottom_left_OutlineText {
+    right: 34rem !important;
+  }
+}
+
 @media (width <= 768px) {
   .top_right_OutlineText {
      left: 30rem !important;

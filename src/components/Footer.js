@@ -173,15 +173,15 @@ const Footer = () => {
                 CONTACT US
               </h3>
               <p className="text-md flex items-center gap-2">
-                <Phone size={16} /> <strong>For Sales:</strong> +91 - 9599145805
+                <Phone size={16} /> <strong>US Sales:</strong> +1 951-521-3487
               </p>
               <p className="text-md flex items-center gap-2">
-                <Phone size={16} /> <strong>For HR:</strong> +91 - 9910655805
+                <Phone size={16} /> <strong>India Sales:</strong> +91 -
+                9599145805
               </p>
               <p className="text-md flex items-center gap-2 mb-6">
                 <Mail size={16} /> <strong>Mail Us:</strong> Sales@abhiwan.com
               </p>
-
               <h3 className="font-semibold mb-3">FOLLOW US</h3>
               <div className="flex gap-4 text-white">
                 <a href="https://www.instagram.com/abhiwantechnology/">

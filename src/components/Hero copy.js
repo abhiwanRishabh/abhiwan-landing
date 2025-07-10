@@ -170,7 +170,7 @@ const Hero = () => {
                   className={`${styles.mainHeading} ${nasalization.className} text-6xl sm:text-6xl md:text-[16rem] font-bold text-white uppercase text-center`}
                 >
                   Abhiwan
-                </h1>
+                </h2>
                 <p
                   className={`${styles.sabHeading} ${helvetica.className} text:xs md:text-2xl tracking-[1.35rem]  md:tracking-[6.5rem] text-white uppercase text-center `}
                 >

@@ -87,7 +87,7 @@ export default function SerrrviceSSlider() {
                 className={`text-8xl font-extrabold text-shadow-lg/30 ${gravesend.className}`}
               >
                 {slides[current].title}
-              </h1>
+              </h2>
               <h2
                 className={`text-2xl font-semibold text-shadow-lg/30  ${helvetica.className}`}
               >

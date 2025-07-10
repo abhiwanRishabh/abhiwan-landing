@@ -3,7 +3,7 @@
 import localFont from "next/font/local";
 
 export const nasalization = localFont({
-  src: "nasalizationrg.ttf",
+  src: "NasalizationRg.otf",
   display: "swap",
 });
 

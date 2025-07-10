@@ -19,8 +19,8 @@ const teamMembers = [
     image: "/content/team/abhishek.png",
   },
   {
-    name: "JHONNY",
-    role: "PARTNER",
+    name: "JOHNNY TRAN",
+    role: "US Sales Operational Head",
     description: "MYDNSAHGASDGSYUICHSYCJ GBHUSCGHJ CBSAHJCBHJBJS HACBHJCSHBB",
     image: "/content/team/jhony.png",
   },

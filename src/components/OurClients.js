@@ -12,40 +12,40 @@ import { gravesend, helvetica } from "@/app/font/Fonts";
 const testimonials = [
   {
     name: "Loet de Hooge",
-    image: "/user1.png",
+    image: "/content/testimonials/testimonial4.png",
     quote:
       "We can speak directly to the developers, which allows us to explain our issues clearly.",
     author: "Founder, Fabwelt",
   },
   {
     name: "Mhari Crawford",
-    image: "/user2.png",
+    image: "/content/testimonials/testimonial5.png",
     quote: "They did their work well, and I am satisfied with their project.",
     author: "Property & Compliance Administrator, Savills",
   },
   {
     name: "Asaf Olshitzky",
-    image: "/user3.png",
+    image: "/content/testimonials/testimonial6.png",
     quote: "What set them apart was their unwavering commitment to honesty.",
     author: "Head Coach, Life Coach",
   },
   {
     name: "Vinotha S",
-    image: "/user4.png",
+    image: "/content/testimonials/testimonial1.png",
     quote:
       "Their proficiency and unwavering dedication to delivering a top-tier project were impressive.",
-    author: "Project Manager, Infosys Technologies Lt",
+    author: "Infosys Technologies",
   },
   {
     name: "Amogh Lila Das",
-    image: "/user5.png",
+    image: "/content/testimonials/testimonial2.png",
     quote:
       "Their attention to detail and dedication to quality stood out as truly impressive.",
     author: "VP, ISKCON DWARKA",
   },
   {
     name: "Catherine Janosky",
-    image: "/user6.png",
+    image: "/content/testimonials/testimonial3.png",
     quote:
       "They consistently delivered items on time and adhered to agreed-upon milestones throughout the development process.",
     author: "CEO, Global Manufacturing Inc",

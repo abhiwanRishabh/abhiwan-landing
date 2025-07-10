@@ -61,7 +61,7 @@ const RightLongBaseLine = ({ text1, text2, hrefid, iconp }) => {
               <MoveLeft className="mb-4" color="#fff" size={16} />
             )}
 
-            <p className={`text-white text-sm`}>
+            <p className={`text-white text-[18px]`}>
               {text1} <br /> {text2}
             </p>
           </div>
@@ -124,7 +124,7 @@ const LeftLongBaseLine = ({ text1, text2, iconp, hrefid }) => {
       >
         <div className=" w-[-webkit-fill-available] absolute  left-[12px]">
           <div className="flex  items-center justify-between ">
-            <p className={`text-white text-sm`}>
+            <p className={`text-white text-[18px]`}>
               {text1} <br /> {text2}
             </p>
             {iconp ? (
@@ -204,9 +204,12 @@ const Hero = () => {
                 />
               </div>
             </div>
-            <div className="flex flex-col justify-between items-between relative z-[98] h-10/12">
+            <div
+              className="flex flex-col justify-between items-between relative z-[98] h-10/12"
+              id="hero-sub-containers"
+            >
               {/* heading */}
-              <div className="translate-y-[40px] sm:translate-y-[100px] lg:translate-0">
+              <div className="translate-y-[40px] sm:translate-y-[100px] md:translate-y-[150px] lg:translate-0">
                 {/* <div data-aos="fade-down"> */}
                 <h1
                   id={"titleRef"}
@@ -216,7 +219,7 @@ const Hero = () => {
                   <span className="translate-y-[400px]">B</span>
                   <span className="translate-y-[400px]">H</span>
                   <span className="translate-y-[400px]">I</span>
-                  <span className="translate-y-[400px]">W</span>
+                  <span className="translate-y-[400px] italic">W</span>
                   <span className="translate-y-[400px]">A</span>
                   <span className="translate-y-[400px]">N</span>
                 </h1>
@@ -263,34 +266,31 @@ const Hero = () => {
               >
                 <div className="flex gap-7 ">
                   <div data-aos="fade-up">
-                    <StatsComp number="6+" ftext="Year of" stext="innovation" />
+                    <StatsComp number="7+" ftext="Year of" stext="Experience" />
                   </div>
                   <div data-aos="fade-up" data-aos-delay={`200`}>
-                    <StatsComp number="50%" ftext="Repeat" stext="Clients" />
+                    <StatsComp number="80%" ftext="Repeat" stext="Clients" />
                   </div>
                   <div data-aos="fade-up" data-aos-delay={`400`}>
-                    <StatsComp number="100+" ftext="Tech" stext="Experts" />
+                    <StatsComp number="90+" ftext="Team" stext="Members" />
                   </div>
                   <div data-aos="fade-up" data-aos-delay={`600`}>
-                    <StatsComp
-                      number="600+"
-                      ftext="Successfull"
-                      stext="Projects"
-                    />
+                    <StatsComp number="300+" ftext="Happy" stext="Clients" />
                   </div>
                 </div>
-                <Link href="#contactus">
+                <>
                   <div className={`flex gap-4 cursor-pointer `}>
                     <div
                       className={`${styles.getStartedContrainer} cursor-pointer`}
                     >
                       <button
                         className={`${styles.getStartedBtn} text-white capitalize py-3 px-5 cursor-pointer`}
+                        onClick={() => goToSection("#contactus")}
                       >
                         Get Started
                       </button>
                     </div>
-                    <div
+                    {/* <div
                       className={`${styles.getStartedArrowContrainer} rounded-full cursor-pointer`}
                     >
                       <button
@@ -298,9 +298,9 @@ const Hero = () => {
                       >
                         <ChevronRight size={30} />
                       </button>
-                    </div>
+                    </div> */}
                   </div>
-                </Link>
+                </>
               </div>
             </div>
             <div

@@ -159,7 +159,7 @@ export default async function BlogPost({ params }) {
         <footer className="px-6 py-12 border-t border-white/10 mt-16">
           <div className="max-w-7xl mx-auto text-center">
             <p className="text-white/60">
-              © 2024 Abhinav Technology. All rights reserved.
+               © 2025 Abhiwan Technology. All rights reserved.
             </p>
           </div>
         </footer>

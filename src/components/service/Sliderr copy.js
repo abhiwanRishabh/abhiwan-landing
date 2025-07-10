@@ -137,7 +137,7 @@ export default function Sliderr() {
           className={`${gravesend.className} text-8xl font-bold tracking-wider uppercase`}
         >
           {slides[current].title}
-        </h1>
+        </h2>
         <p className={` text-2xl mt-2 text-white/80 ${helvetica.className}`}>
           {slides[current].subtitle}
         </p>

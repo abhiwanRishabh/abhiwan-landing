@@ -347,7 +347,7 @@ export default function TechShowcase() {
                           style={{
                             position: "absolute",
                             top: "-8rem",
-                            left: "62rem",
+                            left: "67rem",
                             // left: "-300%",
                             zIndex: 10,
                             scale: 1.5,
@@ -485,7 +485,7 @@ export default function TechShowcase() {
                         style={{
                           position: "absolute",
                           bottom: "-8rem",
-                          right: "67rem",
+                          right: "72rem",
                           // left: "-300%",
                           zIndex: 10,
                         }}

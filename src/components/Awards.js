@@ -12,7 +12,7 @@ const awardsList = [
   { imageUrl: "/content/awards/award_4.png" },
   { imageUrl: "/content/awards/award_5.png" },
   { imageUrl: "/content/awards/award_6.png" },
-  { imageUrl: "/content/awards/award7.png" },
+  { imageUrl: "/content/awards/award_7.png" },
 
   // { imageUrl: "/content/awards/award8.png" },
   // { imageUrl: "/content/awards/award9.png" },
@@ -30,7 +30,7 @@ const awardsList = [
   // { imageUrl: "/content/awards/award21.png" },
 ];
 
-const Awards = ({title = true}) => {
+const Awards = ({ title = true }) => {
   // useEffect(() => {
   //   AOS.init({
   //     duration: 1000,
@@ -61,7 +61,11 @@ const Awards = ({title = true}) => {
         )}
       </div>
       <div>
-        <div className={`${title ? 'py-12' : "p-0"} rounded-md flex flex-col antialiased items-center justify-center relative overflow-hidden`}>
+        <div
+          className={`${
+            title ? "py-12" : "p-0"
+          } rounded-md flex flex-col antialiased items-center justify-center relative overflow-hidden`}
+        >
           {/* <InfiniteMovingCards
             items={awardsList}
             direction="left"
@@ -85,7 +89,14 @@ const Awards = ({title = true}) => {
                       width={150}
                       height={150}
                       // className={`w-32 h-32 ${objectFit} `}
-                      className={`w-[50px] md:w-[120px] h-auto object-contain whitespace-nowrap`}
+                      className={`w-[100px]
+                        ${
+                          award.imageUrl === "/content/awards/award_3.png" ||
+                          award.imageUrl === "/content/awards/award_7.png"
+                            ? "md:w-[200px]"
+                            : "md:w-[125px]"
+                        }
+                        h-auto object-contain whitespace-nowrap`}
                     />
                   ))}
                 </InfiniteMarquee>

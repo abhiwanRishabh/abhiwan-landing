@@ -82,6 +82,7 @@ export default function Page() {
       setSubCategories(subCat.subcategories);
     } else {
       setSubCategories([]);
+      setCurrentPage(1);
     }
   }, [activeTab]);
 
@@ -219,8 +220,15 @@ function ContainerMain({
             onClick={() => {
               setActiveTabIndex(index);
               setActiveTab(item === "AR & VR Demo" ? "ARVR Demo" : item);
-              setActiveTabIndex2(0);
-              setActiveTab2("");
+
+              if (item === "Gaming") {
+                setActiveTab2("2D Games");
+              } else if (item === "Web Development") {
+                setActiveTab2("Gaming Website");
+              } else {
+                setActiveTab2("");
+                setActiveTabIndex2(0);
+              }
             }}
           >
             <h3 className={gravesend.className}>
@@ -442,29 +450,41 @@ function ActiveProject({
   }
 
   function getEmbedUrl(url) {
-    if (!url) return "https://www.youtube.com/embed/XceElLFdKiw";
+    if (!url)
+      return "https://www.youtube.com/embed/XceElLFdKiw?rel=0&modestbranding=1";
+
+    let videoId;
 
     // Handle youtu.be short links
-    if (url?.includes("youtu.be")) {
-      const videoId = url.split("youtu.be/")[1]?.split("?")[0];
-      return `https://www.youtube.com/embed/${videoId}`;
+    if (url.includes("youtu.be")) {
+      videoId = url.split("youtu.be/")[1]?.split("?")[0];
     }
 
     // Handle youtube.com/watch?v= links
-    if (url?.includes("watch?v=")) {
-      const videoId = new URL(url).searchParams.get("v");
-      return `https://www.youtube.com/embed/${videoId}`;
+    else if (url.includes("watch?v=")) {
+      videoId = new URL(url).searchParams.get("v");
     }
 
-    // Handle youtube.com/watch?v= links
-    if (url?.includes("shorts")) {
-      let id = url.split("shorts")[1];
-      return `https://www.youtube.com/embed${id}`;
+    // Handle shorts
+    else if (url.includes("shorts")) {
+      videoId = url.split("shorts/")[1]?.split("?")[0];
     }
 
-    // Already an embed link
-    return url;
+    // If already an embed link, append rel=0 if not present
+    if (url.includes("youtube.com/embed")) {
+      const joinChar = url.includes("?") ? "&" : "?";
+      return `${url}${joinChar}rel=0&modestbranding=1`;
+    }
+
+    // Default embed URL
+    if (videoId) {
+      return `https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1`;
+    }
+
+    // Fallback
+    return "https://www.youtube.com/embed/XceElLFdKiw?rel=0&modestbranding=1";
   }
+
   console.log("activeItem", activeItem, getEmbedUrl(activeItem.video));
   return (
     <div className={styles.activeProjectContainer}>
@@ -499,6 +519,13 @@ function ActiveProject({
           <div className={styles.tags}>
             <Tag color="gray" size={20} />{" "}
             <span onClick={handleRedirect}>{activeItem?.subcategory}</span>
+          </div>
+        )}
+
+        {!activeItem.subcategory && (
+          <div className={styles.tags}>
+            <Tag color="gray" size={20} />{" "}
+            <span onClick={handleRedirect}>{activeItem?.category}</span>
           </div>
         )}
 
