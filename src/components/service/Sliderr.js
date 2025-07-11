@@ -31,7 +31,7 @@ const slides = [
     subtitle:
       "Our digital twin services empower businesses to replicate physical assets with precision, enabling smarter, real-time, data-driven decisions and innovation",
     image: "/content/slider/slider3.jpg",
-    backgroundImage: "/content/slider/webp/bg3.webp",
+    backgroundImage: "/content/slider/bg3.png",
     data: "/content/slider/data3.png",
   },
   {

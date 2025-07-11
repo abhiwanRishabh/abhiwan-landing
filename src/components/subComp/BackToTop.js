@@ -4,7 +4,7 @@ import { useScroll } from "@/components/hooks/useScroll";
 import { ArrowUp } from "lucide-react";
 import Image from "next/image";
 
-let phoneNumber = "918109731332";
+let phoneNumber = "919599145805";
 
 const BackToTop = () => {
   const { isVisible, scrollToTop } = useScroll();

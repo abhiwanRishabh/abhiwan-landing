@@ -136,7 +136,7 @@ const AbhiwanTechnology = () => {
           and scalable end-to-end digital support, ensuring every product meets
           client needs while driving innovation and growth across various
           platforms and industries.
-          <br /> Here’s why we stand out:
+          {/* <br /> Here’s why we stand out: */}
         </p>
       </div>
       <div className="hidden md:block">

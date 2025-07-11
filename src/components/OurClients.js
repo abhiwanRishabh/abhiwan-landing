@@ -50,6 +50,27 @@ const testimonials = [
       "They consistently delivered items on time and adhered to agreed-upon milestones throughout the development process.",
     author: "CEO, Global Manufacturing Inc",
   },
+  {
+    name: "William Ely",
+    image: "/content/testimonials/testimonial7.png",
+    quote:
+      "Abhiwan Technology exceeded expectations with their creativity, communication, and execution. I’m excited to collaborate on future projects.",
+    author: "",
+  },
+  {
+    name: "Jared, Marina Landings",
+    image: "/content/testimonials/testimonial7.png",
+    quote:
+      "From day one, the Abhiwan team felt like an extension of our own. They brought sharp ideas, kept communication seamless, and executed beautifully. Already looking forward to our next project.",
+    author: "",
+  },
+  {
+    name: "Tanya, CEO & Founder, Interior Design Company",
+    image: "/content/testimonials/testimonial7.png",
+    quote:
+      "Abhiwan Technology was responsive, detail-oriented, and easy to work with. The 3D visualizer they built significantly improved user engagement and streamlined our design process.",
+    author: "",
+  },
 ];
 
 const OurClients = () => {
