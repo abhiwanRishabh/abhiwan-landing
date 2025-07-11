@@ -10,7 +10,8 @@ const slides = [
   {
     id: 1,
     title: "Game development",
-    subtitle: "Transforming Ideas into Engaging Virtual Worlds",
+    subtitle:
+      "Immersive game development services are provided by our company, where visionary concepts are transformed into reality through premium design and innovative development.",
     image: "/content/slider/slider1.jpg",
     backgroundImage: "/content/slider/bg1.png",
     data: "/content/slider/data1.png",
@@ -18,7 +19,8 @@ const slides = [
   {
     id: 2,
     title: "Metaverse",
-    subtitle: "Building the Future of Digital Interaction",
+    subtitle:
+      "With our metaverse development services, immersive virtual worlds are created to deliver real-life experiences and deeper engagement for global audiences",
     image: "/content/slider/slider2.jpg",
     backgroundImage: "/content/slider/webp/bg2.webp",
     data: "/content/slider/data2.png",
@@ -26,7 +28,8 @@ const slides = [
   {
     id: 3,
     title: "Digital Twin",
-    subtitle: "Bridging the Physical and Digital Worlds",
+    subtitle:
+      "Our digital twin services empower businesses to replicate physical assets with precision, enabling smarter, real-time, data-driven decisions and innovation",
     image: "/content/slider/slider3.jpg",
     backgroundImage: "/content/slider/webp/bg3.webp",
     data: "/content/slider/data3.png",
@@ -34,7 +37,8 @@ const slides = [
   {
     id: 4,
     title: "Blockchain - Web 3.0",
-    subtitle: "Decentralized Innovation for a Trustless Future",
+    subtitle:
+      "Secure, transparent, and decentralised digital experiences are delivered through blockchain innovation, enabling a trustless future powered by our Web 3.0 solutions",
     image: "/content/slider/slider4.png",
     backgroundImage: "/content/slider/webp/bg4.webp",
     data: "/content/slider/data4.png",
@@ -42,7 +46,8 @@ const slides = [
   {
     id: 5,
     title: "Interactive services",
-    subtitle: "Next-Level Engagement Through Smart Digital Experiences",
+    subtitle:
+      "Next-level engagement is boosted by our expert through interactive services with immersive experiences and tools that deeply connect people.",
     description:
       "We create interactive solutions to enhance customer engagement and operational efficiency.",
     image: "/content/slider/slider5.jpg",
@@ -52,7 +57,8 @@ const slides = [
   {
     id: 6,
     title: "Game art",
-    subtitle: "Breathing Life into Digital Experiences",
+    subtitle:
+      "Immersive experiences are brought to life through creative design, advanced technology, and seamless user interaction that engages and creates impact.",
     description:
       "Our creative team specializes in crafting high-quality visuals for games and digital content.",
     image: "/content/slider/slider6.png",
@@ -63,7 +69,8 @@ const slides = [
   {
     id: 7,
     title: "Web & App Development",
-    subtitle: "Building the Future of Digital Presence",
+    subtitle:
+      "Custom websites and app development services are developed by our team to drive growth and connect businesses with their audiences.",
     description:
       "We develop robust, scalable web and mobile applications for businesses.",
     image: "/content/slider/slider7.jpg",
@@ -74,9 +81,10 @@ const slides = [
   {
     id: 8,
     title: "AI Innovation",
-    subtitle: "Empowering Businesses with Smart Automation",
+    subtitle:
+      "Businesses are empowered through smart automation through innovative AI solutions that streamline operations, minimise costs, enhance efficiency, and accelerate performance",
     description:
-      "We create AI-driven solutions for predictive analytics and automation.",
+      "Businesses are empowered through smart automation through innovative AI solutions that streamline operations, minimise costs, enhance efficiency, and accelerate performance.",
     image: "/content/slider/slider8.jpg",
     backgroundImage: "/content/slider/bg8.png",
     data: "/content/slider/data8.png",
@@ -84,7 +92,8 @@ const slides = [
   {
     id: 9,
     title: "3d Archiviz",
-    subtitle: "Immersive Virtual Designs for Real-World Applications",
+    subtitle:
+      "With Abhiwan, turn ideas into an immersive 3D world for better architectural planning and presentation through the metaverse",
     description:
       "We offer 3D visualization services to enhance architectural planning and interior design.",
     image: "/content/slider/slider9.png",
@@ -94,7 +103,8 @@ const slides = [
   {
     id: 10,
     title: "Extended reality",
-    subtitle: "Merging the Physical and Digital Worlds Seamlessly",
+    subtitle:
+      "Immersive extended reality experiences blend with real and virtual worlds seamlessly created by Abhiwan",
     description:
       "We develop Augmented, Virtual, and Mixed Reality applications for various industries.",
     image: "/content/slider/slider10.png",
@@ -134,7 +144,7 @@ export default function Sliderr() {
   return (
     <>
       <div
-        className="relative w-full h-[90vh] bg-[#1c1b29] text-white overflow-hidden"
+        className="relative w-full h-screen bg-[#1c1b29] text-white overflow-hidden"
         style={{
           backgroundImage: `url(${slides[current].backgroundImage})`,
           backgroundSize: "cover",
@@ -172,7 +182,7 @@ export default function Sliderr() {
         <div className="text-center pt-5 overflow-hidden">
           <motion.h2
             key={slides[current].title} // key triggers animation on change
-            className={`${gravesend.className} text-3xl md:text-5xl font-bold uppercase `}
+            className={`${gravesend.className} text-2xl md:text-5xl font-bold uppercase `}
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -50 }}
@@ -182,7 +192,9 @@ export default function Sliderr() {
           </motion.h2>
         </div>
         <div className="text-center overflow-hidden">
-          <p className={`${helvetica.className} text-white/70 text-lg mt-2`}>
+          <p
+            className={`${helvetica.className} text-white/70 text-sm max-w-[80%] mt-1  md:py-0 md:max-w-[50%] m-auto`}
+          >
             {slides[current].subtitle}
           </p>
         </div>
@@ -193,14 +205,14 @@ export default function Sliderr() {
             const offset = getWrappedOffset(index);
             const isActive = offset === 0;
             const scale = isActive ? 1 : 0.8;
-            const opacity = isActive ? 1 : 0.4;
+            const opacity = isActive ? 1 : 0.3;
             const zIndex = 20 - Math.abs(offset);
             const xOffset = offset * 350;
 
             return (
               <motion.div
                 key={img.id}
-                className="absolute w-[300px] md:w-[400px] h-[280px] md:h-[320px] rounded-xl overflow-hidden shadow-xl cursor-pointer"
+                className="absolute w-[300px] md:w-[400px] h-[280px] md:h-[320px] border-2 border-gray-500 rounded-xl overflow-hidden shadow-xl cursor-pointer"
                 style={{ zIndex }}
                 animate={{ x: xOffset, scale, opacity }}
                 transition={{ type: "spring", stiffness: 260, damping: 25 }}

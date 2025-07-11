@@ -11,7 +11,7 @@ const data = [
   {
     title: "Metaverse",
     description:
-      "We are more than just a tech company – we are partners in your digital transformation. Our expertise spans multiple industries, helping startups, enterprises, & enhance user engagement, & unlock new revenue streams through future-ready technology.",
+      "We’re a top game development company in the USA, helping business partners to grow strong user engagement through advanced immersive solutions. Our high-end services in AI, app development, blockchain development services, and more are designed to unlock new revenue opportunities. With a focus on innovation, we create impactful digital products that drive business growth, enhance customer experience, and bring futuristic technologies to life for lasting success.",
     imageurl: "/content/abhiwan1.jpg",
   },
   {

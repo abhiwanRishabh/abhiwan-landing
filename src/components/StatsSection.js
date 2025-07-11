@@ -58,7 +58,7 @@ export const StatsSection = () => {
           >
             Innovating{" "}
             <span className="text-transparent bg-clip-text bg-[linear-gradient(90deg,_#2C72FF_42.64%,_#D227FC_55.12%,_#4D0A76_75.69%)]">
-              Digital
+              IMMERSIVE
             </span>{" "}
             Solutions, <br />
             Transforming{" "}
@@ -147,10 +147,16 @@ export const StatsSection = () => {
                 <p
                   className={`${helvetica.className} mt-2 md:mt-5 lead text-center md:text-start  text-gray-300 tracking-[0.56px] md:tracking-wide`}
                 >
-                  Since 2018, Abhiwan Technology has been at the forefront of
-                  Game Development, Blockchain, AI, Web & App Development, and
-                  Metaverse Solutions, delivering cutting-edge technology to
-                  startups, enterprises, and global brands.
+                  Since 2018, Abhiwan has supported startups and global brands
+                  with smart technologies. The company delivers game
+                  development, blockchain development, AI solutions, digital
+                  twins, metaverse development, and website and app development
+                  services. The expert team creates modern, user-friendly
+                  digital products that solve problems, grow businesses, and
+                  bring new ideas to life through advanced tools. With a focus
+                  on innovation and quality, Abhiwan ensures every solution is
+                  tailored to meet client needs and drive impactful digital
+                  transformation across industries.
                 </p>
               </div>
               {/* stats */}

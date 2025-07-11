@@ -12,6 +12,7 @@ const cardData = [
     id: uuidv4(),
     title1: "Game ",
     title2: "Development",
+    desc: "Where ideas transform into an engaging gaming world",
     mainImageUrl: "/content/vr-main.webp",
     smallImageUrl: "/content/vr-small.webp",
     dataAos: "fade",
@@ -20,6 +21,7 @@ const cardData = [
     id: uuidv4(),
     title1: "Real Estate ",
     title2: "Metaverse",
+    desc: "Create a Virtual world where people can meet, work, play and explore.",
     mainImageUrl: "/content/realEstateMain.jpg",
     smallImageUrl: "/content/realEstate-small.jpg",
     dataAos: "fade",
@@ -53,14 +55,15 @@ const DigitalSolutions = () => {
             Into <br />
             Cutting-edge{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
-              Digital Solutions
+              Immersive Solutions
             </span>
           </h2>
         </div>{" "}
         <div>
           <p className="mt-6 lead text-gray-300 max-w-3xl mx-auto !font-light">
-            Empowering businesses with innovative technology – From Software
-            Development to blockchain, AI, and Immersive Experiences.
+            Your innovative tech partner for interactive services like
+            Metaverse, digital twin, Artificial Intelligence and blockchain
+            development services
           </p>
         </div>
       </div>
@@ -85,7 +88,7 @@ const DigitalSolutions = () => {
               >
                 <button
                   onClick={handleClose}
-                  className="cursor-pointer absolute top-10 right-10 text-white rounded-full w-10 h-10 flex items-center justify-center text-2xl font-bold shadow-lg z-50"
+                  className="cursor-pointer absolute top-5 right-5 scale-75 text-white rounded-full w-10 h-10 flex items-center justify-center text-2xl font-bold shadow-lg z-50"
                 >
                   <X color="white" size={99} />
                 </button>
@@ -135,10 +138,17 @@ function CardComponent({ handleOpen }) {
                   <h3
                     className={`text-white subheading font-semibold ${gravesend.className}`}
                   >
-                    <span className="block uppercase">{item.title1}</span>
-                    <span className="bg-gradient-to-r from-purple-400 to-pink-500 text-transparent bg-clip-text font-bold uppercase">
-                      {item.title2}
+                    <span className="block uppercase">
+                      {item.title1} {item.title2}
                     </span>
+                    {/* <span className="bg-gradient-to-r from-purple-400 to-pink-500 text-transparent bg-clip-text font-bold uppercase">
+                      {item.title2}
+                    </span> */}
+                    <p
+                      className={`${helvetica.className} text-white/70 text-sm mt-2 max-w-[70%] m-auto`}
+                    >
+                      {item.desc}
+                    </p>
                   </h3>
                 </div>
               </div>
@@ -165,10 +175,16 @@ function CardComponent({ handleOpen }) {
                 <h3
                   className={`mt-6 text-white subheading font-semibold ${gravesend.className}`}
                 >
-                  <span className="block">Digital</span>
-                  <span className="bg-gradient-to-r from-purple-400 to-pink-500 text-transparent bg-clip-text font-bold">
+                  <span className="block">Digital Twin</span>
+                  {/* <span className="bg-gradient-to-r from-purple-400 to-pink-500 text-transparent bg-clip-text font-bold">
                     Twin
-                  </span>
+                  </span> */}
+                  <p
+                    className={`${helvetica.className} text-white/70 text-sm mt-2 max-w-[70%] m-auto`}
+                  >
+                    Virtual replicas enable smarter planning, operations, and
+                    improved outcomes.
+                  </p>
                 </h3>
               </div>
             </div>
@@ -191,10 +207,15 @@ function CardComponent({ handleOpen }) {
               <h3
                 className={`mt-6 text-white subheading font-semibold ${gravesend.className}`}
               >
-                <span className="block">EXTENDED</span>
-                <span className="bg-gradient-to-r from-purple-400 to-pink-500 text-transparent bg-clip-text font-bold">
+                <span className="block">EXTENDED REALITY</span>
+                {/* <span className="bg-gradient-to-r from-purple-400 to-pink-500 text-transparent bg-clip-text font-bold">
                   REALITY
-                </span>
+                </span> */}
+                <p
+                  className={`${helvetica.className} text-white/70 text-sm mt-2 max-w-[50%] m-auto`}
+                >
+                  Bring digital objects into the physical world seamlessly
+                </p>
               </h3>
             </div>
           </div>

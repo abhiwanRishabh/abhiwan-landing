@@ -307,9 +307,9 @@ const Hero = () => {
               className={`${styles.tagLine} relative z-12 ${gravesend.className}`}
             >
               <p className=" text-white  px-4 py-2 rounded-full capitalize">
-                Your Gateway to Game Development,
-                <br className="block lg:hidden " /> Blockchain, ai, and the
-                metaverse
+                Your Gateway to Metaverse,
+                <br className="block lg:hidden " /> blockchain, Ai, and Game
+                development services
               </p>
             </div>
           </div>

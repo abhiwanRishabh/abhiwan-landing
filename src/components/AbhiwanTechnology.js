@@ -9,10 +9,10 @@ const AbhiwanTechnology = () => {
     {
       id: 1,
       emoji: "🚀",
-      titlePart1: "Cutting-Edge",
+      titlePart1: "Future-Ready",
       titlePart2: "Technology",
       description:
-        "We stay ahead of the curve, leveraging the latest in AI, blockchain, AR/VR, and software development to create future-ready solutions.",
+        "We use the latest technology as AI, blockchain, AR/VR, metaverse, and digital twin, to create smart digital solutions. We stay ahead of trends, helping your business grow and remain competitive in the global market.",
     },
     {
       id: 2,
@@ -20,7 +20,7 @@ const AbhiwanTechnology = () => {
       titlePart1: "Client-Centric",
       titlePart2: "Approach",
       description:
-        "Your vision is our mission. We tailor every project to your unique needs, ensuring seamless integration and maximum impact.",
+        "Here, your vision becomes our mission. We carefully ideate and shape each project to match your needs. We ensure smooth and precise delivery sets us apart, ensuring a standout experience every time.",
     },
     {
       id: 3,
@@ -28,7 +28,7 @@ const AbhiwanTechnology = () => {
       titlePart1: "End-to-End",
       titlePart2: "Expertise",
       description:
-        "From concept to deployment, we provide comprehensive tech solutions—software development, gaming, blockchain, and immersive experiences—all under one roof.",
+        "From ideation to launching, we provide complete tech solutions. We offer software, games, and blockchain development services in one place. Our end-to-end game development service ensures smooth work at every stage.",
     },
     {
       id: 4,
@@ -36,7 +36,7 @@ const AbhiwanTechnology = () => {
       titlePart1: "Proven Track",
       titlePart2: "Record",
       description:
-        "With a portfolio spanning global brands and startups, we have a history of delivering successful, high-performing digital products.",
+        "Abhiwan works for both startups and global brands. We create innovative digital products backed by a proven track record. Our high-end, high-performing solutions drive growth, efficiency, and lasting impact across diverse industries.",
     },
     {
       id: 5,
@@ -44,7 +44,7 @@ const AbhiwanTechnology = () => {
       titlePart1: "Scalability &",
       titlePart2: "Performance",
       description:
-        "We build for the future—optimized, scalable, and high-performance solutions designed to grow with your business.",
+        "We provide fast and reliable solutions. Whether you have a startup or an enterprise, our teams ensure high performance and flexibility to support your future growth with blockchain development services.",
     },
     {
       id: 6,
@@ -52,7 +52,7 @@ const AbhiwanTechnology = () => {
       titlePart1: "Industry",
       titlePart2: "Versatility",
       description:
-        "We cater to startups, enterprises, and global corporations across diverse industries, delivering customized solutions for maximum business impact.",
+        "Our team delivers immersive solutions for startups and global enterprises, driving innovation, scalability, and growth. We ensure impactful transformation and contribute to the long-term success and competitive edge of your business.",
     },
   ];
 
@@ -129,12 +129,14 @@ const AbhiwanTechnology = () => {
       </div>
       <div className="hidden md:block">
         <p
-          className={`text-[#DDDDDD] lead   px-4 max-w-[1752px] mx-auto ${helvetica.className}`}
+          className={`text-[#DDDDDD] lead  px-4 max-w-[50%] ${helvetica.className}`}
         >
-          At Abhiwan Technology, we don’t just deliver solutions—we <br />
-          craft experiences that drive innovation, scalability, and success.
-          <br />
-          Here’s why we stand out:
+          Abhiwan Technology is a game development company that delivers digital
+          and custom-built solutions. Our expert team focuses on quality, speed,
+          and scalable end-to-end digital support, ensuring every product meets
+          client needs while driving innovation and growth across various
+          platforms and industries.
+          <br /> Here’s why we stand out:
         </p>
       </div>
       <div className="hidden md:block">

@@ -1,7 +1,8 @@
 export const data = [
   {
     title: "Metaverse",
-    description: "Seamless virtual worlds transforming digital interaction.",
+    description:
+      "Recognised as a top metaverse development company in the USA, immersive virtual worlds are being delivered by us to ensure digital experiences.",
     imageurl: "/content/techShowcase/metaverse.png",
     // text2: "Shopping Metaverse",
     // backcardData: {
@@ -75,7 +76,8 @@ export const data = [
   },
   {
     title: "AI Innovation",
-    description: "Intelligent automation driving the future of tech.",
+    description:
+      "As a leading artificial intelligence company, groundbreaking AI innovations are being delivered to industries where transformation is driven through smart automation.",
     imageurl: "/content/techShowcase/aiInnovation.png",
     text1: "Training",
     text2: "Simulations",
@@ -119,7 +121,7 @@ export const data = [
   {
     title: "Blockchain",
     description:
-      "Secure, decentralized technology revolutionizing transactions.",
+      "A new trend in secure and decentralised transactions is being set through blockchain development services offered by Abhiwan’s advanced technology.",
     imageurl: "/content/techShowcase/blockchain.png",
     backcardData: {
       left: [
@@ -160,7 +162,8 @@ export const data = [
   },
   {
     title: "Web & App Dev",
-    description: "Smart Apps. Sleek Web",
+    description:
+      "Website and app development services are offered by Abhiwan to create smart applications and sleek websites with immersive digital experiences.",
     imageurl: "/content/techShowcase/webApp.png",
     backcardData: {
       left: [
@@ -201,7 +204,8 @@ export const data = [
   },
   {
     title: "Interactive Services",
-    description: "Empowering process through Technology",
+    description:
+      "Boost efficiency and productivity with our smart interactive kiosks, digital walls, and product configurators for seamless retail and business operations.",
     imageurl: "/content/techShowcase/interactiveService.png",
     backcardData: {
       left: [
@@ -242,7 +246,8 @@ export const data = [
   },
   {
     title: "Game Design",
-    description: "Game-Ready Art. Studio-Quality",
+    description:
+      "High-end game art and ready-to-play assets are professionally delivered with seamless performance by Abhiwan, a prominent game design company.",
     imageurl: "/content/techShowcase/gameArt.png",
     backcardData: {
       left: [
