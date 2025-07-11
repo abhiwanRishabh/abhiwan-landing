@@ -145,7 +145,7 @@ export const StatsSection = () => {
                   Innovating Since 2018{" "}
                 </h2>
                 <p
-                  className={`${helvetica.className} mt-2 md:mt-5 lead text-center md:text-start  text-gray-300 tracking-[0.56px] md:tracking-wide`}
+                  className={`mt-2 md:mt-5 lead text-center md:text-start  text-gray-300 tracking-[0.56px] md:tracking-wide`}
                 >
                   Since 2018, Abhiwan has supported startups and global brands
                   with smart technologies. The company delivers game

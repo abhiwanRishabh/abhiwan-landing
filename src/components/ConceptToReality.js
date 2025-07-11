@@ -23,7 +23,7 @@ const projects = [
     image: "/content/projects/kundlipro.png",
     secondImg: isMobileView?.matches
       ? "/content/projects/mobile/kundli.png"
-      : "/content/projects/kundliproH.png",
+      : "/content/projects/new/Kundalipro.png",
     description: "The Most Trusted & Insightful Astrology App",
     // boxShadow: "shadow-[0px_0px_100.8px_0px_#008FFF]",
     appStore: true,
@@ -37,7 +37,7 @@ const projects = [
     image: "/content/projects/cocacola.png",
     secondImg: isMobileView?.matches
       ? "/content/projects/mobile/cocaCola.png"
-      : "/content/projects/cocacolaH.png",
+      : "/content/projects/new/CocaCola.png",
     description: "Wanna be a movie star? Partnered with Box Office!",
     // boxShadow: "shadow-[0px_4px_138.8px_71px_#FF060640]",
     appStore: false,
@@ -51,7 +51,7 @@ const projects = [
     image: "/content/projects/battlesaga.png",
     secondImg: isMobileView?.matches
       ? "/content/projects/mobile/battleSaga.png"
-      : "/content/projects/BattleSagaH.png",
+      : "/content/projects/new/BattleSaga.png",
     description:
       "Battle Saga is a Clash of Clan inspired game on Binance Smart Chain",
     // boxShadow: "shadow-[0px_4px_131.7px_17px_#2A37A6BD]",
@@ -67,7 +67,7 @@ const projectsSecondRow = [
     id: "1d0a1941-450e-49c2-9fa3-87abf0d8aec0",
     title: "Voxel",
     image: "/content/projects/Voxel.png",
-    secondImg: "/content/projects/voxelcasestudy.png",
+    secondImg: "/content/projects/new/Voxel.png",
     description: "voxel",
     // boxShadow: "shadow-[0px_4px_131.7px_17px_#2A37A6BD]",
     appStore: true,
@@ -79,7 +79,7 @@ const projectsSecondRow = [
     id: "deb21f98-4572-4e11-b394-388f7b0fd8f9",
     title: "diamondHook",
     image: "/content/projects/diamondHook.png",
-    secondImg: "/content/projects/diamondHookcasestudy.png",
+    secondImg: "/content/projects/new/DiamondHooves.png",
     description: "diamondHook",
     // boxShadow: "shadow-[0px_4px_131.7px_17px_#2A37A6BD]",
     appStore: false,
@@ -91,7 +91,7 @@ const projectsSecondRow = [
     id: "b5426440-b39b-4bc1-b18c-5fcc6cf205a4",
     title: "Marina",
     image: "/content/projects/marina.png",
-    secondImg: "/content/projects/Marine.png",
+    secondImg: "/content/projects/new/Marina.png",
     description:
       "Battle Saga is a Clash of Clan inspired game on Binance Smart Chain",
     // boxShadow: "shadow-[0px_0px_100.8px_0px_#008FFF]",
@@ -109,7 +109,7 @@ const projectlanscape = [
     image: "/content/projects/penguincart.png",
     secondImg: isMobileView?.matches
       ? "/content/projects/mobile/Penguinkart.png"
-      : "/content/projects/penguinKartsH.png",
+      : "/content/projects/new/PenguinKart.png",
     // boxShadow: " shadow-[0px_4px_93.3px_0px_#02E3F8]",
     dataAos: "fade",
     class: "shadow-card-7",
@@ -120,7 +120,7 @@ const projectlanscape = [
     image: "/content/projects/ohzi.png",
     secondImg: isMobileView?.matches
       ? "/content/projects/mobile/ohzi2.png"
-      : "/content/projects/ohziH.png",
+      : "/content/projects/new/Ohzi.png",
     // boxShadow: "shadow-[0px_4px_126.5px_0px_#000000CF]",
     dataAos: "fade",
     class: "shadow-card-8",
