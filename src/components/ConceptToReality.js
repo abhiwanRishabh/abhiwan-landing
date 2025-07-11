@@ -135,8 +135,6 @@ const useDisableBodyScroll = (isActive) => {
 };
 
 const ConceptToReality = () => {
- 
-
   const [selectedImage, setSelectedImage] = useState(null);
 
   useDisableBodyScroll(!!selectedImage);
@@ -203,7 +201,7 @@ const ConceptToReality = () => {
                     height={400}
                     src={project.image}
                     alt={project.title}
-                    className={`w-full h-full object-fill lg:object-cover rounded-2xl`}
+                    className={`w-[80%] m-auto h-full md:w-full  object-fill lg:object-cover rounded-2xl`}
                     loading="lazy"
                     // className={`rounded-2xl object-cover w-full h-full border border-[#8D8D8D] shadow-[${project.boxShadow}] hover:shadow-xl hover:shadow-purple-500/30 transition-shadow duration-300`}
                   />
@@ -212,7 +210,7 @@ const ConceptToReality = () => {
             </div>
           ))}
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 max-w-7xl mx-auto gap-6 p-3 md:p-4 ">
+      <div className="grid grid-cols-1 md:grid-cols-2 max-w-7xl mx-auto gap-6 p-6 md:p-4 ">
         {projectlanscape.map((item, idx) => {
           return (
             <div
@@ -254,7 +252,7 @@ const ConceptToReality = () => {
                   height={400}
                   src={project.image}
                   alt={project.title}
-                  className={`w-full h-full object-fill lg:object-cover rounded-2xl`}
+                  className={`w-[80%] m-auto h-full md:w-full object-fill lg:object-cover rounded-2xl`}
                   // className={`rounded-2xl object-cover w-full h-full border border-[#8D8D8D] shadow-[${project.boxShadow}] hover:shadow-xl hover:shadow-purple-500/30 transition-shadow duration-300`}
                 />
               </div>

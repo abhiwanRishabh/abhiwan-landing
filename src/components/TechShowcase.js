@@ -92,8 +92,6 @@ export default function TechShowcase() {
     }
   }, []);
 
-
-
   const RightLongBaseLine = ({ text1, text2, iconp }) => {
     return (
       <>
@@ -242,7 +240,7 @@ export default function TechShowcase() {
         <>
           <div className="flex relative py-[0rem]">
             {/* <div className="flex relative h-[128px] py-[9rem]"> */}
-            <div >
+            <div>
               {/* <h2 className="h-[max-content] my-auto text-4xl md:text-7xl font-bold tracking-wide relative z-50 bg-[linear-gradient(90deg,_#FFFDFF_0%,_#999899_100%)] bg-clip-text text-transparent">
             METAVERSE
           </h1> */}
@@ -423,7 +421,7 @@ export default function TechShowcase() {
                           <button className="text-white text-[10px] md:text-sm text-nowrap font-semibold px-3 py-2 border border-[#9CA8BB] rounded-full">
                             {item.title}
                           </button>
-                          <p className="text-[#9CA8BB] text-[8px] md:text-xs mt-3">
+                          <p className="text-[#9CA8BB] text-[8px] md:text-xs mt-3 hidden lg:block">
                             {item.description}
                           </p>
                         </div>
@@ -479,7 +477,6 @@ export default function TechShowcase() {
                       </>
                     )}
 
-
                     {item.title == "Blockchain" && (
                       <Image
                         src="/Innovation.webp"
@@ -496,8 +493,6 @@ export default function TechShowcase() {
                         className={`w-auto object-contain ${styles.bottom_left_OutlineText}`}
                       />
                     )}
-
-                    
                   </div>
                 </motion.div>
               ))}

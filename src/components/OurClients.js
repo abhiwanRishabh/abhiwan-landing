@@ -58,19 +58,19 @@ const testimonials = [
     author: "",
   },
   {
-    name: "Jared, Marina Landings",
-    image: "/content/testimonials/testimonial7.png",
+    name: "Jared",
+    image: "/content/testimonials/testimonial8.png",
     quote:
       "From day one, the Abhiwan team felt like an extension of our own. They brought sharp ideas, kept communication seamless, and executed beautifully. Already looking forward to our next project.",
-    author: "",
+    author: "Marina Landings",
   },
-  {
-    name: "Tanya, CEO & Founder, Interior Design Company",
-    image: "/content/testimonials/testimonial7.png",
-    quote:
-      "Abhiwan Technology was responsive, detail-oriented, and easy to work with. The 3D visualizer they built significantly improved user engagement and streamlined our design process.",
-    author: "",
-  },
+  // {
+  //   name: "Tanya",
+  //   image: "/content/testimonials/testimonial7.png",
+  //   quote:
+  //     "Abhiwan Technology was responsive, detail-oriented, and easy to work with. The 3D visualizer they built significantly improved user engagement and streamlined our design process.",
+  //   author: "CEO & Founder, Interior Design Company",
+  // },
 ];
 
 const OurClients = () => {

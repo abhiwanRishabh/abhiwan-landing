@@ -121,7 +121,7 @@ const AbhiwanTechnology = () => {
         </div>
         <div className="hidden md:block">
           <h2
-            className={`${styles.nonMarquee} ${voltaire.className}  absolute top-[6rem] right-[-13rem] text-[11rem]  font-bold tracking-wide capitalize z-0`}
+            className={`${styles.nonMarquee} ${voltaire.className}  absolute top-[6rem] right-[0rem] text-[9rem] opacity-50 font-bold tracking-wide capitalize z-0`}
           >
             INNOVATION
           </h2>
