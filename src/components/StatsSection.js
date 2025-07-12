@@ -128,7 +128,7 @@ export const StatsSection = () => {
 
       {/* <div clasName="max-w-5xl mx-auto"> */}
       {/* <div clasName="max-w-[1920px] mx-auto"> */}
-      <div className="lg:max-w-full xl:max-w-10/12 px-3 mx-auto">
+      <div className="lg:max-w-[95%] 2xl:max-w-[80%] px-3 mx-auto">
         {/* <div className="flex flex-col md:flex-row  gap-6   mb-20 max-w-7xl mx-auto"> */}
         <div className="flex flex-col lg:flex-row  gap-6  mb-1 md:mb-20 max-w-[1652px] mx-auto">
           <div data-aos="fade-right">
@@ -183,11 +183,11 @@ export const StatsSection = () => {
                               number={`${item.number}`}
                               ftext=""
                               stext=""
-                              className={`${gravesend.className} text:xl md:text-2xl lg:text-4xl font-bold text-white`}
+                              className={`${gravesend.className} text:xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-white`}
                             />
                             <p
                               // className={`${helvetica.className} text-white mt-2 text-[20px]`}
-                              className={`${helvetica.className}  mt-1 text-xs md:mt-2 lg:text-[1rem] xl:text-xl 2xl:text-2xl font-bold  text-transparent bg-clip-text`}
+                              className={`${helvetica.className}  mt-1 text-xs md:mt-2 lg:text-[1rem] xl:text-[1.rem] 2xl:text-2xl font-bold  text-transparent bg-clip-text`}
                               style={{
                                 backgroundImage:
                                   "radial-gradient(50% 167.69% at 50% 87.9%, #3625ff 0%, #2C72FF 50%)",
