@@ -36,6 +36,15 @@ const cardVariants = {
   }),
 };
 
+const images = {
+  "AI Innovation": "/tech/AiInnovation.png",
+  Metaverse: "/tech/metaverse.png",
+  Blockchain: "/tech/Blockchain.png",
+  "Web & App Dev": "/tech/webAndApp.png",
+  "Interactive Services": "/tech/InteractiveService.png",
+  "Game Design": "/tech/GameArt.png",
+};
+
 export default function TechShowcase() {
   const [[startIndex, direction], setStartIndex] = useState([0, 0]);
   const visibleCards = 3;
@@ -97,7 +106,7 @@ export default function TechShowcase() {
       <>
         <div className={`w-[max-content] relative`}>
           <div className=" w-[-webkit-fill-available] absolute  right-[1rem] ">
-            <div className="flex  items-center gap-2">
+            <div className="flex  items-center  gap-2">
               {iconp == "MoveUpLeft" ? (
                 <MoveUpLeft className="mb-4" />
               ) : iconp == "MoveLeft" ? (
@@ -108,8 +117,8 @@ export default function TechShowcase() {
 
               {/* */}
 
-              <p className={`text-center ms-auto`}>
-                {text1} <br /> {text2}
+              <p className={`text-center text-xs `}>
+                {text1} {text2}
               </p>
             </div>
           </div>
@@ -133,50 +142,30 @@ export default function TechShowcase() {
     return (
       <>
         <div className={`w-[max-content] relative`}>
-          <div className=" w-[-webkit-fill-available] absolute  left-[1rem] ">
-            <div className="flex  items-center  relative ">
-              <p className={`text-center me-auto`}>
-                {text1} <br /> {text2}
-              </p>
-              {iconp == "MoveUpRight" ? (
-                <MoveUpRight className="mb-4  " />
-              ) : iconp == "MoveRight" ? (
-                <MoveRight className="mb-4 " />
-              ) : (
-                <MoveDownRight className="mb-4 " />
-              )}
-              {/* <MoveDownRight /> */}
-            </div>
-          </div>
-          {/* <Image
-          src="/baseLine.svg"
-          alt="line"
-          width={255}
-          height={255}
-          className={`${styles.line} `}
-        /> */}
-          <svg
-            width="180"
-            height="100"
-            viewBox="0 0 255 32"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M0 31C0 31 151 31 159.5 31C168 31 182.5 1 191 1C199.5 1 254.5 1 254.5 1"
-              stroke="#842DFF"
-            />
-          </svg>
+          <Image
+            src="/techArrowImage.png"
+            alt="line"
+            width={400}
+            height={400}
+            className={``}
+          />
         </div>
       </>
     );
   };
-  const CardBack = ({ leftside, rightside }) => {
+  const CardBack = ({ leftside, rightside, title }) => {
     return (
       <>
         <div className="flex w-ful p-3">
           <div>
-            {leftside.map((item, index) => {
+            <Image
+              src={`${images[title]}`}
+              alt="line"
+              width={400}
+              height={400}
+              className={``}
+            />
+            {/* {leftside.map((item, index) => {
               return (
                 <div key={`left-${index}`}>
                   <RightLongBaseLine
@@ -186,7 +175,7 @@ export default function TechShowcase() {
                   />
                 </div>
               );
-            })}
+            })} */}
             {/* <RightLongBaseLine
               text1=" About Abhiwan "
               text2=" Technology"
@@ -199,7 +188,7 @@ export default function TechShowcase() {
             /> */}
           </div>
           <div>
-            {rightside.map((item, index) => {
+            {/* {rightside.map((item, index) => {
               return (
                 <div key={`right-${index}`}>
                   <LeftLongBaseLine
@@ -209,7 +198,7 @@ export default function TechShowcase() {
                   />
                 </div>
               );
-            })}
+            })} */}
             {/* <LeftLongBaseLine
               text1=" Innovative  "
               text2=" Solutions"
@@ -391,10 +380,11 @@ export default function TechShowcase() {
                         <div className="absolute inset-0 bg-neutral-900/90 backdrop-blur-[2px] transition-all duration-300 ease-in-out" />
 
                         {/* CardBack content - fully visible */}
-                        <div className="relative z-10 transition-transform duration-300 hidden md:block group-hover:scale-50 md:group-hover:scale-50 lg:group-hover:scale-85 xl:group-hover:scale-100 scale-90 ease-[cubic-bezier(0.16,1,0.3,1)]">
+                        <div className="relative z-10 transition-transform duration-300 hidden md:block  lg:group-hover:scale-85 xl:group-hover:scale-100 scale-90 ease-[cubic-bezier(0.16,1,0.3,1)]">
                           <CardBack
                             leftside={item.backcardData.left}
                             rightside={item.backcardData.right}
+                            title={item.title}
                           />
                         </div>
                       </div>

@@ -145,7 +145,8 @@ export const StatsSection = () => {
                   Innovating Since 2018{" "}
                 </h2>
                 <p
-                  className={`mt-2 md:mt-5 lead text-center md:text-start  text-gray-300 tracking-[0.56px] md:tracking-wide`}
+                  className={`${helvetica.className} mt-2 md:mt-5 lead text-center md:text-start  text-gray-300 tracking-[6px] md:tracking-wide`}
+                  style={{ fontWeight: "400" }}
                 >
                   Since 2018, Abhiwan has supported startups and global brands
                   with smart technologies. The company delivers game
@@ -186,7 +187,7 @@ export const StatsSection = () => {
                             />
                             <p
                               // className={`${helvetica.className} text-white mt-2 text-[20px]`}
-                              className={`${helvetica.className}  mt-1 text-xs md:mt-2 md:text-lg lg:text-2xl  font-bold  text-transparent bg-clip-text`}
+                              className={`${helvetica.className}  mt-1 text-xs md:mt-2 lg:text-[1rem] xl:text-xl 2xl:text-2xl font-bold  text-transparent bg-clip-text`}
                               style={{
                                 backgroundImage:
                                   "radial-gradient(50% 167.69% at 50% 87.9%, #3625ff 0%, #2C72FF 50%)",

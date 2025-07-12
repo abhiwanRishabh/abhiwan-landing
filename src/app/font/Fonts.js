@@ -11,12 +11,12 @@ export const helvetica = localFont({
   src: [
     {
       path: "./helvetica/helvetica-light.ttf",
-      weight: "300",
+      weight: "400",
       style: "normal",
     },
     {
       path: "./helvetica/Helvetica.ttf",
-      weight: "400",
+      weight: "500",
       style: "normal",
     },
     {

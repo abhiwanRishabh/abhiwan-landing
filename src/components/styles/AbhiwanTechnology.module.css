@@ -64,6 +64,7 @@
 @media (width >= 1280px) {
   .seconCardData {
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap : 0rem;
   }
 }
 

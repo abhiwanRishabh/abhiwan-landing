@@ -1,3 +1,7 @@
+
+
+
+
 export const data = [
   {
     title: "Metaverse",
@@ -45,8 +49,8 @@ export const data = [
           iconp: "MoveUpLeft",
         },
         {
-          text1: "Training",
-          text2: "Simulations",
+          text1: "Education",
+          text2: "Metaverse",
           iconp: "MoveLeft",
         },
         {

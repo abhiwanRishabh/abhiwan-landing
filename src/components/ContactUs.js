@@ -246,9 +246,8 @@ const ContactUs = () => {
                 <select name="requirement" onChange={handleChange}>
                   <option value="">Select Requirement</option>
 
-                  <option value="Metaverse Blockchain">
-                    Metaverse Blockchain
-                  </option>
+                  <option value="Metaverse">Metaverse</option>
+                  <option value="Blockchain">Blockchain</option>
                   <option value="Game Development">Game Development</option>
                   <option value="Real Estate Metaverse">
                     Real Estate Metaverse
@@ -257,7 +256,7 @@ const ContactUs = () => {
                     NFT Marketplace | DEFI
                   </option>
                   <option value="Web And App Development">
-                    Web And App Development
+                    Web & App Development
                   </option>
                   <option value="AR / VR Development">
                     AR / VR Development
@@ -265,7 +264,7 @@ const ContactUs = () => {
                   <option value="UI / UX Development">
                     UI / UX Development
                   </option>
-                  <option value="Other">Other</option>
+                  <option value="Other">Others</option>
                 </select>
               </div>
 
