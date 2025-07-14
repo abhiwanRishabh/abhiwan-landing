@@ -55,7 +55,7 @@ const testimonials = [
     image: "/content/testimonials/testimonial7.png",
     quote:
       "Abhiwan Technology exceeded expectations with their creativity, communication, and execution. I’m excited to collaborate on future projects.",
-    author: "",
+    author: "Trivial",
   },
   {
     name: "Jared",
