@@ -61,7 +61,7 @@ const testimonials = [
     name: "Jared",
     image: "/content/testimonials/testimonial8.png",
     quote:
-      "From day one, the Abhiwan team felt like an extension of our own. They brought sharp ideas, kept communication seamless, and executed beautifully. Already looking forward to our next project.",
+      "Abhiwan truly felt like part of our own team creative, easy to work with, and dependable",
     author: "Marina Landings",
   },
   // {

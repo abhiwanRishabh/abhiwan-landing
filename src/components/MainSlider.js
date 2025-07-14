@@ -11,19 +11,19 @@ const data = [
   {
     title: "Metaverse",
     description:
-      "We’re a top game development company in the USA, helping business partners to grow strong user engagement through advanced immersive solutions. Our high-end services in AI, app development, blockchain development services, and more are designed to unlock new revenue opportunities. With a focus on innovation, we create impactful digital products that drive business growth, enhance customer experience, and bring futuristic technologies to life for lasting success.",
+      "Abhiwan offers AI, web and metaverse development services to build immersive solutions that grow your business. We focus on automation, technology and creativity for transformative innovation.",
     imageurl: "/content/abhiwan1.jpg",
   },
   {
     title: "AI Innovation",
     description:
-      "From developing immersive metaverse ecosystems to deploying AI-driven automation solutions, we blend strategy, creativity, and technology to help businesses thrive in the digital age.",
+      "We’re more than a tech company. We’re your digital transformation partner, enabling startups and enterprises with future-ready technology to enhance engagement and drive new revenue opportunities.",
     imageurl: "/content/mainSlider2.jpg",
   },
   {
     title: "Blockchain",
     description:
-      "At Abhiwan Technology, we innovate at the intersection of metaverse, AI, and automation, creating transformative digital experiences. From building immersive virtual ecosystems to crafting intelligent automation solutions, we merge strategy, technology, and creativity to drive businesses forward.",
+      "We’re a top game development company in the USA, enhancing engagement with immersive AI and blockchain development services that unlock new revenue opportunities for businesses.",
     imageurl: "/content/conferencestageabhiwanmockup.jpg",
   },
 ];
