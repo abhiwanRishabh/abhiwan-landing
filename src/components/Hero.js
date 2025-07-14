@@ -61,7 +61,9 @@ const RightLongBaseLine = ({ text1, text2, hrefid, iconp }) => {
               <MoveLeft className="mb-4" color="#fff" size={16} />
             )}
 
-            <p className={`text-white text-[1rem]`}>
+            <p className={`text-white text-[1rem]`}
+             style={{transform : text1 === "Our Recent " ? 'translateX(-21px)' : 'translateX(0px)'}}
+            >
               {text1} <br /> {text2}
             </p>
           </div>
@@ -266,7 +268,11 @@ const Hero = () => {
               >
                 <div className="flex gap-7 ">
                   <div data-aos="fade-up">
-                    <StatsComp number="7+" ftext="Year of" stext="Experience" />
+                    <StatsComp
+                      number="7+"
+                      ftext="Years of"
+                      stext="Experience"
+                    />
                   </div>
                   <div data-aos="fade-up" data-aos-delay={`200`}>
                     <StatsComp number="80%" ftext="Repeat" stext="Clients" />

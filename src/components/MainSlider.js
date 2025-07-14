@@ -123,7 +123,7 @@ export default function MainSlider() {
                 {/* Left Arrow */}
                 <button
                   onClick={handlePrev}
-                  className="hidden md:block absolute md:left-1.5 xl:-left-15 hover:bg-purple-800 text-white p-3 rounded-full shadow-lg transition-colors z-20 slide-arrow"
+                  className="hidden md:block absolute md:left-1.5 xl:left-[5px] hover:bg-purple-800 text-white p-3 rounded-full shadow-lg transition-colors z-20 slide-arrow"
                 >
                   <ChevronLeft size={24} />
                 </button>
@@ -131,7 +131,7 @@ export default function MainSlider() {
                 {/* Right Arrow */}
                 <button
                   onClick={handleNext}
-                  className="hidden md:block  absolute md:right-1.5 xl:-right-15 hover:bg-purple-800 text-white p-3 rounded-full shadow-lg transition-colors z-20 slide-arrow"
+                  className="hidden md:block  absolute md:right-1.5 xl:right-[5px] hover:bg-purple-800 text-white p-3 rounded-full shadow-lg transition-colors z-20 slide-arrow"
                 >
                   <ChevronRight size={24} />
                 </button>
