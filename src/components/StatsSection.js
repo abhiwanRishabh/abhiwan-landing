@@ -135,7 +135,7 @@ export const StatsSection = () => {
             <div className="flex-1 flex flex-col justify-between p-7 pb-4 md:p-7 h-full">
               {/* heading */}
               <div className="mb-1 md:mb-10 lg:mb-15 xl:mb-20">
-                <h2
+                <h3
                   className={` ${nasalization.className} medium-heading text-center md:text-start text-transparent bg-clip-text !capitalize`}
                   style={{
                     backgroundImage:
@@ -143,7 +143,7 @@ export const StatsSection = () => {
                   }}
                 >
                   Innovating Since 2018{" "}
-                </h2>
+                </h3>
                 <p
                   className={`${helvetica.className} mt-2 md:mt-5 lead text-center md:text-start  text-gray-300`}
                   style={{ fontWeight: "400" }}

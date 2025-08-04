@@ -141,13 +141,13 @@ const AbhiwanTechnology = () => {
       </div>
       <div className="hidden md:block">
         <div className="px-4 py-4 text-end max-w-[1752px] mx-auto">
-          <h2
+          <p
             className={`text-white small-heading  font-light  ${montserrat.className}`}
             style={{ fontWeight: 400 }}
           >
             Accessible Technology,
-          </h2>
-          <h2
+          </p>
+          <p
             className={`small-heading  font-light text-transparent bg-clip-text inline-block mt-2  ${montserrat.className}`}
             style={{
               backgroundImage:
@@ -156,7 +156,7 @@ const AbhiwanTechnology = () => {
             }}
           >
             Anytime, Anywhere
-          </h2>
+          </p>
         </div>
       </div>
       {/* ---------------------------------------- */}

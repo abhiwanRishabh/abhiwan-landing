@@ -6,6 +6,11 @@ import Image from "next/image";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { gravesend, helvetica } from "@/app/font/Fonts";
 
+let isMobileView = false;
+if (typeof window !== "undefined") {
+  isMobileView = window.matchMedia("(max-width:600px)")?.matches;
+}
+
 const slides = [
   {
     id: 1,
@@ -14,7 +19,9 @@ const slides = [
       "Immersive game development services are provided by our company, where visionary concepts are transformed into reality through premium design and innovative development.",
     image: "/content/slider/slider1.jpg",
     backgroundImage: "/content/slider/bg1.png",
-    data: "/content/slider/data1.png",
+    data: isMobileView
+      ? "/content/slider/sub_slide_mobile/data1.png"
+      : "/content/slider/data1.png",
   },
   {
     id: 2,
@@ -23,7 +30,9 @@ const slides = [
       "With our metaverse development services, immersive virtual worlds are created to deliver real-life experiences and deeper engagement for global audiences",
     image: "/content/slider/slider2.jpg",
     backgroundImage: "/content/slider/webp/bg2.webp",
-    data: "/content/slider/data2.png",
+    data: isMobileView
+      ? "/content/slider/sub_slide_mobile/data2.png"
+      : "/content/slider/data2.png",
   },
   {
     id: 3,
@@ -32,7 +41,9 @@ const slides = [
       "Our digital twin services empower businesses to replicate physical assets with precision, enabling smarter, real-time, data-driven decisions and innovation",
     image: "/content/slider/slider3.jpg",
     backgroundImage: "/content/slider/bg3.png",
-    data: "/content/slider/data3.png",
+    data: isMobileView
+      ? "/content/slider/sub_slide_mobile/data3.png"
+      : "/content/slider/data3.png",
   },
   {
     id: 4,
@@ -41,7 +52,9 @@ const slides = [
       "Secure, transparent, and decentralised digital experiences are delivered through blockchain innovation, enabling a trustless future powered by our Web 3.0 solutions",
     image: "/content/slider/slider4.png",
     backgroundImage: "/content/slider/webp/bg4.webp",
-    data: "/content/slider/data4.png",
+    data: isMobileView
+      ? "/content/slider/sub_slide_mobile/data4.png"
+      : "/content/slider/data4.png",
   },
   {
     id: 5,
@@ -52,7 +65,9 @@ const slides = [
       "We create interactive solutions to enhance customer engagement and operational efficiency.",
     image: "/content/slider/slider5.jpg",
     backgroundImage: "/content/slider/webp/bg5.webp",
-    data: "/content/slider/data5.png",
+    data: isMobileView
+      ? "/content/slider/sub_slide_mobile/data5.png"
+      : "/content/slider/data5.png",
   },
   {
     id: 6,
@@ -63,7 +78,9 @@ const slides = [
       "Our creative team specializes in crafting high-quality visuals for games and digital content.",
     image: "/content/slider/slider6.png",
     backgroundImage: "/content/slider/webp/bg6.webp",
-    data: "/content/slider/data6.png",
+    data: isMobileView
+      ? "/content/slider/sub_slide_mobile/data6.png"
+      : "/content/slider/data6.png",
   },
 
   {
@@ -75,7 +92,9 @@ const slides = [
       "We develop robust, scalable web and mobile applications for businesses.",
     image: "/content/slider/slider7.jpg",
     backgroundImage: "/content/slider/bg7.png",
-    data: "/content/slider/data7.png",
+    data: isMobileView
+      ? "/content/slider/sub_slide_mobile/data7.png"
+      : "/content/slider/data7.png",
   },
 
   {
@@ -87,7 +106,9 @@ const slides = [
       "Businesses are empowered through smart automation through innovative AI solutions that streamline operations, minimise costs, enhance efficiency, and accelerate performance.",
     image: "/content/slider/slider8.jpg",
     backgroundImage: "/content/slider/bg8.png",
-    data: "/content/slider/data8.png",
+    data: isMobileView
+      ? "/content/slider/sub_slide_mobile/data8.png"
+      : "/content/slider/data8.png",
   },
   {
     id: 9,
@@ -98,7 +119,9 @@ const slides = [
       "We offer 3D visualization services to enhance architectural planning and interior design.",
     image: "/content/slider/slider9.png",
     backgroundImage: "/content/slider/bg9.png",
-    data: "/content/slider/data9.png",
+    data: isMobileView
+      ? "/content/slider/sub_slide_mobile/data9.png"
+      : "/content/slider/data9.png",
   },
   {
     id: 10,
@@ -109,7 +132,9 @@ const slides = [
       "We develop Augmented, Virtual, and Mixed Reality applications for various industries.",
     image: "/content/slider/slider10.png",
     backgroundImage: "/content/slider/bg10.png",
-    data: "/content/slider/data10.png",
+    data: isMobileView
+      ? "/content/slider/sub_slide_mobile/data10.png"
+      : "/content/slider/data10.png",
   },
 ];
 
@@ -275,9 +300,9 @@ export default function Sliderr() {
             >
               <button
                 onClick={handleClose}
-                className="absolute top-15 right-20 bg-white text-black p-2 rounded-full shadow-lg z-50"
+                className={`absolute cursor-pointer ${isMobileView ? 'top-5 right-5' : 'top-15 right-24'} bg-white text-black p-2 rounded-full shadow-lg z-50`}
               >
-                <X size={24} />
+                <X size={18} />
               </button>
               <Image
                 src={selectedImage}

@@ -389,6 +389,10 @@
       
     }
 
+     .tagLine {
+     transform: translateX(-50%) scale(.9);
+  }
+
    .tagLine p {
      border-radius: 14px !important;
      font-size : 10px !important;
@@ -402,3 +406,16 @@
 }
 
 
+@media (width <= 425px) and (height <= 768px) {
+ .sabHeading {
+    letter-spacing: 4.5vw !important;
+     margin-left: 20px;
+  }
+  .tagLine {
+     transform: translateX(-50%) scale(.9);
+  }
+
+  .vrGirl img {
+     scale: 1.2;
+  }
+}

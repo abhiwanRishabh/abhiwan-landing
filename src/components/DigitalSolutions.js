@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { v4 as uuidv4 } from "uuid";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { gravesend, helvetica } from "@/app/font/Fonts";
 import { motion, AnimatePresence } from "framer-motion";
 import Sliderr from "./service/Sliderr";
@@ -12,7 +12,7 @@ const cardData = [
     id: uuidv4(),
     title1: "Game ",
     title2: "Development",
-    desc: "Where ideas transform into an engaging gaming world",
+    desc: "Where ideas transform into an engaging gaming world.",
     mainImageUrl: "/content/vr-main.webp",
     smallImageUrl: "/content/vr-small.webp",
     dataAos: "fade",
@@ -28,8 +28,18 @@ const cardData = [
   },
 ];
 
+const useDisableBodyScroll = (isActive) => {
+  useEffect(() => {
+    document.body.style.overflow = isActive ? "hidden" : "auto";
+    return () => (document.body.style.overflow = "auto");
+  }, [isActive]);
+};
+
+
 const DigitalSolutions = () => {
   const [selectedImage, setSelectedImage] = useState(false);
+
+  useDisableBodyScroll(selectedImage)
 
   const handleOpen = () => {
     setSelectedImage(true);
@@ -38,6 +48,10 @@ const DigitalSolutions = () => {
   const handleClose = () => {
     setSelectedImage(false);
   };
+
+
+  
+
 
   return (
     <>
@@ -62,8 +76,8 @@ const DigitalSolutions = () => {
         <div>
           <p className="mt-6 lead text-gray-300 max-w-3xl mx-auto !font-light">
             Your innovative tech partner for interactive services like
-            Metaverse, digital twin, Artificial Intelligence and blockchain
-            development services
+            Metaverse, Digital Twin, Artificial Intelligence and Blockchain
+            Development Services
           </p>
         </div>
       </div>
@@ -214,7 +228,7 @@ function CardComponent({ handleOpen }) {
                 <p
                   className={`${helvetica.className} text-white/70 text-sm mt-2 max-w-[50%] m-auto`}
                 >
-                  Bring digital objects into the physical world seamlessly
+                  Bring digital objects into the physical world seamlessly.
                 </p>
               </h3>
             </div>

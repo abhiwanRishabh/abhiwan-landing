@@ -408,7 +408,7 @@ function Header() {
             src="/AbhiwanLogoPortfolio.png"
             width={80}
             height={80}
-            alt="abhiwan_logo"
+            alt="Abhiwan Technology"
           />
         </div>
         {/* <span className={styles.logoSubtext}>CLICK TO VISIT US</span> */}

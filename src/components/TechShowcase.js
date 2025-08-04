@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useInView } from "framer-motion";
 import {
   ChevronRight,
   ChevronLeft,
@@ -49,14 +49,15 @@ export default function TechShowcase() {
   const [[startIndex, direction], setStartIndex] = useState([0, 0]);
   const visibleCards = 3;
   const autoScrollRef = useRef(null);
-  const { ref, isVisible } = useLazyLoadOnView();
+  const containerRef = useRef(null);
+  const isInView = useInView(containerRef, { once: false, margin: "-20% 0px" });
 
   const handleNext = () => {
     setStartIndex(([prevIndex]) => [
       (prevIndex + visibleCards) % data.length,
       1,
     ]);
-    resetAutoScroll();
+    // resetAutoScroll();
   };
 
   const handlePrev = () => {
@@ -64,7 +65,7 @@ export default function TechShowcase() {
       (prevIndex - visibleCards + data.length) % data.length,
       -1,
     ]);
-    resetAutoScroll();
+    // resetAutoScroll();
   };
 
   const getVisibleItems = () => {
@@ -90,8 +91,9 @@ export default function TechShowcase() {
   };
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width:768px)");
-    if (mediaQuery.matches) {
+    const mediaQuery = window.matchMedia("(max-width:800px)");
+    console.log("autoscroll will start", mediaQuery.matches && isInView);
+    if (mediaQuery.matches && isInView) {
       resetAutoScroll();
       return () => {
         if (autoScrollRef.current) {
@@ -99,7 +101,7 @@ export default function TechShowcase() {
         }
       };
     }
-  }, []);
+  }, [isInView]);
 
   const RightLongBaseLine = ({ text1, text2, iconp }) => {
     return (
@@ -221,11 +223,14 @@ export default function TechShowcase() {
   };
 
   return (
-    <div
-      ref={ref}
+    <motion.div
+      ref={containerRef}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.7 }}
       className="text-white h-full pt-[2rem] pb-[6rem] px-6 relative overflow-hidden md:overflow-hidden"
     >
-      {isVisible && (
+      {
         <>
           <div className="flex relative py-[0rem]">
             {/* <div className="flex relative h-[128px] py-[9rem]"> */}
@@ -277,7 +282,7 @@ export default function TechShowcase() {
           </button>
 
           <div
-            className={`h-full grid grid-cols-3 lg:grid-cols-3 max-w-7xl mx-auto relative  ${styles.techShowcaseGrid}`}
+            className={`grid grid-cols-3 lg:grid-cols-3 max-w-7xl mx-auto relative  ${styles.techShowcaseGrid}`}
           >
             <AnimatePresence custom={direction} mode="sync">
               {getVisibleItems().map((item, idx) => (
@@ -499,8 +504,8 @@ export default function TechShowcase() {
             </div>
           </div>
         </>
-      )}
-    </div>
+      }
+    </motion.div>
   );
 }
 

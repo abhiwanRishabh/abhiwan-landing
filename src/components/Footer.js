@@ -100,9 +100,9 @@ const Footer = () => {
 
             {/* Quick Navigation */}
             <div className={` ${helvetica.className}`}>
-              <h3 className="font-semibold  text-lg mb-4 text-purple-500">
+              <p Technology className="font-semibold  text-lg mb-4 text-purple-500">
                 QUICK NAVIGATION
-              </h3>
+              </p>
               <ul className="space-y-2 text-md">
                 <li
                   className="flex items-center gap-2 cursor-pointer"
@@ -144,9 +144,9 @@ const Footer = () => {
 
             {/* Global Headquarters */}
             <div className={` ${helvetica.className}`}>
-              <h3 className="font-semibold mb-4 text-purple-500 flex items-center gap-2 text-lg">
+              <p className="font-semibold mb-4 text-purple-500 flex items-center gap-2 text-lg">
                 <Globe size={18} /> GLOBAL HEADQUARTERS
-              </h3>
+              </p>
               <ul className="text-md space-y-2">
                 <li className="text-lg">
                   <strong className="uppercase">United States</strong>
@@ -169,9 +169,9 @@ const Footer = () => {
 
             {/* Contact & Social */}
             <div className={` ${helvetica.className}`}>
-              <h3 className="font-semibold mb-4 text-purple-500 text-lg">
+              <p className="font-semibold mb-4 text-purple-500 text-lg">
                 CONTACT US
-              </h3>
+              </p>
               <p className="text-md whitespace-nowrap flex items-center gap-2">
                 <Phone size={16} /> <strong>US Sales:</strong> +1 951-521-3487
               </p>

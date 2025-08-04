@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useId, useState } from "react";
+import React, { useEffect, useId, useMemo, useState } from "react";
 import styles from "./styles/ConceptToReality.module.css";
 import Image from "next/image";
 import { gravesend, helvetica } from "@/app/font/Fonts";
@@ -22,8 +22,8 @@ const projects = [
     title: "The Kundli Pro",
     image: "/content/projects/kundlipro.png",
     secondImg: isMobileView?.matches
-      ? "/content/projects/mobile/kundli.png"
-      : "/content/projects/new/Kundalipro.png",
+      ? "/content/projects/mobile/kundli.webp"
+      : "/content/projects/new/Kundalipro.webp",
     description: "The Most Trusted & Insightful Astrology App",
     // boxShadow: "shadow-[0px_0px_100.8px_0px_#008FFF]",
     appStore: true,
@@ -36,8 +36,8 @@ const projects = [
     title: "CocaCola",
     image: "/content/projects/cocacola.png",
     secondImg: isMobileView?.matches
-      ? "/content/projects/mobile/cocaCola.png"
-      : "/content/projects/new/CocaCola.png",
+      ? "/content/projects/mobile/cocaCola.webp"
+      : "/content/projects/new/CocaCola.webp",
     description: "Wanna be a movie star? Partnered with Box Office!",
     // boxShadow: "shadow-[0px_4px_138.8px_71px_#FF060640]",
     appStore: false,
@@ -50,8 +50,8 @@ const projects = [
     title: "Battle Saga",
     image: "/content/projects/battlesaga.png",
     secondImg: isMobileView?.matches
-      ? "/content/projects/mobile/battleSaga.png"
-      : "/content/projects/new/BattleSaga.png",
+      ? "/content/projects/mobile/battleSaga.webp"
+      : "/content/projects/new/BattleSaga.webp",
     description:
       "Battle Saga is a Clash of Clan inspired game on Binance Smart Chain",
     // boxShadow: "shadow-[0px_4px_131.7px_17px_#2A37A6BD]",
@@ -67,7 +67,9 @@ const projectsSecondRow = [
     id: "1d0a1941-450e-49c2-9fa3-87abf0d8aec0",
     title: "Voxel",
     image: "/content/projects/Voxel.png",
-    secondImg: "/content/projects/new/Voxel.png",
+    secondImg: isMobileView?.matches
+      ? "/content/projects/mobile/Voxel.webp"
+      : "/content/projects/new/Voxel.webp",
     description: "voxel",
     // boxShadow: "shadow-[0px_4px_131.7px_17px_#2A37A6BD]",
     appStore: true,
@@ -77,9 +79,11 @@ const projectsSecondRow = [
   },
   {
     id: "deb21f98-4572-4e11-b394-388f7b0fd8f9",
-    title: "diamondHook",
+    title: "DiamondHooves",
     image: "/content/projects/diamondHook.png",
-    secondImg: "/content/projects/new/DiamondHooves.png",
+    secondImg: isMobileView?.matches
+      ? "/content/projects/mobile/DiamondHooves.webp"
+      : "/content/projects/new/DiamondHooves.webp",
     description: "diamondHook",
     // boxShadow: "shadow-[0px_4px_131.7px_17px_#2A37A6BD]",
     appStore: false,
@@ -89,9 +93,11 @@ const projectsSecondRow = [
   },
   {
     id: "b5426440-b39b-4bc1-b18c-5fcc6cf205a4",
-    title: "Marina",
+    title: "Marina Landing",
     image: "/content/projects/marina.png",
-    secondImg: "/content/projects/new/Marina.png",
+    secondImg: isMobileView?.matches
+      ? "/content/projects/mobile/Marina.webp"
+      : "/content/projects/new/Marina.webp",
     description:
       "Battle Saga is a Clash of Clan inspired game on Binance Smart Chain",
     // boxShadow: "shadow-[0px_0px_100.8px_0px_#008FFF]",
@@ -102,30 +108,8 @@ const projectsSecondRow = [
     class: "shadow-card-6",
   },
 ];
-const projectlanscape = [
-  {
-    id: "a69c2bcb-d754-4a20-b06a-7e4cb84606f1",
-    title: "penguin cart",
-    image: "/content/projects/penguincart.png",
-    secondImg: isMobileView?.matches
-      ? "/content/projects/mobile/Penguinkart.png"
-      : "/content/projects/new/PenguinKart.png",
-    // boxShadow: " shadow-[0px_4px_93.3px_0px_#02E3F8]",
-    dataAos: "fade",
-    class: "shadow-card-7",
-  },
-  {
-    id: "b74983c9-fa26-4352-a91f-9ab5a4fe39df",
-    title: "ohzi",
-    image: "/content/projects/ohzi.png",
-    secondImg: isMobileView?.matches
-      ? "/content/projects/mobile/ohzi2.png"
-      : "/content/projects/new/Ohzi.png",
-    // boxShadow: "shadow-[0px_4px_126.5px_0px_#000000CF]",
-    dataAos: "fade",
-    class: "shadow-card-8",
-  },
-];
+
+// console.log("projectlanscape", projectlanscape);
 
 const useDisableBodyScroll = (isActive) => {
   useEffect(() => {
@@ -134,8 +118,57 @@ const useDisableBodyScroll = (isActive) => {
   }, [isActive]);
 };
 
+const preloadImages = (imageUrls) => {
+  if (typeof window === "undefined") return; // Ensure client-side only
+  imageUrls.forEach((src) => {
+    const img = new window.Image();
+    img.src = src?.secondImg;
+  });
+};
+
 const ConceptToReality = () => {
   const [selectedImage, setSelectedImage] = useState(null);
+  let isMobileView = false;
+  if (typeof window !== "undefined") {
+    isMobileView = window.matchMedia("(max-width:900px)");
+  }
+
+  const projectlanscape = useMemo(() => {
+    return [
+      {
+        id: "a69c2bcb-d754-4a20-b06a-7e4cb84606f1",
+        title: "Penguin Kart",
+        image: isMobileView?.matches
+          ? "/content/projects/penguincartPortrait.png"
+          : "/content/projects/penguincart.png",
+        secondImg: isMobileView?.matches
+          ? "/content/projects/mobile/Penguinkart.webp"
+          : "/content/projects/new/PenguinKart.webp",
+        // boxShadow: " shadow-[0px_4px_93.3px_0px_#02E3F8]",
+        dataAos: "fade",
+        class: "shadow-card-7",
+      },
+      {
+        id: "b74983c9-fa26-4352-a91f-9ab5a4fe39df",
+        title: "Ohzi",
+        image: isMobileView?.matches
+          ? "/content/projects/OhziPortrait.png"
+          : "/content/projects/ohzi.png",
+        secondImg: isMobileView?.matches
+          ? "/content/projects/mobile/ohzi2.webp"
+          : "/content/projects/new/Ohzi.webp",
+        // boxShadow: "shadow-[0px_4px_126.5px_0px_#000000CF]",
+        dataAos: "fade",
+        class: "shadow-card-8",
+      },
+    ];
+  }, [isMobileView?.matches]);
+
+  useEffect(() => {
+    preloadImages(projects);
+    preloadImages(projectsSecondRow);
+    preloadImages(projectlanscape);
+  }, []);
 
   useDisableBodyScroll(!!selectedImage);
 
@@ -177,7 +210,7 @@ const ConceptToReality = () => {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 max-w-7xl mx-auto gap-6 px-4 py-12">
+      <div className="grid grid-cols-1 md:grid-cols-3 max-w-7xl mx-auto gap-6 px-4 md:py-12">
         {projects &&
           projects.map((project, index) => (
             <div key={project.title}>
@@ -210,7 +243,7 @@ const ConceptToReality = () => {
             </div>
           ))}
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 max-w-7xl mx-auto gap-6 p-6 md:p-4 ">
+      <div className="grid grid-cols-1 md:grid-cols-2 max-w-7xl mx-auto gap-6 p-6 md:p-4">
         {projectlanscape.map((item, idx) => {
           return (
             <div
@@ -218,18 +251,31 @@ const ConceptToReality = () => {
               // data-aos={item.dataAos}
               onClick={() => handleOpen(item.secondImg)}
             >
-              <Image
-                width={400}
-                height={400}
-                src={item.image}
-                alt={item.title}
-                className={`cursor-pointer w-full h-70 lg:h-96 rounded-[2.1rem] ${item?.class}  transition-transform hover:scale-105 duration-300`}
-              />
+              {isMobileView?.matches ? (
+                <Image
+                  width={400}
+                  height={400}
+                  src={item.image}
+                  alt={item.title}
+                  className={`w-[80%] m-auto h-full md:w-full  object-fill lg:object-cover rounded-2xl`}
+                 
+                  // className={`rounded-2xl object-cover w-full h-full border border-[#8D8D8D] shadow-[${project.boxShadow}] hover:shadow-xl hover:shadow-purple-500/30 transition-shadow duration-300`}
+                />
+              ) : (
+                <Image
+                  width={400}
+                  height={400}
+                  src={item.image}
+                  alt={item.title}
+
+                  className={`cursor-pointer w-full h-60 lg:h-96 rounded-[2.1rem] ${item?.class}  transition-transform hover:scale-105 duration-300`}
+                />
+              )}
             </div>
           );
         })}
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 max-w-7xl mx-auto gap-6 px-4 py-12">
+      <div className="grid grid-cols-1 md:grid-cols-3 max-w-7xl mx-auto gap-6 px-4 md:py-12">
         {projectsSecondRow.map((project, index) => (
           <div key={project.title} data-aos={project.dataAos}>
             <div className=" rounded-2xl  w-full shadow-lg transition-transform hover:scale-105 duration-300">
@@ -267,16 +313,16 @@ const ConceptToReality = () => {
           {
             <motion.div
               className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90"
-              initial={{ opacity: 0 }}
+              initial={{ opacity: 0.5 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
             >
               <motion.div
                 className="relative w-full h-full flex items-center justify-center"
-                initial={{ scale: 0.8, opacity: 0 }}
+                initial={{ scale: 0.8, opacity: 0.5 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.8, opacity: 0 }}
-                transition={{ duration: 0.3 }}
+                transition={{ duration: 0 }}
               >
                 {/* <button
                 onClick={handleClose}

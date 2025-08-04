@@ -25,7 +25,7 @@ const Navbar = () => {
           <div>
             <Image
               src="/AbhiwanLogoPortfolio.png"
-              alt="logo"
+              alt="Abhiwan Technology"
               width={100}
               height={100}
               className="object-contain"

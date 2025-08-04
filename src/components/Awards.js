@@ -85,7 +85,7 @@ const Awards = ({ title = true }) => {
                     <Image
                       key={award.imageUrl}
                       src={award.imageUrl}
-                      alt={award?.name || "image"}
+                      alt={award?.name || "Awards"}
                       width={150}
                       height={150}
                       // className={`w-32 h-32 ${objectFit} `}

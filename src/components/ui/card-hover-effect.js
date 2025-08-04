@@ -53,14 +53,14 @@ export const HoverEffect = ({ items, className, newclassName }) => {
                   <div className="flex justify-center">
                     <div className="flex gap-1">
                       <div className="text-2xl mb-2">{item.emoji}</div>
-                      <h2
+                      <h3
                         className={`text-2xl font-extrabold uppercase tracking-wide mb-4 ${gravesend.className}`}
                       >
                         {" "}
                         {item.titlePart1}
                         <br />
                         {item.titlePart2}
-                      </h2>
+                      </h3>
                     </div>
                   </div>
                   <p

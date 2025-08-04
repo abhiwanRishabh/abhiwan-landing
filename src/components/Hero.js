@@ -61,8 +61,14 @@ const RightLongBaseLine = ({ text1, text2, hrefid, iconp }) => {
               <MoveLeft className="mb-4" color="#fff" size={16} />
             )}
 
-            <p className={`text-white text-[1rem]`}
-             style={{transform : text1 === "Our Recent " ? 'translateX(-21px)' : 'translateX(0px)'}}
+            <p
+              className={`text-white text-[1rem]`}
+              style={{
+                transform:
+                  text1 === "Our Recent "
+                    ? "translateX(-21px)"
+                    : "translateX(0px)",
+              }}
             >
               {text1} <br /> {text2}
             </p>
@@ -195,7 +201,7 @@ const Hero = () => {
               <div className="z-[999]" id={"heroImage"}>
                 <Image
                   src="/vrgirl.avif"
-                  alt="hero"
+                  alt="Abhiwan Technology"
                   width={400}
                   height={400}
                   className="w-auto h-full"

@@ -15,7 +15,7 @@ const BackToTop = () => {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-6 right-24 z-40 w-14 h-14 flex items-center justify-center 
+          className="fixed bottom-7 right-8 z-40 w-[43px] h-[43px] flex items-center justify-center 
           rounded-full bg-gradient-to-br from-purple-600 to-purple-800 text-white 
           shadow-[0_0_20px_rgba(168,85,247,0.6)] transition hover:scale-110 cursor-pointer"
         >
@@ -25,10 +25,10 @@ const BackToTop = () => {
       {isVisible && (
         <Image
           src="/whatsappIcon.png"
-          width={50}
-          height={50}
+          width={47}
+          height={47}
           alt="whatsapp-icon"
-          className="fixed bottom-7 right-6  cursor-pointer transition-transform hover:scale-110"
+          className="fixed  bottom-7 right-20  cursor-pointer transition-transform hover:scale-110"
           style={{ zIndex: 41 }}
           onClick={() => {
             window.open(whatsappURL, "_blank");

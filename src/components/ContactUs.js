@@ -246,8 +246,8 @@ const ContactUs = () => {
                 <select name="requirement" onChange={handleChange}>
                   <option value="">Select Requirement</option>
 
-                  <option value="Metaverse">Metaverse</option>
-                  <option value="Blockchain">Blockchain</option>
+                  <option value="Metaverse">Metaverse Development</option>
+                  <option value="Blockchain">Blockchain Development</option>
                   <option value="Game Development">Game Development</option>
                   <option value="Real Estate Metaverse">
                     Real Estate Metaverse
